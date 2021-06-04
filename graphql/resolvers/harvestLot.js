@@ -1,5 +1,6 @@
 // Importing Mongoose Models
 const HarvestLot = require('../../models/harvestLot');
+const HarvestNode = require('../../models/harvestNode');
 
 module.exports = {
 
@@ -25,7 +26,7 @@ module.exports = {
 
                         harvestLotId: args.harvestLotInput.harvestLotId,
 
-                        harvestNodeId: args.harvestLotInput.harvestLotId,
+                        harvestNodeId: args.harvestLotInput.harvestNodeId,
 
 
                         organizationId: args.harvestLotInput.organizationId,
