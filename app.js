@@ -7,6 +7,8 @@ const mongoose = require('mongoose');
 
 const fetch = require('node-fetch');
 
+require('dotenv').config();
+
 // Importing GraphQL Schema
 const graphQlSchema = require('./graphql/schemas/index');
 // Importing GrahQL Resolvers
@@ -18,12 +20,22 @@ const app = express();
 //Body-Parsing
 app.use(express.json());
 
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    if (req.method === 'OPTIONS') {
+        return res.sendStatus(200);
+    }
+    next();
+});
+
 const getNode = (nodeId) => {
 
     fetch(`https://bext360api.azure-api.net/retaildev/v1/getnode/${nodeId}`, {
         method: 'GET',
         headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.KEY}`
+            'Ocp-Apim-Subscription-Key': `${BEXT_API_KEY}`
         }
     })
         .then((result) => {
@@ -52,7 +64,7 @@ const getHarvestLot = (harvestLotId) => {
     fetch(`https://bext360api.azure-api.net/retaildev/v1/getlot/${harvestLotId}`, {
         method: 'GET',
         headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.KEY}`
+            'Ocp-Apim-Subscription-Key': `${BEXT_API_KEY}`
         }
     })
         .then((result) => {
@@ -143,7 +155,6 @@ const fetchAndStoreHarvestLots = (harvestLotIds) => {
 // fetchAndStoreHarvestLots();
 
 
-
 // GraphQL API
 app.use('/graphql', graphqlHTTP({
     schema: graphQlSchema,
@@ -151,11 +162,8 @@ app.use('/graphql', graphqlHTTP({
     graphiql: true
 }));
 
-
-
-
 // Establishing mongoDB connection with Mongoose
-mongoose.connect(`mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@bcb2021cluster.seoo1.mongodb.net/${process.env.MONGO_DB_NAME}?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         // Listening at port 3000
 
