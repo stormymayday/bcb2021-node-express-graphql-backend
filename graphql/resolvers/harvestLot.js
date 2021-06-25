@@ -7,7 +7,7 @@ module.exports = {
     // Creating a Harvest Lot
     createHarvestLot: (args) => {
 
-        // Checking if a Harvest Node with that harvestNodeId already exists in the database (to avoid duplicates)
+        // Checking if a Harvest Lot with that harvestLotId already exists in the database (to avoid duplicates)
         return HarvestLot.findOne({ harvestLotId: args.harvestLotInput.harvestLotId })
 
             .then(harvestLot => {

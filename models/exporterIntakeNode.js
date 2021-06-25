@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-// Wet Mill Node Schema
-const wetMillNodeSchema = new Schema({
+// Exporter Intake Node Schema
+const exporterIntakeNodeSchema = new Schema({
 
-    wetMillNodeId: {
+    exporterIntakeNodeId: {
         type: String,
         // required: true,
     },
@@ -16,11 +16,11 @@ const wetMillNodeSchema = new Schema({
         ref: 'Farmer'
     },
 
-    wetMillLots: [
+    exporterIntakeLots: [
         {
             type: Schema.Types.ObjectId,
-            required: true,
-            ref: 'WetMillLot'
+            // required: true,
+            ref: 'ExporterIntakeLot'
         }
     ],
 
@@ -99,5 +99,5 @@ const wetMillNodeSchema = new Schema({
 
 });
 
-// Creating and Exporting Wet Mill Node Model
-module.exports = mongoose.model('wetMillNode', wetMillNodeSchema);
+// Creating and Exporting the Exporter Intake Node Model
+module.exports = mongoose.model('exporterIntakeNode', exporterIntakeNodeSchema);

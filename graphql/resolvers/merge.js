@@ -1,6 +1,7 @@
 // Importing Mongoose Models
 const HarvestNode = require('../../models/harvestNode');
 const WetMillNode = require('../../models/wetMillNode');
+const ExporterIntakeNode = require('../../models/exporterIntakeNode');
 
 // Function that links Farmer with Harvest Node
 const fetchHarvestNode = harvestNodeId => {
@@ -20,9 +21,9 @@ const fetchHarvestNode = harvestNodeId => {
 };
 
 // Function that links Farmer with Wet Mill Node
-const fetchWetMillNode = wetMillNodeId => {
+const fetchWetMillNode = _id => {
 
-    return WetMillNode.findById(wetMillNodeId)
+    return WetMillNode.findById(_id).populate('wetMillLots')
         .then(wetMillNode => {
 
             return {
@@ -36,5 +37,23 @@ const fetchWetMillNode = wetMillNodeId => {
 
 };
 
+// Function that links Farmer with Exporter Intake Node
+const fetchExporterIntakeNode = _id => {
+
+    return ExporterIntakeNode.findById(_id).populate('exporterIntakeLots')
+        .then(exporterIntakeNode => {
+
+            return {
+                ...exporterIntakeNode._doc
+            };
+
+        })
+        .catch(err => {
+            throw err;
+        })
+
+};
+
 exports.fetchHarvestNode = fetchHarvestNode;
 exports.fetchWetMillNode = fetchWetMillNode;
+exports.fetchExporterIntakeNode = fetchExporterIntakeNode;

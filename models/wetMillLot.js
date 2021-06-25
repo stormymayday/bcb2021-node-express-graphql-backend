@@ -2,52 +2,38 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-// Wet Mill Node Schema
-const wetMillNodeSchema = new Schema({
+// Wet Mill Lot Schema
+const wetMillLotSchema = new Schema({
 
-    wetMillNodeId: {
-        type: String,
-        // required: true,
-    },
-
-    farmer: {
+    wetMillNode: {
         type: Schema.Types.ObjectId,
         // required: true,
-        ref: 'Farmer'
+        ref: 'WetMillNode'
     },
 
-    wetMillLots: [
-        {
-            type: Schema.Types.ObjectId,
-            required: true,
-            ref: 'WetMillLot'
-        }
-    ],
 
-
-    totaAbsorbedWeight: {
+    wetMillLotId: {
         type: String
     },
-    totalAbsorbedWeightUnit: {
+    wetMillNodeId: {
         type: String
     },
-
     organizationId: {
         type: String
     },
     marketplaceId: {
         type: String
     },
-    defaultLocationId: {
+    productId: {
         type: String
     },
-    nodeName: {
+    lotName: {
         type: String
     },
-    nodeType: {
+    lotType: {
         type: String
     },
-    nodeDetailType: {
+    lotDetailType: {
         type: String
     },
     createdDate: {
@@ -56,9 +42,37 @@ const wetMillNodeSchema = new Schema({
     lastModifiedDate: {
         type: String
     },
+    productName: {
+        type: String
+    },
+    productToken: {
+        type: String
+    },
+    productSku: {
+        type: String
+    },
     organizationName: {
         type: String
     },
+    currentWeight: {
+        type: String
+    },
+    currentWeightUnit: {
+        type: String
+    },
+    absorbedWeight: {
+        type: String
+    },
+    absorbedWeightUnit: {
+        type: String
+    },
+    quality: {
+        type: String
+    },
+    lotIsOpen: {
+        type: Boolean
+    },
+
     images: [
         {
             type: String
@@ -75,29 +89,21 @@ const wetMillNodeSchema = new Schema({
         }
     ],
 
-    country: {
+    value: {
         type: String
     },
-    city: {
+    asset: {
         type: String
     },
-    state: {
+    timestamp: {
         type: String
     },
-    latitude: {
-        type: String
-    },
-    longitude: {
-        type: String
-    },
-    elevation: {
-        type: String
-    },
-    elevationUnit: {
+
+    processingDate: {
         type: String
     }
 
 });
 
-// Creating and Exporting Wet Mill Node Model
-module.exports = mongoose.model('wetMillNode', wetMillNodeSchema);
+// Creating and Exporting Wet Mill Lot Model
+module.exports = mongoose.model('WetMillLot', wetMillLotSchema);

@@ -104,8 +104,9 @@ module.exports = buildSchema(`
             documents: [String]
             videos: [String]
 
-            ammountPaid: String
-            currency: String
+            value: String
+            asset: String
+            timestamp: String
 
             coffeeVarietal: String
 
@@ -163,6 +164,8 @@ module.exports = buildSchema(`
             totaAbsorbedWeight: String
             totalAbsorbedWeightUnit: String
 
+            wetMillLots: [WetMillLot]
+
             organizationId: String
             marketplaceId: String
             defaultLocationId: String
@@ -194,6 +197,8 @@ module.exports = buildSchema(`
             totaAbsorbedWeight: String
             totalAbsorbedWeightUnit: String
 
+            wetMillLots: [WetMillLotInput]
+
             organizationId: String
             marketplaceId: String
             defaultLocationId: String
@@ -218,14 +223,238 @@ module.exports = buildSchema(`
 
         }
 
+        type WetMillLot {
+
+            _id: ID!
+
+            wetMillNode: WetMillNode
+
+            wetMillLotId: String
+            wetMillNodeId: String
+
+            organizationId: String
+            marketplaceId: String
+            productId: String
+            lotName: String
+            lotType: String
+            lotDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            productName: String
+            productToken: String
+            productSku: String
+            organizationName: String
+            currentWeight: String
+            currentWeightUnit: String,
+            absorbedWeight: String
+            absorbedWeightUnit: String
+            quality: String
+            lotIsOpen: Boolean
+
+            images: [String]
+            documents: [String]
+            videos: [String]
+
+            value: String
+            asset: String
+            timestamp: String
+
+            processingDate: String
+
+        }
+
+        input WetMillLotInput {
+
+            wetMillNode: WetMillNodeInput
+
+            wetMillLotId: String
+            wetMillNodeId: String
+
+            organizationId: String
+            marketplaceId: String
+            productId: String
+            lotName: String
+            lotType: String
+            lotDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            productName: String
+            productToken: String
+            productSku: String
+            organizationName: String
+            currentWeight: String
+            currentWeightUnit: String,
+            absorbedWeight: String
+            absorbedWeightUnit: String
+            quality: String
+            lotIsOpen: Boolean
+
+            images: [String]
+            documents: [String]
+            videos: [String]
+
+            value: String
+            asset: String
+            timestamp: String
+
+            processingDate: String
+
+        }
+
+        type ExporterIntakeNode {
+
+            _id: ID!
+
+            exporterIntakeNodeId: String!
+
+            totaAbsorbedWeight: String
+            totalAbsorbedWeightUnit: String
+
+            exporterIntakeLots: [ExporterIntakeLot]
+
+            organizationId: String
+            marketplaceId: String
+            defaultLocationId: String
+            nodeName: String
+            nodeType: String
+            nodeDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            organizationName: String
+
+            images: [String]
+            videos: [String]
+            documents: [String]
+
+            country: String
+            city: String
+            state: String
+            latitude: String
+            longitude: String
+            elevation: String
+            elevationUnit: String
+
+        }
+
+        input ExporterIntakeNodeInput {
+
+            exporterIntakeNodeId: String!
+
+            totaAbsorbedWeight: String
+            totalAbsorbedWeightUnit: String
+
+            exporterIntakeLots: [ExporterIntakeLotInput]
+
+            organizationId: String
+            marketplaceId: String
+            defaultLocationId: String
+            nodeName: String
+            nodeType: String
+            nodeDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            organizationName: String
+
+            images: [String]
+            videos: [String]
+            documents: [String]
+
+            country: String
+            city: String
+            state: String
+            latitude: String
+            longitude: String
+            elevation: String
+            elevationUnit: String
+
+        }
+
+        type ExporterIntakeLot {
+
+            _id: ID!
+
+            exporterIntakeNode: ExporterIntakeNode
+
+            exporterIntakeLotId: String
+            exporterIntakeNodeId: String
+
+            organizationId: String
+            marketplaceId: String
+            productId: String
+            lotName: String
+            lotType: String
+            lotDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            productName: String
+            productToken: String
+            productSku: String
+            organizationName: String
+            currentWeight: String
+            currentWeightUnit: String,
+            absorbedWeight: String
+            absorbedWeightUnit: String
+            quality: String
+            lotIsOpen: Boolean
+
+            images: [String]
+            documents: [String]
+            videos: [String]
+
+            value: String
+            asset: String
+            timestamp: String
+
+            processingDate: String
+
+        }
+
+        input ExporterIntakeLotInput {
+
+            exporterIntakeNode: ExporterIntakeNodeInput
+
+            exporterIntakeLotId: String
+            exporterIntakeNodeId: String
+
+            organizationId: String
+            marketplaceId: String
+            productId: String
+            lotName: String
+            lotType: String
+            lotDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            productName: String
+            productToken: String
+            productSku: String
+            organizationName: String
+            currentWeight: String
+            currentWeightUnit: String,
+            absorbedWeight: String
+            absorbedWeightUnit: String
+            quality: String
+            lotIsOpen: Boolean
+
+            images: [String]
+            documents: [String]
+            videos: [String]
+
+            value: String
+            asset: String
+            timestamp: String
+
+            processingDate: String
+
+        }
+
         type Farmer {
 
             _id: ID!
             farmerName: String!
 
-            harvestNode: HarvestNode
-            
+            harvestNode: HarvestNode            
             wetMillNode: WetMillNode
+            exporterIntakeNode: ExporterIntakeNode
 
         }
 
@@ -234,8 +463,8 @@ module.exports = buildSchema(`
             farmerName: String!
 
             harvestNode: HarvestNodeInput
-
             wetMillNode: WetMillNodeInput
+            exporterIntakeNode: ExporterIntakeNodeInput
 
         }
 
@@ -253,6 +482,11 @@ module.exports = buildSchema(`
             createHarvestLot(harvestLotInput: HarvestLotInput): HarvestLot
 
             createWetMillNode(wetMillNodeInput: WetMillNodeInput): WetMillNode
+            createWetMillLot(wetMillLotInput: WetMillLotInput): WetMillLot
+
+            createExporterIntakeNode(exporterIntakeNodeInput: ExporterIntakeNodeInput): ExporterIntakeNode
+            createExporterIntakeLot(exporterIntakeLotInput: ExporterIntakeLotInput): ExporterIntakeLot
+
         }
 
         schema {
