@@ -22,7 +22,7 @@ module.exports = {
                     // Creating New Harvest 
                     const harvestLot = new HarvestLot({
 
-                        harvestNode: '60c3721f8dc09f764df59de9',
+                        harvestNode: '60d52e4c669f337adb752ba4',
 
                         harvestLotId: args.harvestLotInput.harvestLotId,
 
@@ -49,9 +49,12 @@ module.exports = {
                         lotIsOpen: args.harvestLotInput.lotIsOpen,
 
                         images: args.harvestLotInput.images,
+                        documents: args.harvestLotInput.documents,
+                        videos: args.harvestLotInput.videos,
 
-                        ammountPaid: args.harvestLotInput.ammountPaid,
-                        currency: args.harvestLotInput.currency,
+                        value: args.harvestLotInput.value,
+                        asset: args.harvestLotInput.asset,
+                        timestamp: args.harvestLotInput.timestamp,
 
                         coffeeVarietal: args.harvestLotInput.coffeeVarietal,
 
@@ -71,7 +74,7 @@ module.exports = {
                             createdHarvestLot = { ...result._doc };
 
                             // Finding Harvest Node by ID
-                            return HarvestNode.findById('60c3721f8dc09f764df59de9')
+                            return HarvestNode.findById('60d52e4c669f337adb752ba4')
 
                         })
                         .then(harvestNode => {

@@ -2,38 +2,44 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-// Harvest Lot Schema
-const harvestLotSchema = new Schema({
+// Wet Mill Node Schema
+const wetMillNodeSchema = new Schema({
 
-    harvestNode: {
+    wetMillNodeId: {
+        type: String,
+        // required: true,
+    },
+
+    farmer: {
         type: Schema.Types.ObjectId,
         // required: true,
-        ref: 'HarvestNode'
+        ref: 'Farmer'
     },
 
 
-    harvestLotId: {
+    totaAbsorbedWeight: {
         type: String
     },
-    harvestNodeId: {
+    totalAbsorbedWeightUnit: {
         type: String
     },
+
     organizationId: {
         type: String
     },
     marketplaceId: {
         type: String
     },
-    productId: {
+    defaultLocationId: {
         type: String
     },
-    lotName: {
+    nodeName: {
         type: String
     },
-    lotType: {
+    nodeType: {
         type: String
     },
-    lotDetailType: {
+    nodeDetailType: {
         type: String
     },
     createdDate: {
@@ -42,37 +48,9 @@ const harvestLotSchema = new Schema({
     lastModifiedDate: {
         type: String
     },
-    productName: {
-        type: String
-    },
-    productToken: {
-        type: String
-    },
-    productSku: {
-        type: String
-    },
     organizationName: {
         type: String
     },
-    currentWeight: {
-        type: String
-    },
-    currentWeightUnit: {
-        type: String
-    },
-    absorbedWeight: {
-        type: String
-    },
-    absorbedWeightUnit: {
-        type: String
-    },
-    quality: {
-        type: String
-    },
-    lotIsOpen: {
-        type: Boolean
-    },
-
     images: [
         {
             type: String
@@ -89,25 +67,29 @@ const harvestLotSchema = new Schema({
         }
     ],
 
-    value: {
+    country: {
         type: String
     },
-    asset: {
+    city: {
         type: String
     },
-    timestamp: {
+    state: {
         type: String
     },
-
-    coffeeVarietal: {
+    latitude: {
         type: String
     },
-
-    harvestDate: {
+    longitude: {
+        type: String
+    },
+    elevation: {
+        type: String
+    },
+    elevationUnit: {
         type: String
     }
 
 });
 
-// Creating and Exporting Harvest Lot Model
-module.exports = mongoose.model('HarvestLot', harvestLotSchema);
+// Creating and Exporting Wet Mill Node Model
+module.exports = mongoose.model('wetMillNode', wetMillNodeSchema);

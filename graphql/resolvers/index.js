@@ -1,7 +1,10 @@
 // Importing Individual Resolvers
 const farmerResolver = require('./farmer');
+
 const harvestNodeResolver = require('./harvestNode');
 const harvestLotResolver = require('./harvestLot');
+
+const wetMillNodeResolver = require('./wetMillNode');
 
 // Rest of the Individual Resolvers should go here...
 
@@ -9,7 +12,8 @@ const harvestLotResolver = require('./harvestLot');
 const rootResolver = {
     ...farmerResolver,
     ...harvestNodeResolver,
-    ...harvestLotResolver
+    ...harvestLotResolver,
+    ...wetMillNodeResolver
     // Add more resolvers here...
 };
 

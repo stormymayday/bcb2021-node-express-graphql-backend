@@ -12,6 +12,11 @@ const farmerSchema = new Schema({
         type: Schema.Types.ObjectId,
         // required: true,
         ref: 'HarvestNode'
+    },
+    wetMillNode: {
+        type: Schema.Types.ObjectId,
+        // required: true,
+        ref: 'WetMillNode'
     }
 });
 

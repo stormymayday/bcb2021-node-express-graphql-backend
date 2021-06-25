@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 
 const getNode = (nodeId) => {
 
-    fetch(`https://bext360api.azure-api.net/retaildev/v1/getnode/${nodeId}`, {
+    fetch(`${process.env.GET_NODE}${nodeId}`, {
         method: 'GET',
         headers: {
             'Ocp-Apim-Subscription-Key': `${process.env.BEXT_API_KEY}`
@@ -61,7 +61,6 @@ const getNode = (nodeId) => {
 
                                 harvestNodeId: "${data.nodeId}"
 
-
                                 organizationId: "${data.organizationId}"
                                 marketplaceId: "${data.marketplaceId}"
                                 defaultLocationId: "${data.defaultLocationId}"
@@ -72,6 +71,9 @@ const getNode = (nodeId) => {
                                 lastModifiedDate: "${data.lastModifiedDate}"
                                 organizationName: "${data.organizationName}"
 
+                                images: ["${(data.images[0] ? data.images[0].urls[0] : "")}", "${(data.images[1] ? data.images[1].urls[0] : "")}"]
+                                documents: ["${(data.documents[0] ? data.documents[0].urls[0] : "")}", "${(data.documents[1] ? data.documents[1].urls[0] : "")}"]
+                                videos: ["${(data.videos[0] ? data.videos[0].urls[0] : "")}", "${(data.videos[1] ? data.videos[1].urls[0] : "")}"]
 
                                 country: "${data.defaultLocation.country}"
                                 city: "${data.defaultLocation.city}"
@@ -111,7 +113,7 @@ const getNode = (nodeId) => {
 
 const getHarvestLot = (harvestLotId) => {
 
-    fetch(`https://bext360api.azure-api.net/retaildev/v1/getlot/${harvestLotId}`, {
+    fetch(`${process.env.GET_LOT}${harvestLotId}`, {
         method: 'GET',
         headers: {
             'Ocp-Apim-Subscription-Key': `${process.env.BEXT_API_KEY}`
@@ -162,12 +164,14 @@ const getHarvestLot = (harvestLotId) => {
 
                                 lotIsOpen: ${data.lotIsOpen}
 
-
                                 images: ["${(data.images[0] ? data.images[0].urls[0] : "")}", "${(data.images[1] ? data.images[1].urls[0] : "")}"]
+                                documents: ["${(data.documents[0] ? data.documents[0].urls[0] : "")}", "${(data.documents[1] ? data.documents[1].urls[0] : "")}"]
+                                videos: ["${(data.videos[0] ? data.videos[0].urls[0] : "")}", "${(data.videos[1] ? data.videos[1].urls[0] : "")}"]
                                 
 
-                                ammountPaid: "${Object.values(data.values)[0].value}"
-                                currency: "${Object.values(data.values)[0].asset}"
+                                value: "${Object.values(data.values)[0].value}"
+                                asset: "${Object.values(data.values)[0].asset}"
+                                timestamp: "${Object.values(data.values)[0].timeStamp}"
 
                                 coffeeVarietal: "${data.customData['CoffeeVarietal.Measure'].value}"
                                 harvestDate: "${data.customData['HarvestDate.MeasureTime'].value}"
@@ -215,8 +219,88 @@ const fetchAndStoreHarvestLots = async (harvestLotIds) => {
     }
 }
 
-fetchAndStoreHarvestLots(MirianVasquezHarvestLots);
+// fetchAndStoreHarvestLots(MirianVasquezHarvestLots);
 
+
+const getWetMillNode = (nodeId) => {
+
+    fetch(`${process.env.GET_NODE}${nodeId}`, {
+        method: 'GET',
+        headers: {
+            'Ocp-Apim-Subscription-Key': `${process.env.BEXT_API_KEY}`
+        }
+    })
+        .then((result) => {
+            // console.log(result);
+            return result.json();
+        })
+        .then((data) => {
+            // Logging data on the server
+            console.log(data);
+
+            // Storing data in the database
+            fetch('http://localhost:3000/graphql', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    // 'Accept': 'application/json',
+                },
+                body: JSON.stringify({
+                    query: ` 
+
+                    mutation {
+                        createWetMillNode(wetMillNodeInput: {
+
+                                wetMillNodeId: "${data.nodeId}"
+
+                                organizationId: "${data.organizationId}"
+                                marketplaceId: "${data.marketplaceId}"
+                                defaultLocationId: "${data.defaultLocationId}"
+                                nodeName: "${data.nodeName}"
+                                nodeType: "${data.nodeType}"
+                                nodeDetailType: "${data.nodeDetailType}"
+                                createdDate: "${data.createdDate}"
+                                lastModifiedDate: "${data.lastModifiedDate}"
+                                organizationName: "${data.organizationName}"
+
+                                images: ["${(data.images[0] ? data.images[0].urls[0] : "")}", "${(data.images[1] ? data.images[1].urls[0] : "")}"]
+                                documents: ["${(data.documents[0] ? data.documents[0].urls[0] : "")}", "${(data.documents[1] ? data.documents[1].urls[0] : "")}"]
+                                videos: ["${(data.videos[0] ? data.videos[0].urls[0] : "")}", "${(data.videos[1] ? data.videos[1].urls[0] : "")}"]
+
+                                country: "${data.defaultLocation.country}"
+                                city: "${data.defaultLocation.city}"
+                                state: "${data.defaultLocation.state}"
+                                latitude: "${data.defaultLocation.latitude}"
+                                longitude: "${data.defaultLocation.longitude}"
+                                elevation: "${data.defaultLocation.elevation}"
+                                elevationUnit: "${data.defaultLocation.elevationUnit}"
+
+                            }) {
+
+                                wetMillNodeId
+
+                            }
+                        }
+
+                 `
+
+                })
+            })
+                .then(r => r.json())
+                .then(data => console.log('data returned:', data));
+
+            // Sending data as a RESPONSE to the fronted
+            // response.json(data);
+        })
+        .catch((error) => {
+            console.log('Please enter a valid lot ID');
+            response.json(error);
+        });
+
+}
+// Mirian Wet Nill Node = 33cbd53d-ea1c-4b45-a669-b8a3076a0436
+// const nodeId = '33cbd53d-ea1c-4b45-a669-b8a3076a0436';
+// getWetMillNode(nodeId);
 
 // GraphQL API
 app.use('/graphql', graphqlHTTP({
