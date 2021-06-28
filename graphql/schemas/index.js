@@ -447,6 +447,152 @@ module.exports = buildSchema(`
 
         }
 
+        type DryMillNode {
+
+            _id: ID!
+
+            dryMillNodeId: String!
+
+            totaAbsorbedWeight: String
+            totalAbsorbedWeightUnit: String
+
+            dryMillLots: [DryMillLot]
+
+            organizationId: String
+            marketplaceId: String
+            defaultLocationId: String
+            nodeName: String
+            nodeType: String
+            nodeDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            organizationName: String
+
+            images: [String]
+            videos: [String]
+            documents: [String]
+
+            country: String
+            city: String
+            state: String
+            latitude: String
+            longitude: String
+            elevation: String
+            elevationUnit: String
+
+        }
+
+        input DryMillNodeInput {
+
+            dryMillNodeId: String!
+
+            totaAbsorbedWeight: String
+            totalAbsorbedWeightUnit: String
+
+            dryMillLots: [DryMillLotInput]
+
+            organizationId: String
+            marketplaceId: String
+            defaultLocationId: String
+            nodeName: String
+            nodeType: String
+            nodeDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            organizationName: String
+
+            images: [String]
+            videos: [String]
+            documents: [String]
+
+            country: String
+            city: String
+            state: String
+            latitude: String
+            longitude: String
+            elevation: String
+            elevationUnit: String
+
+        }
+
+        type DryMillLot {
+
+            _id: ID!
+
+            dryMillNode: DryMillNode
+
+            dryMillLotId: String
+            dryMillNodeId: String
+
+            organizationId: String
+            marketplaceId: String
+            productId: String
+            lotName: String
+            lotType: String
+            lotDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            productName: String
+            productToken: String
+            productSku: String
+            organizationName: String
+            currentWeight: String
+            currentWeightUnit: String,
+            absorbedWeight: String
+            absorbedWeightUnit: String
+            quality: String
+            lotIsOpen: Boolean
+
+            images: [String]
+            documents: [String]
+            videos: [String]
+
+            value: String
+            asset: String
+            timestamp: String
+
+            processingDate: String
+
+        }
+
+        input DryMillLotInput {
+
+            dryMillNode: DryMillNodeInput
+
+            dryMillLotId: String
+            dryMillNodeId: String
+
+            organizationId: String
+            marketplaceId: String
+            productId: String
+            lotName: String
+            lotType: String
+            lotDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            productName: String
+            productToken: String
+            productSku: String
+            organizationName: String
+            currentWeight: String
+            currentWeightUnit: String,
+            absorbedWeight: String
+            absorbedWeightUnit: String
+            quality: String
+            lotIsOpen: Boolean
+
+            images: [String]
+            documents: [String]
+            videos: [String]
+
+            value: String
+            asset: String
+            timestamp: String
+
+            processingDate: String
+
+        }
+
         type Farmer {
 
             _id: ID!
@@ -455,6 +601,7 @@ module.exports = buildSchema(`
             harvestNode: HarvestNode            
             wetMillNode: WetMillNode
             exporterIntakeNode: ExporterIntakeNode
+            dryMillNode: DryMillNode
 
         }
 
@@ -465,6 +612,7 @@ module.exports = buildSchema(`
             harvestNode: HarvestNodeInput
             wetMillNode: WetMillNodeInput
             exporterIntakeNode: ExporterIntakeNodeInput
+            dryMillNode: DryMillNodeInput
 
         }
 
@@ -486,6 +634,9 @@ module.exports = buildSchema(`
 
             createExporterIntakeNode(exporterIntakeNodeInput: ExporterIntakeNodeInput): ExporterIntakeNode
             createExporterIntakeLot(exporterIntakeLotInput: ExporterIntakeLotInput): ExporterIntakeLot
+
+            createDryMillNode(dryMillNodeInput: DryMillNodeInput): DryMillNode
+            createDryMillLot(dryMillLotInput: DryMillLotInput): DryMillLot
 
         }
 

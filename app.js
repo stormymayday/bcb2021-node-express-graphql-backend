@@ -392,7 +392,7 @@ const getWetMillLot = (wetMillLotId) => {
 }
 
 // Testing one Wet Mill Lot
-// const mirianWetMillLot = "c13610e8-18e4-49bb-82e5-791b8d8b8b21";
+const mirianWetMillLot = "c13610e8-18e4-49bb-82e5-791b8d8b8b21";
 // getWetMillLot(mirianWetMillLot);
 
 // Batch Fetch and Store the Wet Mill Lots
@@ -599,6 +599,183 @@ const fetchAndStoreExporterIntakeLots = async (exporterIntakeLotIds) => {
 const MirianVasquezExporterIntakeLots = ["b1e3936e-ac65-4197-9781-23567a1aa5b5", "fa5900c5-8745-4c65-9424-9cd4dacd1b9c", "42ec3333-ecbb-48ae-b90d-5bdcbf254f70", "a6848507-664d-4c00-8f28-c25f3ee3a3b9", "cef36cd9-b538-4fd4-99cd-d665fff0ab29", "d786b175-1827-482e-b94d-86196c3f057a"];
 
 // fetchAndStoreExporterIntakeLots(MirianVasquezExporterIntakeLots);
+
+
+const getDryMillNode = (nodeId) => {
+
+    fetch(`${process.env.GET_NODE}${nodeId}`, {
+        method: 'GET',
+        headers: {
+            'Ocp-Apim-Subscription-Key': `${process.env.BEXT_API_KEY}`
+        }
+    })
+        .then((result) => {
+            // console.log(result);
+            return result.json();
+        })
+        .then((data) => {
+            // Logging data on the server
+            console.log(data);
+
+            // Storing data in the database
+            fetch('http://localhost:3000/graphql', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    // 'Accept': 'application/json',
+                },
+                body: JSON.stringify({
+                    query: ` 
+
+                    mutation {
+                        createDryMillNode(dryMillNodeInput: {
+
+                                dryMillNodeId: "${data.nodeId}"
+
+                                organizationId: "${data.organizationId}"
+                                marketplaceId: "${data.marketplaceId}"
+                                defaultLocationId: "${data.defaultLocationId}"
+                                nodeName: "${data.nodeName}"
+                                nodeType: "${data.nodeType}"
+                                nodeDetailType: "${data.nodeDetailType}"
+                                createdDate: "${data.createdDate}"
+                                lastModifiedDate: "${data.lastModifiedDate}"
+                                organizationName: "${data.organizationName}"
+
+                                images: ["${(data.images[0] ? data.images[0].urls[0] : "")}", "${(data.images[1] ? data.images[1].urls[0] : "")}"]
+                                documents: ["${(data.documents[0] ? data.documents[0].urls[0] : "")}", "${(data.documents[1] ? data.documents[1].urls[0] : "")}"]
+                                videos: ["${(data.videos[0] ? data.videos[0].urls[0] : "")}", "${(data.videos[1] ? data.videos[1].urls[0] : "")}"]
+
+                                country: "${data.defaultLocation.country}"
+                                city: "${data.defaultLocation.city}"
+                                state: "${data.defaultLocation.state}"
+                                latitude: "${data.defaultLocation.latitude}"
+                                longitude: "${data.defaultLocation.longitude}"
+                                elevation: "${data.defaultLocation.elevation}"
+                                elevationUnit: "${data.defaultLocation.elevationUnit}"
+
+                            }) {
+
+                                dryMillNodeId
+
+                            }
+                        }
+
+                 `
+
+                })
+            })
+                .then(r => r.json())
+                .then(data => console.log('data returned:', data));
+
+            // Sending data as a RESPONSE to the fronted
+            // response.json(data);
+        })
+        .catch((error) => {
+            console.log('Please enter a valid lot ID');
+            response.json(error);
+        });
+
+}
+
+const VillaFloridaDryMillNodeId = '326d2dae-9cd0-4b4c-b64d-8874e1d80abd';
+// getDryMillNode(VillaFloridaDryMillNodeId);
+
+
+const getDryMillLot = (lotId) => {
+
+    fetch(`${process.env.GET_LOT}${lotId}`, {
+        method: 'GET',
+        headers: {
+            'Ocp-Apim-Subscription-Key': `${process.env.BEXT_API_KEY}`
+        }
+    })
+        .then((result) => {
+            // console.log(result);
+            return result.json();
+        })
+        .then((data) => {
+            // Logging data on the server
+            console.log(data);
+
+
+            // Storing data in the database
+            fetch('http://localhost:3000/graphql', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    // 'Accept': 'application/json',
+                },
+                body: JSON.stringify({
+                    query: ` 
+
+                        mutation {
+                            createDryMillLot(dryMillLotInput: {
+
+                                dryMillLotId: "${data.lotId}"
+
+                                dryMillNodeId: "${data.nodeId}"
+
+                                organizationId: "${data.organizationId}"
+                                marketplaceId: "${data.marketplaceId}"
+                                productId: "${data.productId}"
+                                lotName: "${data.lotName}"
+                                lotType: "${data.lotType}"
+                                lotDetailType: "${data.lotDetailType}"
+                                createdDate: "${data.createdDate}"
+                                lastModifiedDate: "${data.lastModifiedDate}"
+                                productName: "${data.productName}"
+                                productToken: "${data.productToken}"
+                                productSku: "${data.productSku}"
+                                organizationName: "${data.organizationName}"
+                                currentWeight: "${data.currentWeight}"
+                                currentWeightUnit: "${data.currentWeightUnit}"
+                                absorbedWeight: "${data.absorbedWeight}"
+                                absorbedWeightUnit: "${data.absorbedWeightUnit}"
+                                quality: "${data.quality}"
+
+                                lotIsOpen: ${data.lotIsOpen}
+
+                                images: ["${(data.images[0] ? data.images[0].urls[0] : "")}", "${(data.images.length > 1 ? data.images[1].urls[0] : "")}"]
+                                documents: ["${(data.documents[0] ? data.documents[0].urls[0] : "")}", "${(data.documents.length > 1 ? data.documents[1].urls[0] : "")}"]
+                                videos: ["${(data.videos[0] ? data.videos[0].urls[0] : "")}", "${(data.videos.length > 1 ? data.videos[1].urls[0] : "")}"]
+                                
+
+                                value: "${(data.values ? Object.values(data.values)[0].value : "")}"
+                                asset: "${(data.values ? Object.values(data.values)[0].asset : "")}"
+                                timestamp: "${(data.values ? Object.values(data.values)[0].timeStamp : "")}"
+
+                                processingDate: "${(data.customData['ProcessingDate.MeasureTime'] ? data.customData['ProcessingDate.MeasureTime'].value : "")}"
+
+                            }) {
+
+                                dryMillLotId
+
+                            }
+                        }
+
+                 `
+
+                })
+            })
+                .then(r => r.json())
+                .then(data => console.log('data returned:', data));
+
+
+
+            // Sending data as a RESPONSE to the fronted
+            // response.json(data);
+        })
+        .catch((error) => {
+            console.log('Please enter a valid lot ID');
+            response.json(error);
+        });
+
+}
+
+// Testing one Dry Mill Lot - Did not work. Performed manual input.
+// const mirianDryMillLots = ["dafe236e-cb33-477a-8fb1-5c5621e8462e", "03c316f5-3630-4361-aa4e-7834853de95e"];
+getDryMillLot("03c316f5-3630-4361-aa4e-7834853de95e");
 
 
 
