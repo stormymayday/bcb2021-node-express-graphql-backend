@@ -773,9 +773,9 @@ const getDryMillLot = (lotId) => {
 
 }
 
-// Testing one Dry Mill Lot - Did not work. Performed manual input.
+// Testing one Dry Mill Lot - One Did not work. Performed manual input for the first lot.
 // const mirianDryMillLots = ["dafe236e-cb33-477a-8fb1-5c5621e8462e", "03c316f5-3630-4361-aa4e-7834853de95e"];
-getDryMillLot("03c316f5-3630-4361-aa4e-7834853de95e");
+// getDryMillLot("03c316f5-3630-4361-aa4e-7834853de95e");
 
 
 
