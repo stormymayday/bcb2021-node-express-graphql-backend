@@ -16,6 +16,7 @@ const graphQlResolvers = require('./graphql/resolvers/index');
 // Importing Utility Functions
 const { createHarvestLot } = require('./utils/createHarvestLot');
 const { createWetMillNode } = require('./utils/createWetMillNode');
+const { createWetMillLot } = require('./utils/createWetMillLot');
 
 // Creating app object by calling Express
 const app = express();
@@ -115,13 +116,12 @@ const createHarvestNode = (nodeId) => {
 const mirianHarvestNodeId = '1dd07753-5a46-4151-a720-badaa9462153';
 const claudiaYJuanHarvestNodeId = '702079e1-62c8-4087-bc82-544acf15d141';
 
-// createHarvestNode(claudiaYJuanHarvestNodeId);
+// createHarvestNode();
 
 // *********************************************************************************** //
 
 // ***************************** Creating a Harvest Lot ****************************** //
 
-// 
 const fetchAndStoreHarvestLots = async (harvestLotIds) => {
     for (let i = 0; i < harvestLotIds.length; i++) {
         // console.log(harvestLotIds.length);
@@ -131,9 +131,9 @@ const fetchAndStoreHarvestLots = async (harvestLotIds) => {
     }
 }
 
-// fetchAndStoreHarvestLots(MirianVasquezHarvestLots);
+// fetchAndStoreHarvestLots();
 
-// createHarvestLot("266b83d3-0a8d-4e8e-b380-a58487988f13");
+// createHarvestLot();
 
 // *********************************************************************************** //
 
@@ -142,112 +142,22 @@ const fetchAndStoreHarvestLots = async (harvestLotIds) => {
 const mirianWetMillnodeId = '33cbd53d-ea1c-4b45-a669-b8a3076a0436';
 const claudiaYJuanWetMillnodeId = '89b0ea0e-cc31-4da3-a22f-5bd1ca6eb3ae';
 
-// createWetMillNode(claudiaYJuanWetMillnodeId);
+// createWetMillNode();
 
 // *********************************************************************************** //
 
 // **************************** Creating a Wet Mill Lot ****************************** //
 
-const getWetMillLot = (wetMillLotId) => {
+const wetMillLots = ["39ed522b-c6e7-4a55-96e4-cdf950728a9b", "bb489cf1-1990-47e1-b7b8-e18dad4c5588", "2f0aebbf-9cef-4d25-ac08-423259921f97", "09a688f8-18a2-4055-8609-5bbf03f70295", "411013de-182e-4343-8bb6-c4c389868b86", "698a5a05-e9d9-45c1-acbd-35ffabd4a091", "4547a0c0-0bec-4dff-8ac1-66d1f110ebea", "12abf096-1182-47a6-9fe1-7fa5e5ab6bdb", "36d544e8-251b-44b8-946c-dbbfbe963dc8", "793b5552-03ba-44d4-91d2-c0801de689cc", "b1f2c43d-7a10-4dc2-8d3e-5151f6f0af70", "24995ef1-64eb-4e6d-96ca-5d0391f5f2bc", "fca23d55-c571-454e-964c-fbe3c7992941", "7a29756d-48c6-4586-be82-eef1a97e65bd", "0264a7f1-fae7-4c01-aeef-c863cf6fd610", "476fc798-b1fe-4f34-a8af-3ad7ce0eecf7", "8dc1ef52-2e4b-4e04-b8e4-7fb8bed63174", "3671514d-0de8-4f00-8db6-e1e070036e80", "8978b880-2e04-4fef-a252-0aca0c19e172", "5e957345-e657-442a-804d-f342de4b85d7", "6c4af25b-c0e6-4ac0-9597-89809fdeb122", "db3457a8-4262-4170-b7d0-ff0f04325805", "0bedef98-c38a-430b-b848-843504d90029", "36be097a-8f71-4136-90c1-8fdf80dea971", "04601f12-8060-45ec-9b31-5c3dc1c206de", "86bfef75-9ffe-4984-a9f8-be370fdbc309", "d6dcfac5-0610-44bb-a53b-3ba19a4b4a0b"];
 
-    fetch(`${process.env.GET_LOT}${wetMillLotId}`, {
-        method: 'GET',
-        headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.BEXT_API_KEY}`
-        }
-    })
-        .then((result) => {
-            // console.log(result);
-            return result.json();
-        })
-        .then((data) => {
-            // Logging data on the server
-            console.log(data);
-
-
-            // Storing data in the database
-            fetch('http://localhost:3000/graphql', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    // 'Accept': 'application/json',
-                },
-                body: JSON.stringify({
-                    query: ` 
-
-                        mutation {
-                            createWetMillLot(wetMillLotInput: {
-
-                                wetMillLotId: "${data.lotId}"
-
-                                wetMillNodeId: "${data.nodeId}"
-
-                                organizationId: "${data.organizationId}"
-                                marketplaceId: "${data.marketplaceId}"
-                                productId: "${data.productId}"
-                                lotName: "${data.lotName}"
-                                lotType: "${data.lotType}"
-                                lotDetailType: "${data.lotDetailType}"
-                                createdDate: "${data.createdDate}"
-                                lastModifiedDate: "${data.lastModifiedDate}"
-                                productName: "${data.productName}"
-                                productToken: "${data.productToken}"
-                                productSku: "${data.productSku}"
-                                organizationName: "${data.organizationName}"
-                                currentWeight: "${data.currentWeight}"
-                                currentWeightUnit: "${data.currentWeightUnit}"
-                                absorbedWeight: "${data.absorbedWeight}"
-                                absorbedWeightUnit: "${data.absorbedWeightUnit}"
-                                quality: "${data.quality}"
-
-                                lotIsOpen: ${data.lotIsOpen}
-
-                                images: ["${(data.images[0] ? data.images[0].urls[0] : "")}", "${(data.images[1] ? data.images[1].urls[0] : "")}"]
-                                documents: ["${(data.documents[0] ? data.documents[0].urls[0] : "")}", "${(data.documents[1] ? data.documents[1].urls[0] : "")}"]
-                                videos: ["${(data.videos[0] ? data.videos[0].urls[0] : "")}", "${(data.videos[1] ? data.videos[1].urls[0] : "")}"]
-                                
-
-                                value: "${(data.values ? Object.values(data.values)[0].value : "")}"
-                                asset: "${(data.values ? Object.values(data.values)[0].asset : "")}"
-                                timestamp: "${(data.values ? Object.values(data.values)[0].timeStamp : "")}"
-
-                                processingDate: "${(data.customData['ProcessingDate.MeasureTime'] ? data.customData['ProcessingDate.MeasureTime'].value : "")}"
-
-                            }) {
-
-                                wetMillLotId
-
-                            }
-                        }
-
-                 `
-
-                })
-            })
-                .then(r => r.json())
-                .then(data => console.log('data returned:', data));
-
-
-
-            // Sending data as a RESPONSE to the fronted
-            // response.json(data);
-        })
-        .catch((error) => {
-            console.log('Please enter a valid lot ID');
-            response.json(error);
-        });
-
-}
-
-const mirianWetMillLot = "c13610e8-18e4-49bb-82e5-791b8d8b8b21";
-// getWetMillLot(mirianWetMillLot);
+// createWetMillLot("39ed522b-c6e7-4a55-96e4-cdf950728a9b");
 
 // Batch Fetch and Store the Wet Mill Lots
 
 const fetchAndStoreWetMillLots = async (wetMillIds) => {
     for (let i = 0; i < wetMillIds.length; i++) {
 
-        let functionCall = await getWetMillLot(wetMillIds[i]);
+        let functionCall = await createWetMillLot(wetMillIds[i]);
 
     }
 }
