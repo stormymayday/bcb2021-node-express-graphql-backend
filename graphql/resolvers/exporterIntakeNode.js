@@ -24,7 +24,7 @@ module.exports = {
 
             exporterIntakeNodeId: args.exporterIntakeNodeInput.exporterIntakeNodeId,
 
-            farmer: '60c3676f17af3273425d935b',
+            farmer: '60eb7fe31bc2c19311e8419f',
 
             totaAbsorbedWeight: args.exporterIntakeNodeInput.totaAbsorbedWeight,
             totalAbsorbedWeightUnit: args.exporterIntakeNodeInput.totalAbsorbedWeightUnit,

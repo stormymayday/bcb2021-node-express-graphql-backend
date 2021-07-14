@@ -17,6 +17,7 @@ const graphQlResolvers = require('./graphql/resolvers/index');
 const { createHarvestLot } = require('./utils/createHarvestLot');
 const { createWetMillNode } = require('./utils/createWetMillNode');
 const { createWetMillLot } = require('./utils/createWetMillLot');
+const { createExporterIntakeNode } = require('./utils/createExporterIntakeNode');
 
 // Creating app object by calling Express
 const app = express();
@@ -148,9 +149,7 @@ const claudiaYJuanWetMillnodeId = '89b0ea0e-cc31-4da3-a22f-5bd1ca6eb3ae';
 
 // **************************** Creating a Wet Mill Lot ****************************** //
 
-const wetMillLots = ["39ed522b-c6e7-4a55-96e4-cdf950728a9b", "bb489cf1-1990-47e1-b7b8-e18dad4c5588", "2f0aebbf-9cef-4d25-ac08-423259921f97", "09a688f8-18a2-4055-8609-5bbf03f70295", "411013de-182e-4343-8bb6-c4c389868b86", "698a5a05-e9d9-45c1-acbd-35ffabd4a091", "4547a0c0-0bec-4dff-8ac1-66d1f110ebea", "12abf096-1182-47a6-9fe1-7fa5e5ab6bdb", "36d544e8-251b-44b8-946c-dbbfbe963dc8", "793b5552-03ba-44d4-91d2-c0801de689cc", "b1f2c43d-7a10-4dc2-8d3e-5151f6f0af70", "24995ef1-64eb-4e6d-96ca-5d0391f5f2bc", "fca23d55-c571-454e-964c-fbe3c7992941", "7a29756d-48c6-4586-be82-eef1a97e65bd", "0264a7f1-fae7-4c01-aeef-c863cf6fd610", "476fc798-b1fe-4f34-a8af-3ad7ce0eecf7", "8dc1ef52-2e4b-4e04-b8e4-7fb8bed63174", "3671514d-0de8-4f00-8db6-e1e070036e80", "8978b880-2e04-4fef-a252-0aca0c19e172", "5e957345-e657-442a-804d-f342de4b85d7", "6c4af25b-c0e6-4ac0-9597-89809fdeb122", "db3457a8-4262-4170-b7d0-ff0f04325805", "0bedef98-c38a-430b-b848-843504d90029", "36be097a-8f71-4136-90c1-8fdf80dea971", "04601f12-8060-45ec-9b31-5c3dc1c206de", "86bfef75-9ffe-4984-a9f8-be370fdbc309", "d6dcfac5-0610-44bb-a53b-3ba19a4b4a0b"];
-
-// createWetMillLot("39ed522b-c6e7-4a55-96e4-cdf950728a9b");
+// createWetMillLot("d6dcfac5-0610-44bb-a53b-3ba19a4b4a0b");
 
 // Batch Fetch and Store the Wet Mill Lots
 
@@ -166,86 +165,12 @@ const fetchAndStoreWetMillLots = async (wetMillIds) => {
 
 // *********************************************************************************** //
 
-const getExporterIntakeNode = (nodeId) => {
+// *********************** Creating an Exporter Intake Node ************************** //
 
-    fetch(`${process.env.GET_NODE}${nodeId}`, {
-        method: 'GET',
-        headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.BEXT_API_KEY}`
-        }
-    })
-        .then((result) => {
-            // console.log(result);
-            return result.json();
-        })
-        .then((data) => {
-            // Logging data on the server
-            console.log(data);
+const marcalaIntakeNode = 'c32bae0b-daae-465b-92d0-b9e5fdbbf9ee';
+// createExporterIntakeNode(marcalaIntakeNode);
 
-            // Storing data in the database
-            fetch('http://localhost:3000/graphql', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    // 'Accept': 'application/json',
-                },
-                body: JSON.stringify({
-                    query: ` 
-
-                    mutation {
-                        createExporterIntakeNode(exporterIntakeNodeInput: {
-
-                                exporterIntakeNodeId: "${data.nodeId}"
-
-                                organizationId: "${data.organizationId}"
-                                marketplaceId: "${data.marketplaceId}"
-                                defaultLocationId: "${data.defaultLocationId}"
-                                nodeName: "${data.nodeName}"
-                                nodeType: "${data.nodeType}"
-                                nodeDetailType: "${data.nodeDetailType}"
-                                createdDate: "${data.createdDate}"
-                                lastModifiedDate: "${data.lastModifiedDate}"
-                                organizationName: "${data.organizationName}"
-
-                                images: ["${(data.images[0] ? data.images[0].urls[0] : "")}", "${(data.images[1] ? data.images[1].urls[0] : "")}"]
-                                documents: ["${(data.documents[0] ? data.documents[0].urls[0] : "")}", "${(data.documents[1] ? data.documents[1].urls[0] : "")}"]
-                                videos: ["${(data.videos[0] ? data.videos[0].urls[0] : "")}", "${(data.videos[1] ? data.videos[1].urls[0] : "")}"]
-
-                                country: "${data.defaultLocation.country}"
-                                city: "${data.defaultLocation.city}"
-                                state: "${data.defaultLocation.state}"
-                                latitude: "${data.defaultLocation.latitude}"
-                                longitude: "${data.defaultLocation.longitude}"
-                                elevation: "${data.defaultLocation.elevation}"
-                                elevationUnit: "${data.defaultLocation.elevationUnit}"
-
-                            }) {
-
-                                exporterIntakeNodeId
-
-                            }
-                        }
-
-                 `
-
-                })
-            })
-                .then(r => r.json())
-                .then(data => console.log('data returned:', data));
-
-            // Sending data as a RESPONSE to the fronted
-            // response.json(data);
-        })
-        .catch((error) => {
-            console.log('Please enter a valid lot ID');
-            response.json(error);
-        });
-
-}
-
-// Did not work. Performed manual input
-// const marcalaIntakeNode = 'c32bae0b-daae-465b-92d0-b9e5fdbbf9ee';
-// getExporterIntakeNode(marcalaIntakeNode);
+// *********************************************************************************** //
 
 const getExporterIntakeLot = (exporterIntakeLotId) => {
 
