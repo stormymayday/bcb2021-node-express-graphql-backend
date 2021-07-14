@@ -18,6 +18,7 @@ const { createHarvestLot } = require('./utils/createHarvestLot');
 const { createWetMillNode } = require('./utils/createWetMillNode');
 const { createWetMillLot } = require('./utils/createWetMillLot');
 const { createExporterIntakeNode } = require('./utils/createExporterIntakeNode');
+const { createExporterIntakeLot } = require('./utils/createExporterIntakeLot');
 
 // Creating app object by calling Express
 const app = express();
@@ -172,115 +173,19 @@ const marcalaIntakeNode = 'c32bae0b-daae-465b-92d0-b9e5fdbbf9ee';
 
 // *********************************************************************************** //
 
-const getExporterIntakeLot = (exporterIntakeLotId) => {
-
-    fetch(`${process.env.GET_LOT}${exporterIntakeLotId}`, {
-        method: 'GET',
-        headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.BEXT_API_KEY}`
-        }
-    })
-        .then((result) => {
-            // console.log(result);
-            return result.json();
-        })
-        .then((data) => {
-            // Logging data on the server
-            console.log(data);
-
-
-            // Storing data in the database
-            fetch('http://localhost:3000/graphql', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    // 'Accept': 'application/json',
-                },
-                body: JSON.stringify({
-                    query: ` 
-
-                        mutation {
-                            createExporterIntakeLot(exporterIntakeLotInput: {
-
-                                exporterIntakeLotId: "${data.lotId}"
-
-                                exporterIntakeNodeId: "${data.nodeId}"
-
-                                organizationId: "${data.organizationId}"
-                                marketplaceId: "${data.marketplaceId}"
-                                productId: "${data.productId}"
-                                lotName: "${data.lotName}"
-                                lotType: "${data.lotType}"
-                                lotDetailType: "${data.lotDetailType}"
-                                createdDate: "${data.createdDate}"
-                                lastModifiedDate: "${data.lastModifiedDate}"
-                                productName: "${data.productName}"
-                                productToken: "${data.productToken}"
-                                productSku: "${data.productSku}"
-                                organizationName: "${data.organizationName}"
-                                currentWeight: "${data.currentWeight}"
-                                currentWeightUnit: "${data.currentWeightUnit}"
-                                absorbedWeight: "${data.absorbedWeight}"
-                                absorbedWeightUnit: "${data.absorbedWeightUnit}"
-                                quality: "${data.quality}"
-
-                                lotIsOpen: ${data.lotIsOpen}
-
-                                images: ["${(data.images[0] ? data.images[0].urls[0] : "")}", "${(data.images.length > 1 ? data.images[1].urls[0] : "")}"]
-                                documents: ["${(data.documents[0] ? data.documents[0].urls[0] : "")}", "${(data.documents[1] ? data.documents[1].urls[0] : "")}"]
-                                videos: ["${(data.videos[0] ? data.videos[0].urls[0] : "")}", "${(data.videos[1] ? data.videos[1].urls[0] : "")}"]
-                                
-
-                                value: "${(data.values ? Object.values(data.values)[0].value : "")}"
-                                asset: "${(data.values ? Object.values(data.values)[0].asset : "")}"
-                                timestamp: "${(data.values ? Object.values(data.values)[0].timeStamp : "")}"
-
-                                processingDate: "${(data.customData['ProcessingDate.MeasureTime'] ? data.customData['ProcessingDate.MeasureTime'].value : "")}"
-
-                            }) {
-
-                                exporterIntakeLotId
-
-                            }
-                        }
-
-                 `
-
-                })
-            })
-                .then(r => r.json())
-                .then(data => console.log('data returned:', data));
-
-
-
-            // Sending data as a RESPONSE to the fronted
-            // response.json(data);
-        })
-        .catch((error) => {
-            console.log('Please enter a valid lot ID');
-            response.json(error);
-        });
-
-}
-
-
-// Testing one Exporter Intake Lot
-const mirianExprterIntakeLot = "fa5900c5-8745-4c65-9424-9cd4dacd1b9c";
-// getExporterIntakeLot(mirianExprterIntakeLot);
-
-// Batch Fetch and Store the Exporter Intake Lots
+// *********************** Creating an Exporter Intake Lot *************************** //
 
 const fetchAndStoreExporterIntakeLots = async (exporterIntakeLotIds) => {
     for (let i = 0; i < exporterIntakeLotIds.length; i++) {
 
-        let functionCall = await getExporterIntakeLot(exporterIntakeLotIds[i]);
+        let functionCall = await createExporterIntakeLot(exporterIntakeLotIds[i]);
 
     }
 }
 
-const MirianVasquezExporterIntakeLots = ["b1e3936e-ac65-4197-9781-23567a1aa5b5", "fa5900c5-8745-4c65-9424-9cd4dacd1b9c", "42ec3333-ecbb-48ae-b90d-5bdcbf254f70", "a6848507-664d-4c00-8f28-c25f3ee3a3b9", "cef36cd9-b538-4fd4-99cd-d665fff0ab29", "d786b175-1827-482e-b94d-86196c3f057a"];
+// fetchAndStoreExporterIntakeLots(lots);
 
-// fetchAndStoreExporterIntakeLots(MirianVasquezExporterIntakeLots);
+// *********************************************************************************** //
 
 
 const getDryMillNode = (nodeId) => {
