@@ -20,6 +20,7 @@ const { createWetMillLot } = require('./utils/createWetMillLot');
 const { createExporterIntakeNode } = require('./utils/createExporterIntakeNode');
 const { createExporterIntakeLot } = require('./utils/createExporterIntakeLot');
 const { createDryMillNode } = require('./utils/createDryMillNode');
+const { createDryMillLot } = require('./utils/createDryMillLot');
 
 // Creating app object by calling Express
 const app = express();
@@ -195,104 +196,24 @@ const VillaFloridaDryMillNodeId = '326d2dae-9cd0-4b4c-b64d-8874e1d80abd';
 
 // *********************************************************************************** //
 
-const getDryMillLot = (lotId) => {
+// **************************** Creating a Dry Mill Lot ****************************** //
 
-    fetch(`${process.env.GET_LOT}${lotId}`, {
-        method: 'GET',
-        headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.BEXT_API_KEY}`
-        }
-    })
-        .then((result) => {
-            // console.log(result);
-            return result.json();
-        })
-        .then((data) => {
-            // Logging data on the server
-            console.log(data);
+const cYJDryMillLots = ["c9eb2017-29ec-4aee-b6ab-e6d300bf6a54", "08bd1b1e-89d2-4f2a-9c0d-c14af26278a0"];
 
+const fetchAndStoreDryMillLots = async (dryMillLotIds) => {
+    for (let i = 0; i < dryMillLotIds.length; i++) {
 
-            // Storing data in the database
-            fetch('http://localhost:3000/graphql', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    // 'Accept': 'application/json',
-                },
-                body: JSON.stringify({
-                    query: ` 
+        let functionCall = await createDryMillLot(dryMillLotIds[i]);
 
-                        mutation {
-                            createDryMillLot(dryMillLotInput: {
-
-                                dryMillLotId: "${data.lotId}"
-
-                                dryMillNodeId: "${data.nodeId}"
-
-                                organizationId: "${data.organizationId}"
-                                marketplaceId: "${data.marketplaceId}"
-                                productId: "${data.productId}"
-                                lotName: "${data.lotName}"
-                                lotType: "${data.lotType}"
-                                lotDetailType: "${data.lotDetailType}"
-                                createdDate: "${data.createdDate}"
-                                lastModifiedDate: "${data.lastModifiedDate}"
-                                productName: "${data.productName}"
-                                productToken: "${data.productToken}"
-                                productSku: "${data.productSku}"
-                                organizationName: "${data.organizationName}"
-                                currentWeight: "${data.currentWeight}"
-                                currentWeightUnit: "${data.currentWeightUnit}"
-                                absorbedWeight: "${data.absorbedWeight}"
-                                absorbedWeightUnit: "${data.absorbedWeightUnit}"
-                                quality: "${data.quality}"
-
-                                lotIsOpen: ${data.lotIsOpen}
-
-                                images: ["${(data.images[0] ? data.images[0].urls[0] : "")}", "${(data.images.length > 1 ? data.images[1].urls[0] : "")}"]
-                                documents: ["${(data.documents[0] ? data.documents[0].urls[0] : "")}", "${(data.documents.length > 1 ? data.documents[1].urls[0] : "")}"]
-                                videos: ["${(data.videos[0] ? data.videos[0].urls[0] : "")}", "${(data.videos.length > 1 ? data.videos[1].urls[0] : "")}"]
-                                
-
-                                value: "${(data.values ? Object.values(data.values)[0].value : "")}"
-                                asset: "${(data.values ? Object.values(data.values)[0].asset : "")}"
-                                timestamp: "${(data.values ? Object.values(data.values)[0].timeStamp : "")}"
-
-                                processingDate: "${(data.customData['ProcessingDate.MeasureTime'] ? data.customData['ProcessingDate.MeasureTime'].value : "")}"
-
-                            }) {
-
-                                dryMillLotId
-
-                            }
-                        }
-
-                 `
-
-                })
-            })
-                .then(r => r.json())
-                .then(data => console.log('data returned:', data));
-
-
-
-            // Sending data as a RESPONSE to the fronted
-            // response.json(data);
-        })
-        .catch((error) => {
-            console.log('Please enter a valid lot ID');
-            response.json(error);
-        });
-
+    }
 }
 
-// Testing one Dry Mill Lot - One Did not work. Performed manual input for the first lot.
-// const mirianDryMillLots = ["dafe236e-cb33-477a-8fb1-5c5621e8462e", "03c316f5-3630-4361-aa4e-7834853de95e"];
-// getDryMillLot("03c316f5-3630-4361-aa4e-7834853de95e");
+// fetchAndStoreDryMillLots(cYJDryMillLots);
 
+// *********************************************************************************** //
 
+/////////////////////////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////////////////////
 // GraphQL API
 app.use('/graphql', graphqlHTTP({
     schema: graphQlSchema,
