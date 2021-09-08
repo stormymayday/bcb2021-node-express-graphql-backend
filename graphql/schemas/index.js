@@ -593,6 +593,187 @@ module.exports = buildSchema(`
 
         }
 
+        type ExportNode {
+
+            _id: ID!
+            totaAbsorbedWeight: String
+            totalAbsorbedWeightUnit: String
+
+            exportLots: [ExportLot]
+
+            exportNodeId: String!
+            organizationId: String
+            marketplaceId: String
+            defaultLocationId: String
+            nodeName: String
+            nodeType: String
+            nodeDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            organizationName: String
+
+            images: [String]
+            videos: [String]
+            documents: [String]
+
+            value: String
+            valueUnit: String
+            unitValue: String
+            unitValueUnit: String
+
+            locationId: String
+            name: String
+            country: String
+            city: String
+            state: String
+            latitude: String
+            longitude: String
+            elevation: String
+            elevationUnit: String
+
+        }
+
+
+        input ExportNodeInput {
+
+            totaAbsorbedWeight: String
+            totalAbsorbedWeightUnit: String
+
+            exportLots: [ExportLotInput]
+
+            exportNodeId: String!
+            organizationId: String
+            marketplaceId: String
+            defaultLocationId: String
+            nodeName: String
+            nodeType: String
+            nodeDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            organizationName: String
+
+            images: [String]
+            videos: [String]
+            documents: [String]
+
+            value: String
+            valueUnit: String
+            unitValue: String
+            unitValueUnit: String
+
+            locationId: String
+            name: String
+            country: String
+            city: String
+            state: String
+            latitude: String
+            longitude: String
+            elevation: String
+            elevationUnit: String
+
+        }
+
+        type ExportLot {
+
+            _id: ID!
+
+            exportNode: ExportNode
+
+            exportLotId: String
+            exportNodeId: String
+
+            organizationId: String
+            marketplaceId: String
+            productId: String
+            lotName: String
+            lotType: String
+            lotDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            productName: String
+            productToken: String
+            productSku: String
+            organizationName: String
+            currentWeight: String
+            currentWeightUnit: String,
+            absorbedWeight: String
+            absorbedWeightUnit: String
+            quality: String
+            lotIsOpen: Boolean
+
+            images: [String]
+            documents: [String]
+            videos: [String]
+
+            secondPaymentValue: String
+            secondPaymentAsset: String
+            secondPaymentTimeStamp: String
+            secondPaymentNotes: String
+            
+            spousePaymentValue: String
+            spousePaymentAsset: String
+            spousePaymentTimestamp: String
+            spousePaymentNotes: String
+
+            ihcafePaymentValue: String
+            ihcafePaymentAsset: String
+            ihcafePaymentTimeStamp: String
+            ihcafePaymentNotes: String
+
+            numberOfBags: String
+
+        }
+
+        input ExportLotInput {
+
+            exportNode: ExportNodeInput
+
+            exportLotId: String
+            exportNodeId: String
+
+            organizationId: String
+            marketplaceId: String
+            productId: String
+            lotName: String
+            lotType: String
+            lotDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            productName: String
+            productToken: String
+            productSku: String
+            organizationName: String
+            currentWeight: String
+            currentWeightUnit: String,
+            absorbedWeight: String
+            absorbedWeightUnit: String
+            quality: String
+            lotIsOpen: Boolean
+
+            images: [String]
+            documents: [String]
+            videos: [String]
+
+            secondPaymentValue: String
+            secondPaymentAsset: String
+            secondPaymentTimeStamp: String
+            secondPaymentNotes: String
+
+            spousePaymentValue: String
+            spousePaymentAsset: String
+            spousePaymentTimestamp: String
+            spousePaymentNotes: String
+
+            ihcafePaymentValue: String
+            ihcafePaymentAsset: String
+            ihcafePaymentTimeStamp: String
+            ihcafePaymentNotes: String
+
+            numberOfBags: String
+
+        }
+
+
         type Farmer {
 
             _id: ID!
@@ -602,6 +783,8 @@ module.exports = buildSchema(`
             wetMillNode: WetMillNode
             exporterIntakeNode: ExporterIntakeNode
             dryMillNode: DryMillNode
+
+            exportNode: ExportNode
 
         }
 
@@ -613,6 +796,8 @@ module.exports = buildSchema(`
             wetMillNode: WetMillNodeInput
             exporterIntakeNode: ExporterIntakeNodeInput
             dryMillNode: DryMillNodeInput
+
+            exportNode: ExportNodeInput
 
         }
 
@@ -637,6 +822,9 @@ module.exports = buildSchema(`
 
             createDryMillNode(dryMillNodeInput: DryMillNodeInput): DryMillNode
             createDryMillLot(dryMillLotInput: DryMillLotInput): DryMillLot
+
+            createExportNode(exportNodeInput: ExportNodeInput): ExportNode
+            createExportLot(exportLotInput: ExportLotInput): ExportLot
 
         }
 
