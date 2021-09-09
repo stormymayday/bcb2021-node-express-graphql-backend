@@ -24,6 +24,9 @@ const { createDryMillLot } = require('./utils/createDryMillLot');
 const { createExportNode } = require('./utils/createExportNode');
 const { createExportLot } = require('./utils/createExportLot');
 
+const { createImportNode } = require('./utils/createImportNode');
+const { createImportLot } = require('./utils/createImportLot');
+
 // Creating app object by calling Express
 const app = express();
 
@@ -221,7 +224,7 @@ const ExportNodeId = 'b8a4b60f-552b-406e-84f9-3bafd0b3f904';
 
 // *********************************************************************************** //
 
-// **************************** Creating an Export Lot ******************************* //
+// **************************** Creating an Export Lots ****************************** //
 
 const claudiaJuanExportLots = ["9493daaa-0652-46ff-95b0-ae9698692137"];
 
@@ -234,6 +237,29 @@ const fetchAndStoreExportLots = async (exportLotIds) => {
 }
 
 // fetchAndStoreExportLots(claudiaJuanExportLots);
+
+// *********************************************************************************** //
+
+// **************************** Creating an Import Node ****************************** //
+
+const ImportNodeId = 'ee761058-6de6-47b3-94ce-33059975764c';
+// createImportNode(ImportNodeId);
+
+// *********************************************************************************** //
+
+// **************************** Creating an Import Lots ****************************** //
+
+const claudiaJuanImportLots = ["df1315fd-4bbb-425a-9498-4929a4242ca4"];
+
+const fetchAndStoreImportLots = async (importLotIds) => {
+    for (let i = 0; i < importLotIds.length; i++) {
+
+        let functionCall = await createImportLot(importLotIds[i]);
+
+    }
+}
+
+// fetchAndStoreImportLots(claudiaJuanImportLots);
 
 // *********************************************************************************** //
 

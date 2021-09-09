@@ -16,6 +16,9 @@ const dryMillLotResolver = require('./dryMillLot');
 const exportNodeResolver = require('./exportNode');
 const exportLotResolver = require('./exportLot');
 
+const importNodeResolver = require('./importNode');
+const importLotResolver = require('./importLot');
+
 // Rest of the Individual Resolvers should go here...
 
 // Mergin Individual Resolvers  into one resolver (rootResolver) for export
@@ -30,7 +33,9 @@ const rootResolver = {
     ...dryMillNodeResolver,
     ...dryMillLotResolver,
     ...exportNodeResolver,
-    ...exportLotResolver
+    ...exportLotResolver,
+    ...importNodeResolver,
+    ...importLotResolver
     // Add more resolvers here...
 };
 

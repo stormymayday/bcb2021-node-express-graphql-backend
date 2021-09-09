@@ -633,7 +633,6 @@ module.exports = buildSchema(`
 
         }
 
-
         input ExportNodeInput {
 
             totaAbsorbedWeight: String
@@ -773,6 +772,161 @@ module.exports = buildSchema(`
 
         }
 
+        type ImportNode {
+
+            _id: ID!
+
+            totaAbsorbedWeight: String
+            totalAbsorbedWeightUnit: String
+
+            importLots: [ImportLot]
+
+            importNodeId: String!
+
+            organizationId: String
+            marketplaceId: String
+            defaultLocationId: String
+            nodeName: String
+            nodeType: String
+            nodeDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            organizationName: String
+
+            images: [String]
+            videos: [String]
+            documents: [String]
+
+            value: String
+            valueUnit: String
+            unitValue: String
+            unitValueUnit: String
+
+            locationId: String
+            name: String
+            country: String
+            city: String
+            state: String
+            latitude: String
+            longitude: String
+            elevation: String
+            elevationUnit: String
+
+        }
+
+        input ImportNodeInput {
+
+            totaAbsorbedWeight: String
+            totalAbsorbedWeightUnit: String
+
+            importLots: [ImportLotInput]
+
+            importNodeId: String!
+
+            organizationId: String
+            marketplaceId: String
+            defaultLocationId: String
+            nodeName: String
+            nodeType: String
+            nodeDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            organizationName: String
+
+            images: [String]
+            videos: [String]
+            documents: [String]
+
+            value: String
+            valueUnit: String
+            unitValue: String
+            unitValueUnit: String
+
+            locationId: String
+            name: String
+            country: String
+            city: String
+            state: String
+            latitude: String
+            longitude: String
+            elevation: String
+            elevationUnit: String
+
+        }
+
+        type ImportLot {
+
+            _id: ID!
+
+            importNode: ImportNode
+
+            importLotId: String
+            importNodeId: String
+
+            organizationId: String
+            marketplaceId: String
+            productId: String
+            lotName: String
+            lotType: String
+            lotDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            productName: String
+            productToken: String
+            productSku: String
+            organizationName: String
+            currentWeight: String
+            currentWeightUnit: String,
+            absorbedWeight: String
+            absorbedWeightUnit: String
+            quality: String
+            lotIsOpen: Boolean
+
+            images: [String]
+            documents: [String]
+            videos: [String]
+
+            numberOfBags: String
+            damage: String
+            transferDate: String
+
+        }
+
+        input ImportLotInput {
+
+            importNode: ImportNodeInput
+
+            importLotId: String
+            importNodeId: String
+
+            organizationId: String
+            marketplaceId: String
+            productId: String
+            lotName: String
+            lotType: String
+            lotDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            productName: String
+            productToken: String
+            productSku: String
+            organizationName: String
+            currentWeight: String
+            currentWeightUnit: String,
+            absorbedWeight: String
+            absorbedWeightUnit: String
+            quality: String
+            lotIsOpen: Boolean
+
+            images: [String]
+            documents: [String]
+            videos: [String]
+
+            numberOfBags: String
+            damage: String
+            transferDate: String
+
+        }
 
         type Farmer {
 
@@ -785,6 +939,7 @@ module.exports = buildSchema(`
             dryMillNode: DryMillNode
 
             exportNode: ExportNode
+            importNode: ImportNode
 
         }
 
@@ -798,6 +953,7 @@ module.exports = buildSchema(`
             dryMillNode: DryMillNodeInput
 
             exportNode: ExportNodeInput
+            importNode: ImportNodeInput
 
         }
 
@@ -825,6 +981,9 @@ module.exports = buildSchema(`
 
             createExportNode(exportNodeInput: ExportNodeInput): ExportNode
             createExportLot(exportLotInput: ExportLotInput): ExportLot
+            
+            createImportNode(importNodeInput: ImportNodeInput): ImportNode
+            createImportLot(importLotInput: ImportLotInput): ImportLot
 
         }
 

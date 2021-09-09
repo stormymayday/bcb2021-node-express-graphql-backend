@@ -4,6 +4,7 @@ const WetMillNode = require('../../models/wetMillNode');
 const ExporterIntakeNode = require('../../models/exporterIntakeNode');
 const DryMillNode = require('../../models/dryMillNode');
 const ExportNode = require('../../models/exportNode');
+const ImportNode = require('../../models/importNode');
 
 // Function that links Farmer with Harvest Node
 const fetchHarvestNode = harvestNodeId => {
@@ -90,8 +91,26 @@ const fetchExportNode = _id => {
 
 };
 
+// Function that links Farmer with Import Node
+const fetchImportNode = _id => {
+
+    return ImportNode.findById(_id).populate('importLots')
+        .then(importNode => {
+
+            return {
+                ...importNode._doc
+            };
+
+        })
+        .catch(err => {
+            throw err;
+        })
+
+};
+
 exports.fetchHarvestNode = fetchHarvestNode;
 exports.fetchWetMillNode = fetchWetMillNode;
 exports.fetchExporterIntakeNode = fetchExporterIntakeNode;
 exports.fetchDryMillNode = fetchDryMillNode;
 exports.fetchExportNode = fetchExportNode;
+exports.fetchImportNode = fetchImportNode;

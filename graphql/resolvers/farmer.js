@@ -2,7 +2,16 @@
 const Farmer = require('../../models/farmer');
 
 // Importing Merge (Fetch) Functions
-const { fetchHarvestNode, fetchWetMillNode, fetchExporterIntakeNode, fetchDryMillNode, fetchExportNode } = require('./merge');
+const {
+
+    fetchHarvestNode,
+    fetchWetMillNode,
+    fetchExporterIntakeNode,
+    fetchDryMillNode,
+    fetchExportNode,
+    fetchImportNode
+
+} = require('./merge');
 
 
 module.exports = {
@@ -28,9 +37,10 @@ module.exports = {
                         dryMillNode: fetchDryMillNode.bind(this, farmer._doc.dryMillNode),
 
                         // Export Node
-                        exportNode: fetchExportNode.bind(this, farmer._doc.exportNode)
+                        exportNode: fetchExportNode.bind(this, farmer._doc.exportNode),
 
                         // Import Node
+                        importNode: fetchImportNode.bind(this, farmer._doc.importNode)
 
                         // Roasting Node
 
