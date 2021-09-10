@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-const createWetMillNode = (nodeId) => {
+const createHarvestNode = (nodeId) => {
 
     fetch(`${process.env.GET_NODE}${nodeId}`, {
         method: 'GET',
@@ -27,12 +27,9 @@ const createWetMillNode = (nodeId) => {
                     query: ` 
 
                     mutation {
-                        createWetMillNode(wetMillNodeInput: {
+                        createHarvestNode(harvestNodeInput: {
 
-                                wetMillNodeId: "${data.nodeId}"
-
-                                totaAbsorbedWeight: ""
-                                totalAbsorbedWeightUnit: ""
+                                harvestNodeId: "${data.nodeId}"
 
                                 organizationId: "${data.organizationId}"
                                 marketplaceId: "${data.marketplaceId}"
@@ -58,7 +55,7 @@ const createWetMillNode = (nodeId) => {
 
                             }) {
 
-                                wetMillNodeId
+                                harvestNodeId
 
                             }
                         }
@@ -80,4 +77,4 @@ const createWetMillNode = (nodeId) => {
 
 }
 
-exports.createWetMillNode = createWetMillNode;
+exports.createHarvestNode = createHarvestNode;

@@ -27,6 +27,16 @@ const farmerSchema = new Schema({
         type: Schema.Types.ObjectId,
         // required: true,
         ref: 'DryMillNode'
+    },
+    exportNode: {
+        type: Schema.Types.ObjectId,
+        // required: true,
+        ref: 'ExportNode'
+    },
+    importNode: {
+        type: Schema.Types.ObjectId,
+        // required: true,
+        ref: 'ImportNode'
     }
 });
 
