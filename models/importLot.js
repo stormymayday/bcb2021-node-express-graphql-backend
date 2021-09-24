@@ -90,6 +90,45 @@ const importLotSchema = new Schema({
         }
     ],
 
+    fobBasePaymentValue: {
+        type: String
+    },
+    fobBasePaymentAsset: {
+        type: String
+    },
+    fobBasePaymentTimeStamp: {
+        type: String
+    },
+    fobBasePaymentNotes: {
+        type: String
+    },
+
+    fobPremiumPaymentValue: {
+        type: String
+    },
+    fobPremiumPaymentAsset: {
+        type: String
+    },
+    fobPremiumPaymentTimestamp: {
+        type: String
+    },
+    fobPremiumPaymentNotes: {
+        type: String
+    },
+
+    catrachaCommunityContributionPaymentValue: {
+        type: String
+    },
+    catrachaCommunityContributionPaymentAsset: {
+        type: String
+    },
+    catrachaCommunityContributionPaymentTimeStamp: {
+        type: String
+    },
+    catrachaCommunityContributionPaymentNotes: {
+        type: String
+    },
+
     numberOfBags: {
         type: String
     },

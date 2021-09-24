@@ -21,8 +21,8 @@ module.exports = {
                     // Creating New Export Lot 
                     const exportLot = new ExportLot({
 
-                        // Claudia & Juan
-                        exportNode: '6137f75f16295d21d04393a7',
+                        // Luis
+                        exportNode: '613bc34dda1548532fad78fb',
 
                         exportLotId: args.exportLotInput.exportLotId,
 
@@ -82,7 +82,7 @@ module.exports = {
                             createdExportLot = { ...result._doc };
 
                             // Finding Export Node by ID
-                            return ExportNode.findById('6137f75f16295d21d04393a7')
+                            return ExportNode.findById('613bc34dda1548532fad78fb')
 
                         })
                         .then(exportNode => {

@@ -886,6 +886,21 @@ module.exports = buildSchema(`
             documents: [String]
             videos: [String]
 
+            fobBasePaymentValue: String
+            fobBasePaymentAsset: String
+            fobBasePaymentTimeStamp: String
+            fobBasePaymentNotes: String
+
+            fobPremiumPaymentValue: String
+            fobPremiumPaymentAsset: String
+            fobPremiumPaymentTimestamp: String
+            fobPremiumPaymentNotes: String
+
+            catrachaCommunityContributionPaymentValue: String
+            catrachaCommunityContributionPaymentAsset: String
+            catrachaCommunityContributionPaymentTimeStamp: String
+            catrachaCommunityContributionPaymentNotes: String
+
             numberOfBags: String
             damage: String
             transferDate: String
@@ -921,6 +936,21 @@ module.exports = buildSchema(`
             images: [String]
             documents: [String]
             videos: [String]
+
+            fobBasePaymentValue: String
+            fobBasePaymentAsset: String
+            fobBasePaymentTimeStamp: String
+            fobBasePaymentNotes: String
+
+            fobPremiumPaymentValue: String
+            fobPremiumPaymentAsset: String
+            fobPremiumPaymentTimestamp: String
+            fobPremiumPaymentNotes: String
+
+            catrachaCommunityContributionPaymentValue: String
+            catrachaCommunityContributionPaymentAsset: String
+            catrachaCommunityContributionPaymentTimeStamp: String
+            catrachaCommunityContributionPaymentNotes: String
 
             numberOfBags: String
             damage: String

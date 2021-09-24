@@ -20,7 +20,7 @@ module.exports = {
         // Creating New Export Node
         const exportNode = new ExportNode({
 
-            // Claudia & Juan
+            // Luis
             farmer: '613a9694e697483d168be5d4',
 
             totaAbsorbedWeight: args.exportNodeInput.totaAbsorbedWeight,

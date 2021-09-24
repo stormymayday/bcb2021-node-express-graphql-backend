@@ -51,6 +51,21 @@ module.exports = {
                         documents: args.importLotInput.documents,
                         videos: args.importLotInput.videos,
 
+                        fobBasePaymentValue: args.importLotInput.fobBasePaymentValue,
+                        fobBasePaymentAsset: args.importLotInput.fobBasePaymentAsset,
+                        fobBasePaymentTimeStamp: args.importLotInput.fobBasePaymentTimeStamp,
+                        fobBasePaymentNotes: args.importLotInput.fobBasePaymentNotes,
+
+                        fobPremiumPaymentValue: args.importLotInput.fobPremiumPaymentValue,
+                        fobPremiumPaymentAsset: args.importLotInput.fobPremiumPaymentAsset,
+                        fobPremiumPaymentTimestamp: args.importLotInput.fobPremiumPaymentTimestamp,
+                        fobPremiumPaymentNotes: args.importLotInput.fobPremiumPaymentNotes,
+
+                        catrachaCommunityContributionPaymentValue: args.importLotInput.catrachaCommunityContributionPaymentValue,
+                        catrachaCommunityContributionPaymentAsset: args.importLotInput.catrachaCommunityContributionPaymentAsset,
+                        catrachaCommunityContributionPaymentTimeStamp: args.importLotInput.catrachaCommunityContributionPaymentTimeStamp,
+                        catrachaCommunityContributionPaymentNotes: args.importLotInput.catrachaCommunityContributionPaymentNotes,
+
                         numberOfBags: args.importLotInput.numberOfBags,
                         damage: args.importLotInput.damage,
                         transferDate: args.importLotInput.transferDate

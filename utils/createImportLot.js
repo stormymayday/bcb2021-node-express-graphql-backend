@@ -59,6 +59,21 @@ const createImportLot = (lotId) => {
                                 documents: ["${(data.documents[0] ? data.documents[0].urls[0] : "")}", "${(data.documents.length > 1 ? data.documents[1].urls[0] : "")}", "${(data.documents.length > 2 ? data.documents[2].urls[0] : "")}"]
                                 videos: ["${(data.videos[0] ? data.videos[0].urls[0] : "")}", "${(data.videos.length > 1 ? data.videos[1].urls[0] : "")}"]
 
+                                fobBasePaymentValue: ""
+                                fobBasePaymentAsset: ""
+                                fobBasePaymentTimeStamp: ""
+                                fobBasePaymentNotes: ""
+
+                                fobPremiumPaymentValue: ""
+                                fobPremiumPaymentAsset: ""
+                                fobPremiumPaymentTimestamp: ""
+                                fobPremiumPaymentNotes: ""
+
+                                catrachaCommunityContributionPaymentValue: ""
+                                catrachaCommunityContributionPaymentAsset: ""
+                                catrachaCommunityContributionPaymentTimeStamp: ""
+                                catrachaCommunityContributionPaymentNotes: ""
+
                                 numberOfBags: "${data.customData['NumberOfBags.Measure'].value}"
                                 damage: "${data.customData['Damage.Measure'].value}"
                                 transferDate: "${data.customData['TransferDate.MeasureTime'].value}"
