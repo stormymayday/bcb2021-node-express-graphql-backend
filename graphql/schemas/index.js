@@ -961,7 +961,9 @@ module.exports = buildSchema(`
         type Farmer {
 
             _id: ID!
+
             farmerName: String!
+            producerName: String
 
             harvestNode: HarvestNode            
             wetMillNode: WetMillNode

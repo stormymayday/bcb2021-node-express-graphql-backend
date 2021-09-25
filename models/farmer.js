@@ -8,6 +8,9 @@ const farmerSchema = new Schema({
         type: String,
         required: true
     },
+    producerName: {
+        type: String
+    },
     harvestNode: {
         type: Schema.Types.ObjectId,
         // required: true,
