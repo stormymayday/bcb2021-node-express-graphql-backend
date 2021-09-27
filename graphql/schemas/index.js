@@ -978,6 +978,7 @@ module.exports = buildSchema(`
         input FarmerInput {
 
             farmerName: String!
+            producerName: String
 
             harvestNode: HarvestNodeInput
             wetMillNode: WetMillNodeInput
