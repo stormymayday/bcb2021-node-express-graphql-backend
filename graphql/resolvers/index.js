@@ -19,6 +19,9 @@ const exportLotResolver = require('./exportLot');
 const importNodeResolver = require('./importNode');
 const importLotResolver = require('./importLot');
 
+const roasterIntakeNodeResolver = require('./roasterIntakeNode');
+const roasterIntakeLotResolver = require('./roasterIntakeLot');
+
 // Rest of the Individual Resolvers should go here...
 
 // Mergin Individual Resolvers  into one resolver (rootResolver) for export
@@ -35,7 +38,9 @@ const rootResolver = {
     ...exportNodeResolver,
     ...exportLotResolver,
     ...importNodeResolver,
-    ...importLotResolver
+    ...importLotResolver,
+    ...roasterIntakeNodeResolver,
+    ...roasterIntakeLotResolver
     // Add more resolvers here...
 };
 

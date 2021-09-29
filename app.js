@@ -24,9 +24,11 @@ const { createDryMillNode } = require('./utils/createDryMillNode');
 const { createDryMillLot } = require('./utils/createDryMillLot');
 const { createExportNode } = require('./utils/createExportNode');
 const { createExportLot } = require('./utils/createExportLot');
-
 const { createImportNode } = require('./utils/createImportNode');
 const { createImportLot } = require('./utils/createImportLot');
+
+const { createRoasterIntakeNode } = require('./utils/createRoasterIntakeNode');
+const { createRoasterIntakeLot } = require('./utils/createRoasterIntakeLot');
 
 // Creating app object by calling Express
 const app = express();
@@ -193,6 +195,30 @@ const fetchAndStoreImportLots = async (importLotIds) => {
 }
 
 // fetchAndStoreImportLots(importLots);
+
+// *********************************************************************************** //
+
+// *********************** Creating an Roaster Intake Node ************************** //
+
+const qcccRoasterIntakeNode = 'bbb8b444-ad7b-4caf-8d82-d30eee42d357';
+const oldSoulRoasterIntakeNode = '';
+// createRoasterIntakeNode(qcccRoasterIntakeNode);
+
+// *********************************************************************************** //
+
+// ************************* Creating Roaster Intake Lots **************************** //
+
+const qcccRoasterIntakeLots = ["8867ca16-4ad9-49f2-bca4-0b581190d43e"];
+
+const fetchAndStoreRoasterIntakeLots = async (roasterIntakeLotsIds) => {
+    for (let i = 0; i < roasterIntakeLotsIds.length; i++) {
+
+        let functionCall = await createRoasterIntakeLot(roasterIntakeLotsIds[i]);
+
+    }
+}
+
+// fetchAndStoreRoasterIntakeLots(qcccRoasterIntakeLots);
 
 // *********************************************************************************** //
 
