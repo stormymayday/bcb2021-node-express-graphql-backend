@@ -74,7 +74,7 @@ const createExportLot = (lotId) => {
                                 ihcafePaymentTimeStamp: ""
                                 ihcafePaymentNotes: ""
 
-                                numberOfBags: ""
+                                numberOfBags: "${data.customData['NumberOfBags'].value}"
                                 
                             }) {
 
