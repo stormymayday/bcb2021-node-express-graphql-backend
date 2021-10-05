@@ -57,10 +57,11 @@ const JoseAntonioNolascoHarvestNodeId = '8c8a341d-112d-43a0-bc28-8d7b5eceb697';
 const mariaAdelaHarvestNodeId = '9efb04d1-76ab-4dae-94dd-29f0b0105fcc';
 const atanacioHarvestNodeId = '174a5f0c-0a98-46b9-b1af-c3fee2e78470';
 const fidelinaHarvestNodeId = '77073017-c640-4822-ad6d-7e6fd51da0f8';
-
 const francisHarvestNodeId = 'bc4fb3d0-97c9-4b84-946a-406bb7901de9';
 
-// createHarvestNode(francisHarvestNodeId);
+const adanHarvestNodeId = 'd7a3d524-d8fa-4f0d-b695-e5c7dfbc09a2';
+
+// createHarvestNode(adanHarvestNodeId);
 
 // *********************************************************************************** //
 
@@ -74,7 +75,7 @@ const fetchAndStoreHarvestLots = async (harvestLotIds) => {
         // continue;
     }
 }
-const harvestLots = ["8ec3ed57-7980-47f8-bb5d-cf1385b5aaaa", "71765cc2-8d17-49d5-b541-0af4aebe6353", "91cd9f57-5718-4a7b-88d8-55da12be0342"];
+const harvestLots = ["d3448b76-501f-4e71-a554-bd418f08f8b5", "6c99f5eb-baf1-4ecc-a06c-4541198a2563"];
 
 // fetchAndStoreHarvestLots(harvestLots);
 
@@ -89,10 +90,10 @@ const JoseAntonioNolascoWetMillnodeId = '52adf38d-af7d-48b8-b3f1-d0c2ca9108b5';
 const mariaAdelaWetMillnodeId = '645bbec5-6faa-4185-8c54-ca9851a9b638';
 const atanacioWetMillnodeId = '52adf38d-af7d-48b8-b3f1-d0c2ca9108b5';
 const fidelinaWetMillnodeId = '52adf38d-af7d-48b8-b3f1-d0c2ca9108b5';
-
 const francisWetMillNodeId = 'eafdbb3c-c5aa-4648-a419-0baaf95f89ae';
+const adanWetMillNodeId = '57d900e5-bcc2-45f7-9776-e4b86d317abc';
 
-// createWetMillNode(francisWetMillNodeId);
+// createWetMillNode(adanWetMillNodeId);
 
 // *********************************************************************************** //
 
@@ -107,7 +108,7 @@ const fetchAndStoreWetMillLots = async (wetMillIds) => {
     }
 }
 
-const wetMillLots = ["1fa7693c-94d9-400b-960a-4f5f77cb9f1e"];
+const wetMillLots = ["7807d90d-29da-407f-bf5d-48481cc84ca2", "0c089ea3-e789-4c47-b175-261a47450e79", "f9cee52f-0974-41fd-aa03-dd2ad4030529", "4b86fb22-d3ca-4160-bacf-51a22d52a874", "48f8dedd-3837-42aa-a302-d9f706278288", "3c6863e9-6ae8-4cb3-8e45-f669c513f186"];
 
 // fetchAndStoreWetMillLots(wetMillLots);
 

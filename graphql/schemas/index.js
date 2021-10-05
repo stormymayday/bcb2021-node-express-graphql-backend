@@ -94,7 +94,7 @@ module.exports = buildSchema(`
             productSku: String
             organizationName: String
             currentWeight: String
-            currentWeightUnit: String,
+            currentWeightUnit: String
             absorbedWeight: String
             absorbedWeightUnit: String
             quality: String
@@ -245,7 +245,7 @@ module.exports = buildSchema(`
             productSku: String
             organizationName: String
             currentWeight: String
-            currentWeightUnit: String,
+            currentWeightUnit: String
             absorbedWeight: String
             absorbedWeightUnit: String
             quality: String
@@ -283,7 +283,7 @@ module.exports = buildSchema(`
             productSku: String
             organizationName: String
             currentWeight: String
-            currentWeightUnit: String,
+            currentWeightUnit: String
             absorbedWeight: String
             absorbedWeightUnit: String
             quality: String
@@ -391,7 +391,7 @@ module.exports = buildSchema(`
             productSku: String
             organizationName: String
             currentWeight: String
-            currentWeightUnit: String,
+            currentWeightUnit: String
             absorbedWeight: String
             absorbedWeightUnit: String
             quality: String
@@ -429,7 +429,7 @@ module.exports = buildSchema(`
             productSku: String
             organizationName: String
             currentWeight: String
-            currentWeightUnit: String,
+            currentWeightUnit: String
             absorbedWeight: String
             absorbedWeightUnit: String
             quality: String
@@ -537,7 +537,7 @@ module.exports = buildSchema(`
             productSku: String
             organizationName: String
             currentWeight: String
-            currentWeightUnit: String,
+            currentWeightUnit: String
             absorbedWeight: String
             absorbedWeightUnit: String
             quality: String
@@ -575,7 +575,7 @@ module.exports = buildSchema(`
             productSku: String
             organizationName: String
             currentWeight: String
-            currentWeightUnit: String,
+            currentWeightUnit: String
             absorbedWeight: String
             absorbedWeightUnit: String
             quality: String
@@ -694,7 +694,7 @@ module.exports = buildSchema(`
             productSku: String
             organizationName: String
             currentWeight: String
-            currentWeightUnit: String,
+            currentWeightUnit: String
             absorbedWeight: String
             absorbedWeightUnit: String
             quality: String
@@ -743,7 +743,7 @@ module.exports = buildSchema(`
             productSku: String
             organizationName: String
             currentWeight: String
-            currentWeightUnit: String,
+            currentWeightUnit: String
             absorbedWeight: String
             absorbedWeightUnit: String
             quality: String
@@ -876,7 +876,7 @@ module.exports = buildSchema(`
             productSku: String
             organizationName: String
             currentWeight: String
-            currentWeightUnit: String,
+            currentWeightUnit: String
             absorbedWeight: String
             absorbedWeightUnit: String
             quality: String
@@ -927,7 +927,7 @@ module.exports = buildSchema(`
             productSku: String
             organizationName: String
             currentWeight: String
-            currentWeightUnit: String,
+            currentWeightUnit: String
             absorbedWeight: String
             absorbedWeightUnit: String
             quality: String
@@ -1072,7 +1072,7 @@ module.exports = buildSchema(`
             productSku: String
             organizationName: String
             currentWeight: String
-            currentWeightUnit: String,
+            currentWeightUnit: String
             absorbedWeight: String
             absorbedWeightUnit: String
             quality: String
@@ -1109,7 +1109,7 @@ module.exports = buildSchema(`
             productSku: String
             organizationName: String
             currentWeight: String
-            currentWeightUnit: String,
+            currentWeightUnit: String
             absorbedWeight: String
             absorbedWeightUnit: String
             quality: String
@@ -1234,7 +1234,7 @@ module.exports = buildSchema(`
             productSku: String
             organizationName: String
             currentWeight: String
-            currentWeightUnit: String,
+            currentWeightUnit: String
             absorbedWeight: String
             absorbedWeightUnit: String
             quality: String
@@ -1270,7 +1270,7 @@ module.exports = buildSchema(`
             productSku: String
             organizationName: String
             currentWeight: String
-            currentWeightUnit: String,
+            currentWeightUnit: String
             absorbedWeight: String
             absorbedWeightUnit: String
             quality: String
