@@ -21,7 +21,7 @@ module.exports = {
                     // Creating New Exporter Intake Lot 
                     const exporterIntakeLot = new ExporterIntakeLot({
 
-                        exporterIntakeNode: '61512e4351910374c656c7c5',
+                        exporterIntakeNode: '615645a1168b9c924601da85',
 
                         exporterIntakeLotId: args.exporterIntakeLotInput.exporterIntakeLotId,
 
@@ -70,7 +70,7 @@ module.exports = {
                             createdExporterIntakeLot = { ...result._doc };
 
                             // Finding Exporter Intake Node by ID
-                            return ExporterIntakeNode.findById('61512e4351910374c656c7c5')
+                            return ExporterIntakeNode.findById('615645a1168b9c924601da85')
 
                         })
                         .then(exporterIntakeNode => {

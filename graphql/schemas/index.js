@@ -1126,6 +1126,166 @@ module.exports = buildSchema(`
 
         }
 
+        type RoastingNode {
+
+            _id: ID!
+
+            roastingNodeId: String!
+
+            totaAbsorbedWeight: String
+            totalAbsorbedWeightUnit: String
+
+            roastingLots: [RoastingLot]
+
+            organizationId: String
+            marketplaceId: String
+            defaultLocationId: String
+            nodeName: String
+            nodeType: String
+            nodeDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            organizationName: String
+
+            images: [String]
+            videos: [String]
+            documents: [String]
+
+            value: String
+            valueUnit: String
+            unitValue: String
+            unitValueUnit: String
+
+            locationId: String
+            name: String
+            country: String
+            city: String
+            state: String
+            latitude: String
+            longitude: String
+            elevation: String
+            elevationUnit: String
+
+            address: String
+
+        }
+
+        input RoastingNodeInput {
+
+            roastingNodeId: String!
+
+            totaAbsorbedWeight: String
+            totalAbsorbedWeightUnit: String
+
+            roastingLots: [RoastingLotInput]
+
+            organizationId: String
+            marketplaceId: String
+            defaultLocationId: String
+            nodeName: String
+            nodeType: String
+            nodeDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            organizationName: String
+
+            images: [String]
+            videos: [String]
+            documents: [String]
+
+            value: String
+            valueUnit: String
+            unitValue: String
+            unitValueUnit: String
+
+            locationId: String
+            name: String
+            country: String
+            city: String
+            state: String
+            latitude: String
+            longitude: String
+            elevation: String
+            elevationUnit: String
+
+            address: String
+
+        }
+
+        type RoastingLot {
+
+            _id: ID!
+
+            roastingNode: RoastingNode
+
+            roastingLotId: String
+            roastingNodeId: String
+
+            organizationId: String
+            marketplaceId: String
+            productId: String
+            lotName: String
+            lotType: String
+            lotDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            productName: String
+            productToken: String
+            productSku: String
+            organizationName: String
+            currentWeight: String
+            currentWeightUnit: String,
+            absorbedWeight: String
+            absorbedWeightUnit: String
+            quality: String
+            lotIsOpen: Boolean
+
+            images: [String]
+            documents: [String]
+            videos: [String]
+
+            actor: String
+            roastDate: String
+            notes: String
+
+        }
+
+        input RoastingLotInput {
+
+            roastingNode: RoastingNodeInput
+
+            roastingLotId: String
+            roastingNodeId: String
+
+            organizationId: String
+            marketplaceId: String
+            productId: String
+            lotName: String
+            lotType: String
+            lotDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            productName: String
+            productToken: String
+            productSku: String
+            organizationName: String
+            currentWeight: String
+            currentWeightUnit: String,
+            absorbedWeight: String
+            absorbedWeightUnit: String
+            quality: String
+            lotIsOpen: Boolean
+
+            images: [String]
+            documents: [String]
+            videos: [String]
+
+            actor: String
+            roastDate: String
+            notes: String
+
+        }
+
         type Farmer {
 
             _id: ID!
@@ -1139,8 +1299,9 @@ module.exports = buildSchema(`
             dryMillNode: DryMillNode
             exportNode: ExportNode
             importNode: ImportNode
-
             roasterIntakeNode: RoasterIntakeNode
+
+            roastingNode: RoastingNode
 
         }
 
@@ -1155,8 +1316,9 @@ module.exports = buildSchema(`
             dryMillNode: DryMillNodeInput
             exportNode: ExportNodeInput
             importNode: ImportNodeInput
-
             roasterIntakeNode: RoasterIntakeNodeInput
+
+            roastingNode: RoastingNodeInput
 
         }
 
@@ -1190,6 +1352,9 @@ module.exports = buildSchema(`
 
             createRoasterIntakeNode(roasterIntakeNodeInput: RoasterIntakeNodeInput): RoasterIntakeNode
             createRoasterIntakeLot(roasterIntakeLotInput: RoasterIntakeLotInput): RoasterIntakeLot
+
+            createRoastingNode(roastingNodeInput: RoastingNodeInput): RoastingNode
+            createRoastingLot(roastingLotInput: RoastingLotInput): RoastingLot
 
         }
 

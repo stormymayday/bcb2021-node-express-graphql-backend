@@ -1,11 +1,11 @@
 const fetch = require('node-fetch');
 
-const createExportLot = (lotId) => {
+const createRoastingLot = (roastingLotId) => {
 
-    fetch(`${process.env.GET_LOT}${lotId}`, {
+    fetch(`${process.env.GET_LOT}${roastingLotId}`, {
         method: 'GET',
         headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.BEXT_API_KEY}`
+            'Ocp-Apim-Subscription-Key': `${process.env.QCCC_API_KEY}`
         }
     })
         .then((result) => {
@@ -29,11 +29,11 @@ const createExportLot = (lotId) => {
 
                         mutation {
 
-                            createExportLot(exportLotInput: {
+                            createRoastingLot(roastingLotInput: {
 
-                                exportLotId: "${data.lotId}"
+                                roastingLotId: "${data.lotId}"
 
-                                exportNodeId: "${data.nodeId}"
+                                roastingNodeId: "${data.nodeId}"
 
                                 organizationId: "${data.organizationId}"
                                 marketplaceId: "${data.marketplaceId}"
@@ -58,27 +58,14 @@ const createExportLot = (lotId) => {
                                 images: ["${(data.images[0] ? data.images[0].urls[0] : "")}", "${(data.images.length > 1 ? data.images[1].urls[0] : "")}"]
                                 documents: ["${(data.documents[0] ? data.documents[0].urls[0] : "")}", "${(data.documents.length > 1 ? data.documents[1].urls[0] : "")}", "${(data.documents.length > 2 ? data.documents[2].urls[0] : "")}"]
                                 videos: ["${(data.videos[0] ? data.videos[0].urls[0] : "")}", "${(data.videos.length > 1 ? data.videos[1].urls[0] : "")}"]
-
-                                secondPaymentValue: ""
-                                secondPaymentAsset: ""
-                                secondPaymentTimeStamp: ""
-                                secondPaymentNotes: ""
-
-                                spousePaymentValue: ""
-                                spousePaymentAsset: ""
-                                spousePaymentTimestamp: ""
-                                spousePaymentNotes: ""
-
-                                ihcafePaymentValue: ""
-                                ihcafePaymentAsset: ""
-                                ihcafePaymentTimeStamp: ""
-                                ihcafePaymentNotes: ""
-
-                                numberOfBags: ""
                                 
+                                actor: "${data.customData['ActorName.Measure'].value}"
+                                roastDate: "${data.customData['TransformDate.MeasureTime'].dateTimeValue}"
+                                notes: "${data.customData['Notes.Measure'].value}"
+
                             }) {
 
-                                exportLotId
+                                roastingLotId
 
                             }
                         }
@@ -102,4 +89,4 @@ const createExportLot = (lotId) => {
 
 }
 
-exports.createExportLot = createExportLot;
+exports.createRoastingLot = createRoastingLot;

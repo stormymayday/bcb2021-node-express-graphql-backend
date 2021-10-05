@@ -22,7 +22,8 @@ module.exports = {
                     const harvestNode = new HarvestNode({
 
                         harvestNodeId: args.harvestNodeInput.harvestNodeId,
-                        farmer: '6151293f6c70195c00c005e1',
+
+                        farmer: '615630a94ccc1be75b7ac27c',
 
                         totaAbsorbedWeight: args.harvestNodeInput.totaAbsorbedWeight,
                         totalAbsorbedWeightUnit: args.harvestNodeInput.totalAbsorbedWeightUnit,

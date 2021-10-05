@@ -26,9 +26,11 @@ const { createExportNode } = require('./utils/createExportNode');
 const { createExportLot } = require('./utils/createExportLot');
 const { createImportNode } = require('./utils/createImportNode');
 const { createImportLot } = require('./utils/createImportLot');
-
 const { createRoasterIntakeNode } = require('./utils/createRoasterIntakeNode');
 const { createRoasterIntakeLot } = require('./utils/createRoasterIntakeLot');
+
+const { createRoastingNode } = require('./utils/createRoastingNode');
+const { createRoastingLot } = require('./utils/createRoastingLot');
 
 // Creating app object by calling Express
 const app = express();
@@ -53,10 +55,12 @@ const claudiaYJuanHarvestNodeId = '702079e1-62c8-4087-bc82-544acf15d141';
 const LuisHarvestNodeId = '5b10dd8f-2d9b-4595-98ab-4896ece46466';
 const JoseAntonioNolascoHarvestNodeId = '8c8a341d-112d-43a0-bc28-8d7b5eceb697';
 const mariaAdelaHarvestNodeId = '9efb04d1-76ab-4dae-94dd-29f0b0105fcc';
-
 const atanacioHarvestNodeId = '174a5f0c-0a98-46b9-b1af-c3fee2e78470';
+const fidelinaHarvestNodeId = '77073017-c640-4822-ad6d-7e6fd51da0f8';
 
-// createHarvestNode(atanacioHarvestNodeId);
+const francisHarvestNodeId = 'bc4fb3d0-97c9-4b84-946a-406bb7901de9';
+
+// createHarvestNode(francisHarvestNodeId);
 
 // *********************************************************************************** //
 
@@ -70,7 +74,7 @@ const fetchAndStoreHarvestLots = async (harvestLotIds) => {
         // continue;
     }
 }
-const harvestLots = [];
+const harvestLots = ["8ec3ed57-7980-47f8-bb5d-cf1385b5aaaa", "71765cc2-8d17-49d5-b541-0af4aebe6353", "91cd9f57-5718-4a7b-88d8-55da12be0342"];
 
 // fetchAndStoreHarvestLots(harvestLots);
 
@@ -83,10 +87,12 @@ const claudiaYJuanWetMillnodeId = '89b0ea0e-cc31-4da3-a22f-5bd1ca6eb3ae';
 const luisWetMillnodeId = '52adf38d-af7d-48b8-b3f1-d0c2ca9108b5';
 const JoseAntonioNolascoWetMillnodeId = '52adf38d-af7d-48b8-b3f1-d0c2ca9108b5';
 const mariaAdelaWetMillnodeId = '645bbec5-6faa-4185-8c54-ca9851a9b638';
-
 const atanacioWetMillnodeId = '52adf38d-af7d-48b8-b3f1-d0c2ca9108b5';
+const fidelinaWetMillnodeId = '52adf38d-af7d-48b8-b3f1-d0c2ca9108b5';
 
-// createWetMillNode(mariaAdelaWetMillnodeId);
+const francisWetMillNodeId = 'eafdbb3c-c5aa-4648-a419-0baaf95f89ae';
+
+// createWetMillNode(francisWetMillNodeId);
 
 // *********************************************************************************** //
 
@@ -101,7 +107,7 @@ const fetchAndStoreWetMillLots = async (wetMillIds) => {
     }
 }
 
-const wetMillLots = [];
+const wetMillLots = ["1fa7693c-94d9-400b-960a-4f5f77cb9f1e"];
 
 // fetchAndStoreWetMillLots(wetMillLots);
 
@@ -123,7 +129,7 @@ const fetchAndStoreExporterIntakeLots = async (exporterIntakeLotIds) => {
 
     }
 }
-const exporterIntakeLots = [];
+const exporterIntakeLots = ["f81f3f37-7484-42c4-a04c-4a4ef193cc7a"];
 
 // fetchAndStoreExporterIntakeLots(exporterIntakeLots);
 
@@ -138,7 +144,8 @@ const VillaFloridaDryMillNodeId = '326d2dae-9cd0-4b4c-b64d-8874e1d80abd';
 
 // **************************** Creating a Dry Mill Lot ****************************** //
 
-const dryMillLots = ["769f5740-6d1f-4c14-9506-fe593a5bee36", "675b8e7e-12c7-478b-8fff-3a952490d7a1"];
+const dryMillLots = ["be890242-a380-49ae-925e-12df1f5445e1"];
+
 
 const fetchAndStoreDryMillLots = async (dryMillLotIds) => {
     for (let i = 0; i < dryMillLotIds.length; i++) {
@@ -161,7 +168,7 @@ const ExportNodeId = 'b8a4b60f-552b-406e-84f9-3bafd0b3f904';
 
 // **************************** Creating an Export Lots ****************************** //
 
-const exportLots = ["13fc64a3-f281-4c7e-901f-26cfe5df6b87"];
+const exportLots = ["ad7e60c3-f011-43e1-bb92-f830646a50d0"];
 
 const fetchAndStoreExportLots = async (exportLotIds) => {
     for (let i = 0; i < exportLotIds.length; i++) {
@@ -184,7 +191,7 @@ const ImportNodeId = 'ee761058-6de6-47b3-94ce-33059975764c';
 
 // **************************** Creating an Import Lots ****************************** //
 
-const importLots = ["3b7a6ffb-c0c2-4305-ace0-a602e9578460"];
+const importLots = ["577493d1-ad70-4b6c-9d64-12ddbbbeaa82"];
 
 const fetchAndStoreImportLots = async (importLotIds) => {
     for (let i = 0; i < importLotIds.length; i++) {
@@ -198,7 +205,7 @@ const fetchAndStoreImportLots = async (importLotIds) => {
 
 // *********************************************************************************** //
 
-// *********************** Creating an Roaster Intake Node ************************** //
+// *********************** Creating an Roaster Intake Node *************************** //
 
 const qcccRoasterIntakeNode = 'bbb8b444-ad7b-4caf-8d82-d30eee42d357';
 const oldSoulRoasterIntakeNode = '';
@@ -219,6 +226,31 @@ const fetchAndStoreRoasterIntakeLots = async (roasterIntakeLotsIds) => {
 }
 
 // fetchAndStoreRoasterIntakeLots(qcccRoasterIntakeLots);
+
+// *********************************************************************************** //
+
+// **************************** Creating a Roasting Node ***************************** //
+
+const qcccRoastingNode = '302f1a90-0600-4fcc-831c-b417bd4dcb8d';
+const oldSoulRoastingNode = '';
+// createRoastingNode(qcccRoastingNode);
+
+// *********************************************************************************** //
+
+// **************************** Creating Roasting Lots ******************************* //
+
+const qcccRoastingLots = ["5879a65e-2a44-4787-82a9-6cd291589767"];
+
+const fetchAndStoreRoastingLots = async (roastingLotsIds) => {
+
+    for (let i = 0; i < roastingLotsIds.length; i++) {
+
+        let functionCall = await createRoastingLot(roastingLotsIds[i]);
+
+    }
+}
+
+// fetchAndStoreRoastingLots(qcccRoastingLots);
 
 // *********************************************************************************** //
 

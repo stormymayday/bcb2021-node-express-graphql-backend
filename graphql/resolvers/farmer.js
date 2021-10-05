@@ -10,7 +10,8 @@ const {
     fetchDryMillNode,
     fetchExportNode,
     fetchImportNode,
-    fetchRoasterIntakeNode
+    fetchRoasterIntakeNode,
+    fetchRoastingNode
 
 } = require('./merge');
 
@@ -44,9 +45,10 @@ module.exports = {
                         importNode: fetchImportNode.bind(this, farmer._doc.importNode),
 
                         // Roaster Intake Node
-                        roasterIntakeNode: fetchRoasterIntakeNode.bind(this, farmer._doc.roasterIntakeNode)
+                        roasterIntakeNode: fetchRoasterIntakeNode.bind(this, farmer._doc.roasterIntakeNode),
 
                         // Roasting Node
+                        roastingNode: fetchRoastingNode.bind(this, farmer._doc.roastingNode)
 
                         // Other Nodes ...
 
