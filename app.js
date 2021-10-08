@@ -146,7 +146,7 @@ const VillaFloridaDryMillNodeId = '326d2dae-9cd0-4b4c-b64d-8874e1d80abd';
 
 // **************************** Creating a Dry Mill Lot ****************************** //
 
-const dryMillLots = ["d6f301d4-15dc-4f4a-a6d1-19f9ed39f0e9", "8f82a71e-0052-45df-b503-7567bbfcd6d6"];
+const dryMillLots = ["c83aa38b-3776-43f6-a6b3-9edb700b5c98", "f96070f4-c798-4144-9965-9a5f7d68f444"];
 
 
 const fetchAndStoreDryMillLots = async (dryMillLotIds) => {
@@ -170,7 +170,7 @@ const ExportNodeId = 'b8a4b60f-552b-406e-84f9-3bafd0b3f904';
 
 // **************************** Creating an Export Lots ****************************** //
 
-const exportLots = ["c9a40f0c-7bac-4ac1-82d1-46854769a0be"];
+const exportLots = ["d1bcff34-256f-48fb-93a1-00b0bada253d"];
 
 const fetchAndStoreExportLots = async (exportLotIds) => {
     for (let i = 0; i < exportLotIds.length; i++) {
@@ -180,7 +180,7 @@ const fetchAndStoreExportLots = async (exportLotIds) => {
     }
 }
 
-// fetchAndStoreExportLots(exportLots);
+fetchAndStoreExportLots(exportLots);
 
 // *********************************************************************************** //
 
