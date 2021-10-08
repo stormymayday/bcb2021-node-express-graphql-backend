@@ -61,8 +61,9 @@ const francisHarvestNodeId = 'bc4fb3d0-97c9-4b84-946a-406bb7901de9';
 const adanHarvestNodeId = 'd7a3d524-d8fa-4f0d-b695-e5c7dfbc09a2';
 const gumercindoHarvestNodeId = '6e374ca1-ea5f-4cc4-863e-ece4143cad48';
 const davidHarvestNodeId = 'f5b260cf-afd8-4525-9533-4562a8741f0a';
+const rigobertoHarvestNodeId = 'c0cd6532-86dd-4693-843a-5825cabb4e8e';
 
-// createHarvestNode(davidHarvestNodeId);
+// createHarvestNode(rigobertoHarvestNodeId);
 
 // *********************************************************************************** //
 
@@ -76,7 +77,7 @@ const fetchAndStoreHarvestLots = async (harvestLotIds) => {
         // continue;
     }
 }
-const harvestLots = ["7973e50c-9b2d-49f1-8bd5-cc3822408714", "3c136552-3e0b-4145-bba4-392e51d1f6af", "e160f9a9-9cbe-4836-9a4f-0b49bfe147b4", "66c86495-8285-419d-af12-123b7fbbfb9d", "843f0282-2459-41b8-b426-e1a2653921e7", "e8453af5-7de4-44ae-8eb4-47ac230f6069", "3a0b8258-7b00-4146-bbd9-6f55bce89b3e", "89ccad68-d083-49e2-94d2-925b537f189c", "d55399ba-e8aa-4a34-8cad-b5f2a62fcfb9", "624da35c-d57e-4dd9-af36-e0f6ff73bd4f", "184bc85e-76ef-4395-85c0-109f2b2a15c7", "b1a37ffa-e439-444c-8229-808ef72a6f6d", "ea7e506a-5bbe-4622-8c84-da384a8b247e", "1ca1b803-f2c9-4ae3-86a9-058a60bd4daa", "79c96f0c-d9e6-4c05-928f-c77edffc4f02", "47ec1c95-9d4e-49a8-a1ac-776797037e97", "62d48665-b39a-4d4d-95e1-4ee8934e181d", "4b8d3aae-d07e-462a-abb8-ea09e2145d18"];
+const harvestLots = ["b35c2b3b-6577-4f18-b4d1-e2be9a623523", "1b74494e-5eca-4f7e-9c52-45cbf8db2e5e", "bb8d6f6b-2499-4570-8184-cef7bfa36c38", "384b7f15-e0c2-40c1-95e0-9d06b58044be", "8915fa4a-0065-4aa8-b78c-0957b39a0826", "8a35c3d4-c5e9-4ad5-80b6-5d028b4042a9", "c31e8bce-4c05-4566-94be-16e9771dd4bf", "e2a63207-21c2-4926-879a-5960dcec56aa", "67b2322f-6272-4ea0-a52f-0816e0959141", "aa570493-c079-4b7c-b39c-7a4c1fd3bfa5", "5caa3303-6d63-4cde-927b-0d2d3336f1d7", "13112449-49c4-4ad6-ac0b-d3b8070698fd", "70bc3d13-864a-416f-af5e-b36f9668ebf4", "de8b1a82-cc5f-4107-89ec-4b82f6d7a374", "74964099-7246-47b0-917a-d2103b07cb96", "561086eb-39cb-4f8b-a709-abd15c90b457", "1bb4059b-b1dd-4363-a5ea-915227a0f0bb", "0a9c94dd-e387-4900-b67d-58f12fdd3784"];
 
 // fetchAndStoreHarvestLots(harvestLots);
 
@@ -95,8 +96,9 @@ const francisWetMillNodeId = 'eafdbb3c-c5aa-4648-a419-0baaf95f89ae';
 const adanWetMillNodeId = '57d900e5-bcc2-45f7-9776-e4b86d317abc';
 const gumercindoWetMillNodeId = '927a09b8-1014-4ceb-8f46-a56ac87c7ad2';
 const davidWetMillNodeId = 'cd219201-cab3-445e-8e3b-9d1888d9860c';
+const rigobertoWetMillNodeId = 'eafdbb3c-c5aa-4648-a419-0baaf95f89ae';
 
-// createWetMillNode(davidWetMillNodeId);
+// createWetMillNode(rigobertoWetMillNodeId);
 
 // *********************************************************************************** //
 
@@ -111,7 +113,7 @@ const fetchAndStoreWetMillLots = async (wetMillIds) => {
     }
 }
 
-const wetMillLots = ["0dc1e87c-34a7-41bd-90d6-0de024f9e528", "6a249b05-bed8-437d-a92c-916451b4adeb", "3f94fa66-0d77-4370-b7e5-4ea46810d7b5", "604a5f24-0a35-43dc-84a1-b54666ea6896", "4dc1e62b-8e50-4bbc-a1a4-cb0d672a6a23", "1e5536f4-bf0b-4eee-82fa-9a95b36de67d", "98e710c2-b437-4fc6-acfa-0ed59a02a408", "88150a81-c843-4e36-842a-1a976cc33b9d", "f703d391-4fe3-495a-9061-617b30d1bd90"];
+const wetMillLots = ["ce34a674-7438-44dc-a2f9-8f39f87d5b05", "f3c722e4-fc6d-4776-95e0-849f2181b632", "c5b78472-9f23-48bd-98e7-64b1e011fcbb", "36ac0c71-3651-4e1a-ab9c-6b37a046145c", "c04f4309-629f-4380-8b12-e1949033ca39", "5e96b1b2-2415-411a-ba2d-339cbe9e861c", "b53c71b1-2421-4f9a-bacf-e083aa12944b", "b7f8a060-68bc-4e68-885a-01d5ab1ea748", "fc3de86a-22bc-4a74-9548-fbb5f5ce585a", "eb925121-f584-442d-81d3-2b8784b90158", "e19b4274-a718-4cce-974d-e7ee7158b375", "fe4a9bd6-7794-41a2-8736-04428e9505ef", "f4268808-ee10-416c-9407-540681d96c8d", "09ec4d23-2e20-4f5a-907b-627d3478a147", "4980256f-094d-46b9-b649-b75f13561bfc", "d9d1b73d-0adf-4822-a090-8cd271492c9f", "7fe5bdd8-a05a-4e56-be8b-4f287c3e5289", "a0f11b1f-3b0d-4968-98ac-17d2180b03c3", "1be0e463-ccda-4bc8-816c-dd56df2f780b", "f0a9ad8b-cb90-400c-b26e-64e59518d520", "208e0c32-0d03-43df-991f-172d5f34535b", "10820ae0-a8a2-4e59-b48e-92bcb11d52ad", "2c1792bd-03c0-433a-b11d-8efe2ca841a3", "0de8433f-58d4-4055-ba5d-124aabba59a1", "0241dd1a-7d1f-48f6-83eb-a3a694db0ea6", "71159538-d43e-47a9-b2fe-367db5aead94", "82f8387b-0a68-4ec3-ab9c-919f3da5b01b", "197d214c-70ae-4216-a775-4fdf9ce1fe87", "26772ad6-cf89-4926-9ade-b0ca00c6ae4f", "abb6fc56-d8cc-459d-b297-43472c1af171", "10260860-a587-40fb-ad46-f2a9ed2779b5", "462cdad0-b374-495a-8e4f-e818086bdfd7", "5ae0ed7a-2c23-40cb-9d75-3f193093214a", "0df77e8f-87c1-4dd3-afcf-c94c8e623056", "cc9036cd-de5d-43c6-a018-57992598fef5", "ca156f52-d386-4430-a4ea-daf8a8280000", "46873a28-be2b-4800-903c-2c2f799f6e86", "7a60e930-812c-4fae-9943-3d494f11ddd1", "4b3dbc23-bd2d-46db-a8f0-cc28e234b5f6", "0020c70b-b024-4503-87da-ee9c33f521ec", "244ec470-a821-45ab-9b64-f930c588a484", "915532b2-dacc-4b5c-b281-85dbe3b2656f", "78e34d82-b5b9-44b7-ba4b-9ae80d07803b", "a02e5976-ee2d-44f5-a226-4f881bf9830f", "0c9d0ab2-e0e9-49fa-9310-a4f8283dfa6f", "2f5bde89-427c-4c21-a387-57dac10c85e6", "35525876-6f75-45fa-bfeb-255e745fa589", "5289f9c1-7d05-40ad-a735-7a127b2edd30", "d9d73f94-2f10-42fc-8c93-0a390abd2fde", "36f8d94c-8554-4b63-a07d-50099766a35e", "6f98475d-124c-4b6a-8f41-c586cc37cc41", "df365e70-38b4-4974-8d16-5f9547082043", "ba824f6d-5ad6-4d59-a55e-454b7229f6fa", "6316073b-3508-4d4b-ae7d-f1daf47e51e0"];
 
 // fetchAndStoreWetMillLots(wetMillLots);
 
@@ -172,7 +174,7 @@ const ExportNodeId = 'b8a4b60f-552b-406e-84f9-3bafd0b3f904';
 
 // **************************** Creating an Export Lots ****************************** //
 
-const exportLots = ["d1bcff34-256f-48fb-93a1-00b0bada253d"];
+const exportLots = ["c60d379f-9a8b-47b8-87e4-4a6f22b9124d"];
 
 const fetchAndStoreExportLots = async (exportLotIds) => {
     for (let i = 0; i < exportLotIds.length; i++) {
@@ -195,7 +197,7 @@ const ImportNodeId = 'ee761058-6de6-47b3-94ce-33059975764c';
 
 // **************************** Creating an Import Lots ****************************** //
 
-const importLots = ["672a67be-2e15-4df8-af17-dba32e5ed416"];
+const importLots = ["baa67e13-14b0-4a03-bb4a-51568f9a13a4"];
 
 const fetchAndStoreImportLots = async (importLotIds) => {
     for (let i = 0; i < importLotIds.length; i++) {
