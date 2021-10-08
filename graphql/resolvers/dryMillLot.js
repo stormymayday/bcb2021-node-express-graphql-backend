@@ -21,7 +21,7 @@ module.exports = {
                     // Creating New Dry Mill Lot 
                     const dryMillLot = new DryMillLot({
 
-                        dryMillNode: '615f9122d255d65591df6383',
+                        dryMillNode: '616048960c55f993d2da9c08',
 
                         dryMillLotId: args.dryMillLotInput.dryMillLotId,
 
@@ -70,7 +70,7 @@ module.exports = {
                             createdDryMillLot = { ...result._doc };
 
                             // Finding Dry Mill Node by ID
-                            return DryMillNode.findById('615f9122d255d65591df6383')
+                            return DryMillNode.findById('616048960c55f993d2da9c08')
 
                         })
                         .then(dryMillNode => {

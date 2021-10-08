@@ -148,7 +148,7 @@ const VillaFloridaDryMillNodeId = '326d2dae-9cd0-4b4c-b64d-8874e1d80abd';
 
 // **************************** Creating a Dry Mill Lot ****************************** //
 
-const dryMillLots = ["c83aa38b-3776-43f6-a6b3-9edb700b5c98", "f96070f4-c798-4144-9965-9a5f7d68f444"];
+const dryMillLots = ["3b0d14c3-755a-4560-a43e-2a0f28f8e895", "6a2e6876-3be9-47e6-a39a-de507170db0e"];
 
 
 const fetchAndStoreDryMillLots = async (dryMillLotIds) => {
