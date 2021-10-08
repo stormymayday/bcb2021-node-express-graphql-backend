@@ -23,7 +23,7 @@ module.exports = {
 
                         harvestNodeId: args.harvestNodeInput.harvestNodeId,
 
-                        farmer: '615cc623838bfb00165cc5ad',
+                        farmer: '615f8a02098ac7a4ab0ec6e1',
 
                         totaAbsorbedWeight: args.harvestNodeInput.totaAbsorbedWeight,
                         totalAbsorbedWeightUnit: args.harvestNodeInput.totalAbsorbedWeightUnit,

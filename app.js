@@ -58,10 +58,10 @@ const mariaAdelaHarvestNodeId = '9efb04d1-76ab-4dae-94dd-29f0b0105fcc';
 const atanacioHarvestNodeId = '174a5f0c-0a98-46b9-b1af-c3fee2e78470';
 const fidelinaHarvestNodeId = '77073017-c640-4822-ad6d-7e6fd51da0f8';
 const francisHarvestNodeId = 'bc4fb3d0-97c9-4b84-946a-406bb7901de9';
-
 const adanHarvestNodeId = 'd7a3d524-d8fa-4f0d-b695-e5c7dfbc09a2';
+const gumercindoHarvestNodeId = '6e374ca1-ea5f-4cc4-863e-ece4143cad48';
 
-// createHarvestNode(adanHarvestNodeId);
+// createHarvestNode(gumercindoHarvestNodeId);
 
 // *********************************************************************************** //
 
@@ -75,7 +75,7 @@ const fetchAndStoreHarvestLots = async (harvestLotIds) => {
         // continue;
     }
 }
-const harvestLots = ["d3448b76-501f-4e71-a554-bd418f08f8b5", "6c99f5eb-baf1-4ecc-a06c-4541198a2563"];
+const harvestLots = ["b478e1fb-a430-4144-8c49-428f66ce1bec", "fdef484d-a3e2-4f04-b26a-cc12949b4934"];
 
 // fetchAndStoreHarvestLots(harvestLots);
 
@@ -92,8 +92,9 @@ const atanacioWetMillnodeId = '52adf38d-af7d-48b8-b3f1-d0c2ca9108b5';
 const fidelinaWetMillnodeId = '52adf38d-af7d-48b8-b3f1-d0c2ca9108b5';
 const francisWetMillNodeId = 'eafdbb3c-c5aa-4648-a419-0baaf95f89ae';
 const adanWetMillNodeId = '57d900e5-bcc2-45f7-9776-e4b86d317abc';
+const gumercindoWetMillNodeId = '927a09b8-1014-4ceb-8f46-a56ac87c7ad2';
 
-// createWetMillNode(adanWetMillNodeId);
+// createWetMillNode(gumercindoWetMillNodeId);
 
 // *********************************************************************************** //
 
@@ -169,7 +170,7 @@ const ExportNodeId = 'b8a4b60f-552b-406e-84f9-3bafd0b3f904';
 
 // **************************** Creating an Export Lots ****************************** //
 
-const exportLots = ["ad7e60c3-f011-43e1-bb92-f830646a50d0"];
+const exportLots = ["c9a40f0c-7bac-4ac1-82d1-46854769a0be"];
 
 const fetchAndStoreExportLots = async (exportLotIds) => {
     for (let i = 0; i < exportLotIds.length; i++) {
@@ -192,7 +193,7 @@ const ImportNodeId = 'ee761058-6de6-47b3-94ce-33059975764c';
 
 // **************************** Creating an Import Lots ****************************** //
 
-const importLots = ["577493d1-ad70-4b6c-9d64-12ddbbbeaa82"];
+const importLots = ["63e65df8-9093-4b00-b8fe-c6697e4b75ea"];
 
 const fetchAndStoreImportLots = async (importLotIds) => {
     for (let i = 0; i < importLotIds.length; i++) {
