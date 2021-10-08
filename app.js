@@ -180,7 +180,7 @@ const fetchAndStoreExportLots = async (exportLotIds) => {
     }
 }
 
-fetchAndStoreExportLots(exportLots);
+// fetchAndStoreExportLots(exportLots);
 
 // *********************************************************************************** //
 
@@ -193,7 +193,7 @@ const ImportNodeId = 'ee761058-6de6-47b3-94ce-33059975764c';
 
 // **************************** Creating an Import Lots ****************************** //
 
-const importLots = ["63e65df8-9093-4b00-b8fe-c6697e4b75ea"];
+const importLots = ["672a67be-2e15-4df8-af17-dba32e5ed416"];
 
 const fetchAndStoreImportLots = async (importLotIds) => {
     for (let i = 0; i < importLotIds.length; i++) {
