@@ -133,7 +133,7 @@ const fetchAndStoreExporterIntakeLots = async (exporterIntakeLotIds) => {
 
     }
 }
-const exporterIntakeLots = ["4d734267-0796-499d-bb3e-92b8485f2a2f", "a0498c22-75de-4509-95e1-09d8bda676ed", "8f442c4a-4287-4919-b6df-fa2a02e1c769", "e570af19-05fc-482d-96ff-823442e2ccb6"];
+const exporterIntakeLots = ["1d829a0c-d698-4a86-b725-cb5ae78e38fc", "c2facf05-cab0-4457-9572-e21febddc24f", "0b86b8a5-32b8-4fab-a309-b6ee69758364", "15393e65-b6cc-47b6-b542-b9404877fc3f", "9475d270-63ec-46cd-802b-a0f5ef03efc4"];
 
 // fetchAndStoreExporterIntakeLots(exporterIntakeLots);
 
