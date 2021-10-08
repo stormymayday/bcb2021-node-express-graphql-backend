@@ -109,7 +109,7 @@ const fetchAndStoreWetMillLots = async (wetMillIds) => {
     }
 }
 
-const wetMillLots = ["7807d90d-29da-407f-bf5d-48481cc84ca2", "0c089ea3-e789-4c47-b175-261a47450e79", "f9cee52f-0974-41fd-aa03-dd2ad4030529", "4b86fb22-d3ca-4160-bacf-51a22d52a874", "48f8dedd-3837-42aa-a302-d9f706278288", "3c6863e9-6ae8-4cb3-8e45-f669c513f186"];
+const wetMillLots = ["aee9eeba-6db6-40b5-b417-395523fd69e8", "098f48eb-c668-4b8c-8ea4-5454cb28e6ab", "a8a28928-e498-4e41-887e-8076c653894e", "3ee0cb6f-64bd-443c-b9b0-d5cd08cb4ab9", "8feef096-a919-4b17-b5f1-5a0b1eba78ee", "875d6bc8-9737-4c3f-910d-8c94ff2d193b"];
 
 // fetchAndStoreWetMillLots(wetMillLots);
 
