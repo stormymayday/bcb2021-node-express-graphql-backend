@@ -60,8 +60,9 @@ const fidelinaHarvestNodeId = '77073017-c640-4822-ad6d-7e6fd51da0f8';
 const francisHarvestNodeId = 'bc4fb3d0-97c9-4b84-946a-406bb7901de9';
 const adanHarvestNodeId = 'd7a3d524-d8fa-4f0d-b695-e5c7dfbc09a2';
 const gumercindoHarvestNodeId = '6e374ca1-ea5f-4cc4-863e-ece4143cad48';
+const davidHarvestNodeId = 'f5b260cf-afd8-4525-9533-4562a8741f0a';
 
-// createHarvestNode(gumercindoHarvestNodeId);
+// createHarvestNode(davidHarvestNodeId);
 
 // *********************************************************************************** //
 
@@ -75,7 +76,7 @@ const fetchAndStoreHarvestLots = async (harvestLotIds) => {
         // continue;
     }
 }
-const harvestLots = ["b478e1fb-a430-4144-8c49-428f66ce1bec", "fdef484d-a3e2-4f04-b26a-cc12949b4934"];
+const harvestLots = ["7973e50c-9b2d-49f1-8bd5-cc3822408714", "3c136552-3e0b-4145-bba4-392e51d1f6af", "e160f9a9-9cbe-4836-9a4f-0b49bfe147b4", "66c86495-8285-419d-af12-123b7fbbfb9d", "843f0282-2459-41b8-b426-e1a2653921e7", "e8453af5-7de4-44ae-8eb4-47ac230f6069", "3a0b8258-7b00-4146-bbd9-6f55bce89b3e", "89ccad68-d083-49e2-94d2-925b537f189c", "d55399ba-e8aa-4a34-8cad-b5f2a62fcfb9", "624da35c-d57e-4dd9-af36-e0f6ff73bd4f", "184bc85e-76ef-4395-85c0-109f2b2a15c7", "b1a37ffa-e439-444c-8229-808ef72a6f6d", "ea7e506a-5bbe-4622-8c84-da384a8b247e", "1ca1b803-f2c9-4ae3-86a9-058a60bd4daa", "79c96f0c-d9e6-4c05-928f-c77edffc4f02", "47ec1c95-9d4e-49a8-a1ac-776797037e97", "62d48665-b39a-4d4d-95e1-4ee8934e181d", "4b8d3aae-d07e-462a-abb8-ea09e2145d18"];
 
 // fetchAndStoreHarvestLots(harvestLots);
 
@@ -93,8 +94,9 @@ const fidelinaWetMillnodeId = '52adf38d-af7d-48b8-b3f1-d0c2ca9108b5';
 const francisWetMillNodeId = 'eafdbb3c-c5aa-4648-a419-0baaf95f89ae';
 const adanWetMillNodeId = '57d900e5-bcc2-45f7-9776-e4b86d317abc';
 const gumercindoWetMillNodeId = '927a09b8-1014-4ceb-8f46-a56ac87c7ad2';
+const davidWetMillNodeId = 'cd219201-cab3-445e-8e3b-9d1888d9860c';
 
-// createWetMillNode(gumercindoWetMillNodeId);
+// createWetMillNode(davidWetMillNodeId);
 
 // *********************************************************************************** //
 
@@ -109,7 +111,7 @@ const fetchAndStoreWetMillLots = async (wetMillIds) => {
     }
 }
 
-const wetMillLots = ["aee9eeba-6db6-40b5-b417-395523fd69e8", "098f48eb-c668-4b8c-8ea4-5454cb28e6ab", "a8a28928-e498-4e41-887e-8076c653894e", "3ee0cb6f-64bd-443c-b9b0-d5cd08cb4ab9", "8feef096-a919-4b17-b5f1-5a0b1eba78ee", "875d6bc8-9737-4c3f-910d-8c94ff2d193b"];
+const wetMillLots = ["0dc1e87c-34a7-41bd-90d6-0de024f9e528", "6a249b05-bed8-437d-a92c-916451b4adeb", "3f94fa66-0d77-4370-b7e5-4ea46810d7b5", "604a5f24-0a35-43dc-84a1-b54666ea6896", "4dc1e62b-8e50-4bbc-a1a4-cb0d672a6a23", "1e5536f4-bf0b-4eee-82fa-9a95b36de67d", "98e710c2-b437-4fc6-acfa-0ed59a02a408", "88150a81-c843-4e36-842a-1a976cc33b9d", "f703d391-4fe3-495a-9061-617b30d1bd90"];
 
 // fetchAndStoreWetMillLots(wetMillLots);
 

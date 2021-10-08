@@ -22,7 +22,7 @@ module.exports = {
                     // Creating New Harvest 
                     const harvestLot = new HarvestLot({
 
-                        harvestNode: '615f8b2a23ca6a0016ad740e',
+                        harvestNode: '61604364c4b0e10d1de0fe53',
 
                         harvestLotId: args.harvestLotInput.harvestLotId,
 
@@ -74,7 +74,7 @@ module.exports = {
                             createdHarvestLot = { ...result._doc };
 
                             // Finding Harvest Node by ID
-                            return HarvestNode.findById('615f8b2a23ca6a0016ad740e')
+                            return HarvestNode.findById('61604364c4b0e10d1de0fe53')
 
                         })
                         .then(harvestNode => {
