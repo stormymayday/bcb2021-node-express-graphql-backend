@@ -5,7 +5,7 @@ const createRoasterIntakeLot = (roasterIntakeLotId) => {
     fetch(`${process.env.GET_LOT}${roasterIntakeLotId}`, {
         method: 'GET',
         headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.QCCC_API_KEY}`
+            'Ocp-Apim-Subscription-Key': `${process.env.OLDSOUL_API_KEY}`
         }
     })
         .then((result) => {
@@ -61,7 +61,7 @@ const createRoasterIntakeLot = (roasterIntakeLotId) => {
                                 numberOfBags: "${data.customData['NumberOfBags.Measure'].value}"
                                 damage: "${data.customData['Damage.Measure'].value}"
                                 transferDate: "${data.customData['TransferDate.MeasureTime'].dateTimeValue}"
-                                receivedDate: "${data.customData['ReceivedDate.MeasureTime'].dateTimeValue}"
+                                receivedDate: "${data.customData['ReceivedDate.MeasureTime'] ? data.customData['ReceivedDate.MeasureTime'].dateTimeValue : ""}"
 
                             }) {
 

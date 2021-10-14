@@ -50,9 +50,16 @@ module.exports = {
                         documents: args.roastingLotInput.documents,
                         videos: args.roastingLotInput.videos,
 
-                        numberOfBags: args.roastingLotInput.numberOfBags,
-                        damage: args.roastingLotInput.damage,
-                        transferDate: args.roastingLotInput.transferDate
+                        roastLossPercentage: args.roastingLotInput.roastLossPercentage,
+                        roastLossQuantity: args.roastingLotInput.roastLossQuantity,
+                        transferDate: args.roastingLotInput.transferDate,
+                        roasterActor: args.roastingLotInput.roasterActor,
+                        roastDate: args.roastingLotInput.roastDate,
+                        varietal: args.roastingLotInput.varietal,
+                        roastType: args.roastingLotInput.roastType,
+                        cuppingScore: args.roastingLotInput.cuppingScore,
+                        cuppersNotes: args.roastingLotInput.cuppersNotes,
+                        roastingNotes: args.roastingLotInput.roastingNotes
 
                     });
 
@@ -81,7 +88,7 @@ module.exports = {
                             }
 
                             // Adding Roasting Lot into roastingLots array
-                            roastingNode.roastingLots.push(roastingLot);
+                            roastingNode.roastingLots.unshift(roastingLot);
 
                             // Updating the appropriate Roasting Node in the database
                             return roastingNode.save();

@@ -1244,9 +1244,16 @@ module.exports = buildSchema(`
             documents: [String]
             videos: [String]
 
-            actor: String
+            roastLossPercentage: String
+            roastLossQuantity: String
+            transferDate: String
+            roasterActor: String
             roastDate: String
-            notes: String
+            varietal: String
+            roastType: String
+            cuppingScore: String
+            cuppersNotes: String
+            roastingNotes: String
 
         }
 
@@ -1280,9 +1287,16 @@ module.exports = buildSchema(`
             documents: [String]
             videos: [String]
 
-            actor: String
+            roastLossPercentage: String
+            roastLossQuantity: String
+            transferDate: String
+            roasterActor: String
             roastDate: String
-            notes: String
+            varietal: String
+            roastType: String
+            cuppingScore: String
+            cuppersNotes: String
+            roastingNotes: String
 
         }
 

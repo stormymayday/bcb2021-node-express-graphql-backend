@@ -174,7 +174,7 @@ const ExportNodeId = 'b8a4b60f-552b-406e-84f9-3bafd0b3f904';
 
 // **************************** Creating an Export Lots ****************************** //
 
-const exportLots = ["c60d379f-9a8b-47b8-87e4-4a6f22b9124d"];
+const exportLots = ["17293754-5f3a-4566-8c7a-cf7087c5065b"];
 
 const fetchAndStoreExportLots = async (exportLotIds) => {
     for (let i = 0; i < exportLotIds.length; i++) {
@@ -197,7 +197,7 @@ const ImportNodeId = 'ee761058-6de6-47b3-94ce-33059975764c';
 
 // **************************** Creating an Import Lots ****************************** //
 
-const importLots = ["baa67e13-14b0-4a03-bb4a-51568f9a13a4"];
+const importLots = ["2e64ff95-1652-4c7b-b922-d62f13bb76ce"];
 
 const fetchAndStoreImportLots = async (importLotIds) => {
     for (let i = 0; i < importLotIds.length; i++) {
@@ -214,14 +214,15 @@ const fetchAndStoreImportLots = async (importLotIds) => {
 // *********************** Creating an Roaster Intake Node *************************** //
 
 const qcccRoasterIntakeNode = 'bbb8b444-ad7b-4caf-8d82-d30eee42d357';
-const oldSoulRoasterIntakeNode = '';
-// createRoasterIntakeNode(qcccRoasterIntakeNode);
+const oldSoulRoasterIntakeNode = 'c9694f10-e161-476c-96d2-47282eb02bda';
+// createRoasterIntakeNode(oldSoulRoasterIntakeNode);
 
 // *********************************************************************************** //
 
 // ************************* Creating Roaster Intake Lots **************************** //
 
 const qcccRoasterIntakeLots = ["8867ca16-4ad9-49f2-bca4-0b581190d43e"];
+const oldSoulRoasterIntakeLots = ["7e57cb06-2e95-4b65-bb2a-8ae55bbc011d"];
 
 const fetchAndStoreRoasterIntakeLots = async (roasterIntakeLotsIds) => {
     for (let i = 0; i < roasterIntakeLotsIds.length; i++) {
@@ -231,21 +232,22 @@ const fetchAndStoreRoasterIntakeLots = async (roasterIntakeLotsIds) => {
     }
 }
 
-// fetchAndStoreRoasterIntakeLots(qcccRoasterIntakeLots);
+// fetchAndStoreRoasterIntakeLots(oldSoulRoasterIntakeLots);
 
 // *********************************************************************************** //
 
 // **************************** Creating a Roasting Node ***************************** //
 
 const qcccRoastingNode = '302f1a90-0600-4fcc-831c-b417bd4dcb8d';
-const oldSoulRoastingNode = '';
-// createRoastingNode(qcccRoastingNode);
+const oldSoulRoastingNode = '43774e42-e708-4e08-899e-5996c4dda30b';
+// createRoastingNode(oldSoulRoastingNode);
 
 // *********************************************************************************** //
 
 // **************************** Creating Roasting Lots ******************************* //
 
-const qcccRoastingLots = ["5879a65e-2a44-4787-82a9-6cd291589767"];
+const qcccRoastingLots = ["5879a65e-2a44-4787-82a9-6cd291589767", "a24f95d7-7334-4034-9196-b8e6abfb6358", "a6b00958-250b-4419-a46e-5aa8cda61cd5"];
+const oldSoulRoastingLots = ["3934279c-5576-4163-b75f-e54e00668bab"];
 
 const fetchAndStoreRoastingLots = async (roastingLotsIds) => {
 

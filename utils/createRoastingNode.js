@@ -5,7 +5,7 @@ const createRoastingNode = (nodeId) => {
     fetch(`${process.env.GET_NODE}${nodeId}`, {
         method: 'GET',
         headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.QCCC_API_KEY}`
+            'Ocp-Apim-Subscription-Key': `${process.env.OLDSOUL_API_KEY}`
         }
     })
         .then((result) => {
