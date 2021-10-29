@@ -1244,16 +1244,17 @@ module.exports = buildSchema(`
             documents: [String]
             videos: [String]
 
-            roastLossPercentage: String
-            roastLossQuantity: String
-            transferDate: String
             roasterActor: String
             roastDate: String
-            varietal: String
+            chargeTemperature: String
+            dropTemperature: String
+            totalRoastTime: String
             roastType: String
-            cuppingScore: String
-            cuppersNotes: String
+            roastLossQuantity: String
             roastingNotes: String
+            tastingNotes: String
+
+            cuppingScore: String
 
         }
 
@@ -1287,17 +1288,18 @@ module.exports = buildSchema(`
             documents: [String]
             videos: [String]
 
-            roastLossPercentage: String
-            roastLossQuantity: String
-            transferDate: String
             roasterActor: String
             roastDate: String
-            varietal: String
+            chargeTemperature: String
+            dropTemperature: String
+            totalRoastTime: String
             roastType: String
-            cuppingScore: String
-            cuppersNotes: String
+            roastLossQuantity: String
             roastingNotes: String
-
+            tastingNotes: String
+            
+            cuppingScore: String
+            
         }
 
         type Farmer {

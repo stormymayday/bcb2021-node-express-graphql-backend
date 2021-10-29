@@ -50,16 +50,17 @@ module.exports = {
                         documents: args.roastingLotInput.documents,
                         videos: args.roastingLotInput.videos,
 
-                        roastLossPercentage: args.roastingLotInput.roastLossPercentage,
-                        roastLossQuantity: args.roastingLotInput.roastLossQuantity,
-                        transferDate: args.roastingLotInput.transferDate,
                         roasterActor: args.roastingLotInput.roasterActor,
                         roastDate: args.roastingLotInput.roastDate,
-                        varietal: args.roastingLotInput.varietal,
+                        chargeTemperature: args.roastingLotInput.chargeTemperature,
+                        dropTemperature: args.roastingLotInput.dropTemperature,
+                        totalRoastTime: args.roastingLotInput.totalRoastTime,
                         roastType: args.roastingLotInput.roastType,
-                        cuppingScore: args.roastingLotInput.cuppingScore,
-                        cuppersNotes: args.roastingLotInput.cuppersNotes,
-                        roastingNotes: args.roastingLotInput.roastingNotes
+                        roastLossQuantity: args.roastingLotInput.roastLossQuantity,
+                        roastingNotes: args.roastingLotInput.roastingNotes,
+                        tastingNotes: args.roastingLotInput.tastingNotes,
+
+                        cuppingScore: args.roastingLotInput.cuppingScore
 
                     });
 

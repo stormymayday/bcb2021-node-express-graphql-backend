@@ -59,16 +59,18 @@ const createRoastingLot = (roastingLotId) => {
                                 documents: ["${(data.documents[0] ? data.documents[0].urls[0] : "")}", "${(data.documents.length > 1 ? data.documents[1].urls[0] : "")}", "${(data.documents.length > 2 ? data.documents[2].urls[0] : "")}"]
                                 videos: ["${(data.videos[0] ? data.videos[0].urls[0] : "")}", "${(data.videos.length > 1 ? data.videos[1].urls[0] : "")}"]
                                 
-                                roastLossPercentage: "${data.customData['RoastLossPercentage.Measure'] ? data.customData['RoastLossPercentage.Measure'].value : ""}"
-                                roastLossQuantity: "${data.customData['RoastLossQuantity.Measure'] ? data.customData['RoastLossQuantity.Measure'].value : ""}"
-                                transferDate: "${data.customData['TransferDate.MeasureTime'] ? data.customData['TransferDate.MeasureTime'].value : ""}"
+
                                 roasterActor: "${data.customData['ActorName.Measure'] ? data.customData['ActorName.Measure'].value : ""}"
-                                roastDate: "${data.customData['RoastDate.MeasureTime'] ? data.customData['RoastDate.MeasureTime'].value : ""}"
-                                varietal: "${data.customData['Varietal.Measure'] ? data.customData['Varietal.Measure'].value : ""}"
+                                roastDate: "${data.customData['TransformDate.MeasureTime'] ? data.customData['RoastDate.MeasureTime'].value : ""}"
+                                chargeTemperature: "${data.customData['ChargeTemperature.Measure'] ? data.customData['ChargeTemperature.Measure'].value : ""}"
+                                dropTemperature: "${data.customData['DropTemperature.Measure'] ? data.customData['DropTemperature.Measure'].value : ""}"
+                                totalRoastTime: "${data.customData['TotalRoastTime.Measure'] ? data.customData['TotalRoastTime.Measure'].value : ""}"
                                 roastType: "${data.customData['RoastType.Measure'] ? data.customData['RoastType.Measure'].value : ""}"
+                                roastLossQuantity: "${data.customData['RoastLossQuantity.Measure'] ? data.customData['RoastLossQuantity.Measure'].value : ""}"
+                                roastingNotes: "${data.customData['RoastingNotes.Measure'] ? data.customData['RoastingNotes.Measure'].value : ""}"
+                                tastingNotes: "${data.customData['TastingNotes.Measure'] ? data.customData['TastingNotes.Measure'].value : ""}"
+                                
                                 cuppingScore: "${data.customData['CuppingScore.Measure'] ? data.customData['CuppingScore.Measure'].value : ""}"
-                                cuppersNotes: "${data.customData['CuppersNotes.Measure'] ? data.customData['CuppersNotes.Measure'].value : ""}"
-                                roastingNotes: "${data.customData['Notes.Measure'] ? data.customData['Notes.Measure'].value : ""}"
 
                             }) {
 

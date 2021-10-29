@@ -90,36 +90,37 @@ const roastingLotSchema = new Schema({
         }
     ],
 
-    roastLossPercentage: {
-        type: String
-    },
-    roastLossQuantity: {
-        type: String
-    },
-    transferDate: {
-        type: String
-    },
     roasterActor: {
         type: String
     },
     roastDate: {
         type: String
     },
-    varietal: {
+    chargeTemperature: {
+        type: String
+    },
+    dropTemperature: {
+        type: String
+    },
+    totalRoastTime: {
         type: String
     },
     roastType: {
         type: String
     },
-    cuppingScore: {
-        type: String
-    },
-    cuppersNotes: {
+    roastLossQuantity: {
         type: String
     },
     roastingNotes: {
         type: String
-    }
+    },
+    tastingNotes: {
+        type: String
+    },
+
+    cuppingScore: {
+        type: String
+    },
 
 });
 
