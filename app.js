@@ -115,7 +115,7 @@ const fetchAndStoreWetMillLots = async (wetMillIds) => {
     }
 }
 
-const wetMillLots = [];
+const wetMillLots = ["ac59f308-cc1f-4e08-abc2-36cad1d67f24", "e457ef87-86de-4420-ba10-575a057a3603", "c3fe3fa0-11ee-4006-895e-285ed8d3e437", "292d33da-fc3f-44d2-bd06-ac707b00be20", "a41c7137-286f-4798-84ba-70bd35580919", "6da4836c-77e6-4f53-8c04-a2bb7ab93531", "32e664e5-0198-4155-89ac-f581fb882267", "5b29f715-a565-4633-9f0d-7b808fa7055a", "46acbeb1-70c0-4ac1-be20-7be59f09f0ae", "45b0f0c2-9435-46de-a872-fd9c7044f30a", "41f37a2a-cb9d-4ca2-be6d-22c169800ad6", "769223f8-7de7-4a64-92f7-09540d5d78f8"];
 
 // fetchAndStoreWetMillLots(wetMillLots);
 
@@ -137,7 +137,7 @@ const fetchAndStoreExporterIntakeLots = async (exporterIntakeLotIds) => {
 
     }
 }
-const exporterIntakeLots = ["36a6572e-4243-4e63-8b17-4fd2c4feac09", "6ee5e20c-4510-423f-b911-355144cb30a9", "7622e784-287d-4158-8ad5-d980d0b0c040", "d80b2661-d423-4287-ba8b-cde6e6e5f942", "996412d2-c9d6-47db-b9a4-17c6db94453d", "3839fd90-1714-42bd-86f8-4130f3d61409", "161a9826-379a-4bbe-8c04-1323d0aa61e0", "448b67e1-b153-44e6-a731-fe49f5c76da9", "9000750e-e9c3-44fc-9f53-98bea9af41ce", "a2473419-1cd1-4435-a876-94ecb7366530", "12980578-d877-4d5e-9bcc-39867708cbd9", "db452897-d415-4ba7-821c-ed4a9e39e58b", "30b044a4-61aa-40bb-abb1-ec59b187303c", "4d2baca8-84ce-4268-81cd-63c81c7ab849", "1c4ce1dc-d2a8-41db-b03a-2d92c035f45f", "8a314502-b660-43e3-a369-b294ad510809", "cc7726a0-4c81-4872-8f1b-cf36245fa909", "126111fc-f5e3-44d4-9e0f-7056219d9442", "05499117-8811-4111-8c9f-c2300ad8be48", "11f98135-5d24-4d36-b81d-46855e0d0dce"];
+const exporterIntakeLots = [];
 
 // fetchAndStoreExporterIntakeLots(exporterIntakeLots);
 
