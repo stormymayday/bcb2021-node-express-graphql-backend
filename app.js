@@ -137,7 +137,7 @@ const fetchAndStoreExporterIntakeLots = async (exporterIntakeLotIds) => {
 
     }
 }
-const exporterIntakeLots = [];
+const exporterIntakeLots = ["9af15cb5-e444-4015-a62e-81a3312cdf71", "bcbb0738-5636-4c1a-a7bd-5a45396111c8", "e3fd9b5e-e9d5-43a9-ba5a-adbb1ccc1190", "ef50b932-9585-4e31-ac6b-fb919269b31f", "b3f1ce12-6f41-4da8-9671-d7f2b6bb3595", "16157aaf-3c21-4e2e-9240-04a929de3cb8", "0ebd9476-83d4-4da4-9c10-6ed76f32785d", "ce60c094-5647-4a46-a2dc-7d473abcaa3a"];
 
 // fetchAndStoreExporterIntakeLots(exporterIntakeLots);
 
