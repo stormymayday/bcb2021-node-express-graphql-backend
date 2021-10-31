@@ -18,7 +18,7 @@ const createRoastingLot = (roastingLotId) => {
 
 
             // Storing data in the database
-            fetch('http://localhost:3000/graphql', {
+            fetch('https://graphql-bcb.herokuapp.com/graphql', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -61,7 +61,9 @@ const createRoastingLot = (roastingLotId) => {
                                 
 
                                 roasterActor: "${data.customData['ActorName.Measure'] ? data.customData['ActorName.Measure'].value : ""}"
-                                roastDate: "${data.customData['TransformDate.MeasureTime'] ? data.customData['RoastDate.MeasureTime'].value : ""}"
+
+                                roastDate: "${data.customData['TransformDate.MeasureTime'] ? data.customData['TransformDate.MeasureTime'].dateTimeValue : ""}"
+
                                 chargeTemperature: "${data.customData['ChargeTemperature.Measure'] ? data.customData['ChargeTemperature.Measure'].value : ""}"
                                 dropTemperature: "${data.customData['DropTemperature.Measure'] ? data.customData['DropTemperature.Measure'].value : ""}"
                                 totalRoastTime: "${data.customData['TotalRoastTime.Measure'] ? data.customData['TotalRoastTime.Measure'].value : ""}"

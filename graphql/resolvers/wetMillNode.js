@@ -22,7 +22,7 @@ module.exports = {
 
                         wetMillNodeId: args.wetMillNodeInput.wetMillNodeId,
 
-                        farmer: '61605b2c4ceb5100169dc312',
+                        farmer: '617de8254e760e7585884071',
 
                         totaAbsorbedWeight: args.wetMillNodeInput.totaAbsorbedWeight,
                         totalAbsorbedWeightUnit: args.wetMillNodeInput.totalAbsorbedWeightUnit,

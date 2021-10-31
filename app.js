@@ -62,8 +62,9 @@ const adanHarvestNodeId = 'd7a3d524-d8fa-4f0d-b695-e5c7dfbc09a2';
 const gumercindoHarvestNodeId = '6e374ca1-ea5f-4cc4-863e-ece4143cad48';
 const davidHarvestNodeId = 'f5b260cf-afd8-4525-9533-4562a8741f0a';
 const rigobertoHarvestNodeId = 'c0cd6532-86dd-4693-843a-5825cabb4e8e';
+const gloriaHarvestNodeId = 'a4c8bf16-7c5b-44d9-a25b-2635bc9d803e';
 
-// createHarvestNode(rigobertoHarvestNodeId);
+// createHarvestNode(gloriaHarvestNodeId);
 
 // *********************************************************************************** //
 
@@ -77,7 +78,7 @@ const fetchAndStoreHarvestLots = async (harvestLotIds) => {
         // continue;
     }
 }
-const harvestLots = ["b35c2b3b-6577-4f18-b4d1-e2be9a623523", "1b74494e-5eca-4f7e-9c52-45cbf8db2e5e", "bb8d6f6b-2499-4570-8184-cef7bfa36c38", "384b7f15-e0c2-40c1-95e0-9d06b58044be", "8915fa4a-0065-4aa8-b78c-0957b39a0826", "8a35c3d4-c5e9-4ad5-80b6-5d028b4042a9", "c31e8bce-4c05-4566-94be-16e9771dd4bf", "e2a63207-21c2-4926-879a-5960dcec56aa", "67b2322f-6272-4ea0-a52f-0816e0959141", "aa570493-c079-4b7c-b39c-7a4c1fd3bfa5", "5caa3303-6d63-4cde-927b-0d2d3336f1d7", "13112449-49c4-4ad6-ac0b-d3b8070698fd", "70bc3d13-864a-416f-af5e-b36f9668ebf4", "de8b1a82-cc5f-4107-89ec-4b82f6d7a374", "74964099-7246-47b0-917a-d2103b07cb96", "561086eb-39cb-4f8b-a709-abd15c90b457", "1bb4059b-b1dd-4363-a5ea-915227a0f0bb", "0a9c94dd-e387-4900-b67d-58f12fdd3784"];
+const harvestLots = ["d906dba4-b72e-46e9-ad84-c27a1db41555", "925b22da-fa64-412e-b21c-8527df86e83a", "3961291c-3d9f-473a-afb2-b331cbab1898", "daf2db42-6d60-4c82-9a6b-99dd15ba61cf"];
 
 // fetchAndStoreHarvestLots(harvestLots);
 
@@ -97,8 +98,9 @@ const adanWetMillNodeId = '57d900e5-bcc2-45f7-9776-e4b86d317abc';
 const gumercindoWetMillNodeId = '927a09b8-1014-4ceb-8f46-a56ac87c7ad2';
 const davidWetMillNodeId = 'cd219201-cab3-445e-8e3b-9d1888d9860c';
 const rigobertoWetMillNodeId = 'eafdbb3c-c5aa-4648-a419-0baaf95f89ae';
+const gloriaWetMillNodeId = 'cf1ba230-ad6d-4fb2-9bcc-da415e1bfe72';
 
-// createWetMillNode(rigobertoWetMillNodeId);
+// createWetMillNode(gloriaWetMillNodeId);
 
 // *********************************************************************************** //
 
@@ -246,7 +248,7 @@ const oldSoulRoastingNode = '43774e42-e708-4e08-899e-5996c4dda30b';
 
 // **************************** Creating Roasting Lots ******************************* //
 
-const qcccRoastingLots = ["6dbdde82-ee73-4ae3-811c-1a9ce9e1b47a"];
+const qcccRoastingLots = ["f0a94695-a372-49a4-8612-1c05d41a8902"];
 const oldSoulRoastingLots = ["3934279c-5576-4163-b75f-e54e00668bab"];
 
 const fetchAndStoreRoastingLots = async (roastingLotsIds) => {
