@@ -176,7 +176,7 @@ const ExportNodeId = 'b8a4b60f-552b-406e-84f9-3bafd0b3f904';
 
 // **************************** Creating an Export Lots ****************************** //
 
-const exportLots = ["17293754-5f3a-4566-8c7a-cf7087c5065b"];
+const exportLots = ["b14559ce-dfb9-48b8-802b-ee6e3ee6fb64"];
 
 const fetchAndStoreExportLots = async (exportLotIds) => {
     for (let i = 0; i < exportLotIds.length; i++) {
