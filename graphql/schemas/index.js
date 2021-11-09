@@ -904,7 +904,7 @@ module.exports = buildSchema(`
             numberOfBags: String
             damage: String
             transferDate: String
-
+            
         }
 
         input ImportLotInput {
