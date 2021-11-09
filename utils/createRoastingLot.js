@@ -18,7 +18,7 @@ const createRoastingLot = (roastingLotId) => {
 
 
             // Storing data in the database
-            fetch('https://graphql-bcb.herokuapp.com/graphql', {
+            fetch('http://localhost:3000/graphql', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

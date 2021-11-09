@@ -199,7 +199,7 @@ const ImportNodeId = 'ee761058-6de6-47b3-94ce-33059975764c';
 
 // **************************** Creating an Import Lots ****************************** //
 
-const importLots = ["2e64ff95-1652-4c7b-b922-d62f13bb76ce"];
+const importLots = ["b8448e5c-c67b-43cc-9c8a-8759bcb963b1"];
 
 const fetchAndStoreImportLots = async (importLotIds) => {
     for (let i = 0; i < importLotIds.length; i++) {
@@ -248,8 +248,8 @@ const oldSoulRoastingNode = '43774e42-e708-4e08-899e-5996c4dda30b';
 
 // **************************** Creating Roasting Lots ******************************* //
 
-const qcccRoastingLots = ["f0a94695-a372-49a4-8612-1c05d41a8902"];
-const oldSoulRoastingLots = ["3934279c-5576-4163-b75f-e54e00668bab"];
+const qcccRoastingLots = ["21d5ddfb-18ac-4233-8b97-27b2f39ac59a"];
+const oldSoulRoastingLots = ["61a025c9-d737-4063-88a6-0a1673339b29"];
 
 const fetchAndStoreRoastingLots = async (roastingLotsIds) => {
 

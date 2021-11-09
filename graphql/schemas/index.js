@@ -1087,6 +1087,26 @@ module.exports = buildSchema(`
             transferDate: String
             receivedDate: String
 
+            fobPaymentValue: String
+            fobPaymentAsset: String
+            fobPaymentTimestamp: String
+            fobPaymentNotes: String
+
+            importCostValue: String
+            importCostAsset: String
+            importCostTimestamp: String
+            importCostNotes: String
+
+            freightCostValue: String
+            freightCostAsset: String
+            freightCostTimetamp: String
+            freightCostNotes: String
+
+            roastingCostValue: String
+            roastingCostAsset: String
+            roastingCostTimestamp: String
+            roastingCostNotes: String
+
         }
 
         input RoasterIntakeLotInput {
@@ -1123,6 +1143,26 @@ module.exports = buildSchema(`
             damage: String
             transferDate: String
             receivedDate: String
+
+            fobPaymentValue: String
+            fobPaymentAsset: String
+            fobPaymentTimestamp: String
+            fobPaymentNotes: String
+
+            importCostValue: String
+            importCostAsset: String
+            importCostTimestamp: String
+            importCostNotes: String
+
+            freightCostValue: String
+            freightCostAsset: String
+            freightCostTimetamp: String
+            freightCostNotes: String
+
+            roastingCostValue: String
+            roastingCostAsset: String
+            roastingCostTimestamp: String
+            roastingCostNotes: String
 
         }
 

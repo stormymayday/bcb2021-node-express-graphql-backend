@@ -53,7 +53,27 @@ module.exports = {
                         numberOfBags: args.roasterIntakeLotInput.numberOfBags,
                         damage: args.roasterIntakeLotInput.damage,
                         transferDate: args.roasterIntakeLotInput.transferDate,
-                        receivedDate: args.roasterIntakeLotInput.receivedDate
+                        receivedDate: args.roasterIntakeLotInput.receivedDate,
+
+                        fobPaymentValue: args.roasterIntakeLotInput.fobPaymentValue,
+                        fobPaymentAsset: args.roasterIntakeLotInput.fobPaymentAsset,
+                        fobPaymentTimestamp: args.roasterIntakeLotInput.fobPaymentTimestamp,
+                        fobPaymentNotes: args.roasterIntakeLotInput.fobPaymentNotes,
+
+                        importCostValue: args.roasterIntakeLotInput.importCostValue,
+                        importCostAsset: args.roasterIntakeLotInput.importCostAsset,
+                        importCostTimestamp: args.roasterIntakeLotInput.importCostTimestamp,
+                        importCostNotes: args.roasterIntakeLotInput.importCostNotes,
+
+                        freightCostValue: args.roasterIntakeLotInput.freightCostValue,
+                        freightCostAsset: args.roasterIntakeLotInput.freightCostAsset,
+                        freightCostTimetamp: args.roasterIntakeLotInput.freightCostTimetamp,
+                        freightCostNotes: args.roasterIntakeLotInput.freightCostNotes,
+
+                        roastingCostValue: args.roasterIntakeLotInput.roastingCostValue,
+                        roastingCostAsset: args.roasterIntakeLotInput.roastingCostAsset,
+                        roastingCostTimestamp: args.roasterIntakeLotInput.roastingCostTimestamp,
+                        roastingCostNotes: args.roasterIntakeLotInput.roastingCostNotes,
 
                     });
 

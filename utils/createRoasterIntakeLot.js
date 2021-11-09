@@ -63,6 +63,26 @@ const createRoasterIntakeLot = (roasterIntakeLotId) => {
                                 transferDate: "${data.customData['TransferDate.MeasureTime'].dateTimeValue}"
                                 receivedDate: "${data.customData['ReceivedDate.MeasureTime'] ? data.customData['ReceivedDate.MeasureTime'].dateTimeValue : ""}"
 
+                                fobPaymentValue: ""
+                                fobPaymentAsset: ""
+                                fobPaymentTimestamp: ""
+                                fobPaymentNotes: ""
+
+                                importCostValue: ""
+                                importCostAsset: ""
+                                importCostTimestamp: ""
+                                importCostNotes: ""
+
+                                freightCostValue: ""
+                                freightCostAsset: ""
+                                freightCostTimetamp: ""
+                                freightCostNotes: ""
+
+                                roastingCostValue: ""
+                                roastingCostAsset: ""
+                                roastingCostTimestamp: ""
+                                roastingCostNotes: ""
+
                             }) {
 
                                 roasterIntakeLotId

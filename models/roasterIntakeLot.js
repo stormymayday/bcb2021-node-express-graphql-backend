@@ -101,6 +101,58 @@ const roasterIntakeLotSchema = new Schema({
     },
     receivedDate: {
         type: String
+    },
+
+    fobPaymentValue: {
+        type: String
+    },
+    fobPaymentAsset: {
+        type: String
+    },
+    fobPaymentTimestamp: {
+        type: String
+    },
+    fobPaymentNotes: {
+        type: String
+    },
+
+    importCostValue: {
+        type: String
+    },
+    importCostAsset: {
+        type: String
+    },
+    importCostTimestamp: {
+        type: String
+    },
+    importCostNotes: {
+        type: String
+    },
+
+    freightCostValue: {
+        type: String
+    },
+    freightCostAsset: {
+        type: String
+    },
+    freightCostTimetamp: {
+        type: String
+    },
+    freightCostNotes: {
+        type: String
+    },
+
+    roastingCostValue: {
+        type: String
+    },
+    roastingCostAsset: {
+        type: String
+    },
+    roastingCostTimestamp: {
+        type: String
+    },
+    roastingCostNotes: {
+        type: String
     }
 
 });
