@@ -260,7 +260,7 @@ const fetchAndStoreRoastingLots = async (roastingLotsIds) => {
     }
 }
 
-fetchAndStoreRoastingLots(oldSoulRoastingLots);
+// fetchAndStoreRoastingLots(oldSoulRoastingLots);
 
 // *********************************************************************************** //
 
