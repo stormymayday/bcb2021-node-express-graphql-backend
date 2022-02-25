@@ -248,7 +248,7 @@ const oldSoulRoastingNode = '43774e42-e708-4e08-899e-5996c4dda30b';
 
 // **************************** Creating Roasting Lots ******************************* //
 
-const qcccRoastingLots = ["bcffc9a2-cfb3-4329-bfd2-5efd3f7f65a5"];
+const qcccRoastingLots = ["97f6fc46-155c-4584-9a4a-91c53cbf00f0"];
 const oldSoulRoastingLots = ["2be19189-d811-45d9-bbe1-4a64f17f1a8d"];
 
 const fetchAndStoreRoastingLots = async (roastingLotsIds) => {
@@ -260,7 +260,7 @@ const fetchAndStoreRoastingLots = async (roastingLotsIds) => {
     }
 }
 
-// fetchAndStoreRoastingLots(oldSoulRoastingLots);
+// fetchAndStoreRoastingLots(qcccRoastingLots);
 
 // *********************************************************************************** //
 
