@@ -249,7 +249,7 @@ const oldSoulRoastingNode = '43774e42-e708-4e08-899e-5996c4dda30b';
 // **************************** Creating Roasting Lots ******************************* //
 
 const qcccRoastingLots = ["97f6fc46-155c-4584-9a4a-91c53cbf00f0"];
-const oldSoulRoastingLots = ["a2ef0e72-21ce-4faa-8cd5-f7dbc5782c41"];
+const oldSoulRoastingLots = ["1ab3f600-8966-4581-bba3-b40f898e7d77"];
 
 const fetchAndStoreRoastingLots = async (roastingLotsIds) => {
 

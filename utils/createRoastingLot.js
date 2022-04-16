@@ -5,7 +5,7 @@ const createRoastingLot = (roastingLotId) => {
     fetch(`${process.env.GET_LOT}${roastingLotId}`, {
         method: 'GET',
         headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.OLDSOUL_API_KEY}`
+            'Ocp-Apim-Subscription-Key': `${process.env.QCCC_API_KEY}`
         }
     })
         .then((result) => {
