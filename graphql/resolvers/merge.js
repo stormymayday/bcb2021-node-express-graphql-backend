@@ -7,6 +7,7 @@ const ExportNode = require('../../models/exportNode');
 const ImportNode = require('../../models/importNode');
 const RoasterIntakeNode = require('../../models/roasterIntakeNode');
 const RoastingNode = require('../../models/roastingNode');
+const FinishedProductNode = require('../../models/finishedProductNode');
 
 // Function that links Farmer with Harvest Node
 const fetchHarvestNode = harvestNodeId => {
@@ -144,6 +145,24 @@ const fetchRoastingNode = _id => {
 
 };
 
+// Function that links Farmer with Finished Product Node
+const fetchFinishedProductNode = _id => {
+
+    return FinishedProductNode.findById(_id).populate('finishedProductLots')
+        .then(finishedProductNode => {
+
+            return {
+                ...finishedProductNode._doc
+            };
+
+        })
+        .catch(err => {
+            throw err;
+        })
+
+};
+
+
 exports.fetchHarvestNode = fetchHarvestNode;
 exports.fetchWetMillNode = fetchWetMillNode;
 exports.fetchExporterIntakeNode = fetchExporterIntakeNode;
@@ -152,3 +171,4 @@ exports.fetchExportNode = fetchExportNode;
 exports.fetchImportNode = fetchImportNode;
 exports.fetchRoasterIntakeNode = fetchRoasterIntakeNode;
 exports.fetchRoastingNode = fetchRoastingNode;
+exports.fetchFinishedProductNode = fetchFinishedProductNode;

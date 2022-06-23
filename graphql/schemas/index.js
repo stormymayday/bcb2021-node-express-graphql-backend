@@ -1342,6 +1342,168 @@ module.exports = buildSchema(`
             
         }
 
+        type FinishedProductNode {
+
+            _id: ID!
+
+            finishedProductNodeId: String!
+
+            totaAbsorbedWeight: String
+            totalAbsorbedWeightUnit: String
+
+            finishedProductLots: [FinishedProductLot]
+
+            organizationId: String
+            marketplaceId: String
+            defaultLocationId: String
+            nodeName: String
+            nodeType: String
+            nodeDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            organizationName: String
+
+            images: [String]
+            videos: [String]
+            documents: [String]
+
+            value: String
+            valueUnit: String
+            unitValue: String
+            unitValueUnit: String
+
+            locationId: String
+            name: String
+            country: String
+            city: String
+            state: String
+            latitude: String
+            longitude: String
+            elevation: String
+            elevationUnit: String
+
+            address: String
+
+        }
+        
+        input FinishedProductNodeInput {
+
+            finishedProductNodeId: String!
+
+            totaAbsorbedWeight: String
+            totalAbsorbedWeightUnit: String
+
+            finishedProductLots: [FinishedProductLotInput]
+
+            organizationId: String
+            marketplaceId: String
+            defaultLocationId: String
+            nodeName: String
+            nodeType: String
+            nodeDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            organizationName: String
+
+            images: [String]
+            videos: [String]
+            documents: [String]
+
+            value: String
+            valueUnit: String
+            unitValue: String
+            unitValueUnit: String
+
+            locationId: String
+            name: String
+            country: String
+            city: String
+            state: String
+            latitude: String
+            longitude: String
+            elevation: String
+            elevationUnit: String
+
+            address: String
+
+        }
+
+        type FinishedProductLot {
+
+            _id: ID!
+
+            finishedProductNode: FinishedProductNode
+
+            finishedProductLotId: String
+            finishedProductNodeId: String
+
+            organizationId: String
+            marketplaceId: String
+            productId: String
+            lotName: String
+            lotType: String
+            lotDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            productName: String
+            productToken: String
+            productSku: String
+            organizationName: String
+            currentWeight: String
+            currentWeightUnit: String
+            absorbedWeight: String
+            absorbedWeightUnit: String
+            quality: String
+            lotIsOpen: Boolean
+
+            images: [String]
+            documents: [String]
+            videos: [String]
+
+            thirdPaymentValue: String
+            thirdPaymentAsset: String
+            thirdPaymentTimeStamp: String
+            thirdPaymentNotes: String
+
+        }
+
+        input FinishedProductLotInput {
+
+            finishedProductNode: FinishedProductNodeInput
+
+            finishedProductLotId: String
+            finishedProductNodeId: String
+
+            organizationId: String
+            marketplaceId: String
+            productId: String
+            lotName: String
+            lotType: String
+            lotDetailType: String
+            createdDate: String
+            lastModifiedDate: String
+            productName: String
+            productToken: String
+            productSku: String
+            organizationName: String
+            currentWeight: String
+            currentWeightUnit: String
+            absorbedWeight: String
+            absorbedWeightUnit: String
+            quality: String
+            lotIsOpen: Boolean
+
+            images: [String]
+            documents: [String]
+            videos: [String]
+
+            thirdPaymentValue: String
+            thirdPaymentAsset: String
+            thirdPaymentTimeStamp: String
+            thirdPaymentNotes: String
+
+        }
+
         type Farmer {
 
             _id: ID!
@@ -1356,8 +1518,9 @@ module.exports = buildSchema(`
             exportNode: ExportNode
             importNode: ImportNode
             roasterIntakeNode: RoasterIntakeNode
-
             roastingNode: RoastingNode
+
+            finishedProductNode: FinishedProductNode
 
         }
 
@@ -1373,8 +1536,9 @@ module.exports = buildSchema(`
             exportNode: ExportNodeInput
             importNode: ImportNodeInput
             roasterIntakeNode: RoasterIntakeNodeInput
-
             roastingNode: RoastingNodeInput
+
+            finishedProductNode: FinishedProductNodeInput
 
         }
 
@@ -1411,6 +1575,9 @@ module.exports = buildSchema(`
 
             createRoastingNode(roastingNodeInput: RoastingNodeInput): RoastingNode
             createRoastingLot(roastingLotInput: RoastingLotInput): RoastingLot
+
+            createFinishedProductNode(finishedProductNodeInput: FinishedProductNodeInput): FinishedProductNode
+            createFinishedProductLot(finishedProductLotInput: FinishedProductLotInput): FinishedProductLot
 
         }
 

@@ -28,9 +28,11 @@ const { createImportNode } = require('./utils/createImportNode');
 const { createImportLot } = require('./utils/createImportLot');
 const { createRoasterIntakeNode } = require('./utils/createRoasterIntakeNode');
 const { createRoasterIntakeLot } = require('./utils/createRoasterIntakeLot');
-
 const { createRoastingNode } = require('./utils/createRoastingNode');
 const { createRoastingLot } = require('./utils/createRoastingLot');
+
+const { createfinishedProductNode } = require('./utils/createfinishedProductNode');
+const { createFinishedProductLot } = require('./utils/createFinishedProductLot');
 
 // Creating app object by calling Express
 const app = express();
@@ -249,7 +251,7 @@ const oldSoulRoastingNode = '43774e42-e708-4e08-899e-5996c4dda30b';
 // **************************** Creating Roasting Lots ******************************* //
 
 const qcccRoastingLots = ["d3d320f8-4a9e-4812-a863-28a5b426aeb7"];
-const oldSoulRoastingLots = ["8e691864-e44f-411a-94f2-0d3fd70b15ad"];
+const oldSoulRoastingLots = ["5ba440b9-0f3a-4799-b440-8a77e1cebe1f"];
 
 const fetchAndStoreRoastingLots = async (roastingLotsIds) => {
 
@@ -261,6 +263,33 @@ const fetchAndStoreRoastingLots = async (roastingLotsIds) => {
 }
 
 // fetchAndStoreRoastingLots(oldSoulRoastingLots);
+
+// *********************************************************************************** //
+
+// **************************** Creating a Finished Product Node ***************************** //
+
+const qcccFinishedProductNode = '';
+const oldSoulFinishedProductNode = '9a1b101c-532e-4aaf-99bd-82c27691d7c6';
+
+// createfinishedProductNode(oldSoulFinishedProductNode);
+
+// *********************************************************************************** //
+
+// **************************** Creating Finished Product Lot ******************************* //
+
+const qcccFinishedProductLots = [""];
+const oldFinishedProductLots = ["fb59d600-0884-470e-9e31-4c94edc55cfd"];
+
+const fetchAndStoreFinishedProductLots = async (finishedProductLotIds) => {
+
+    for (let i = 0; i < finishedProductLotIds.length; i++) {
+
+        let functionCall = await createFinishedProductLot(finishedProductLotIds[i]);
+
+    }
+}
+
+// fetchAndStoreFinishedProductLots(oldFinishedProductLots);
 
 // *********************************************************************************** //
 

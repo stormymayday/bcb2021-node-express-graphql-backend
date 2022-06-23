@@ -11,7 +11,8 @@ const {
     fetchExportNode,
     fetchImportNode,
     fetchRoasterIntakeNode,
-    fetchRoastingNode
+    fetchRoastingNode,
+    fetchFinishedProductNode
 
 } = require('./merge');
 
@@ -48,7 +49,10 @@ module.exports = {
                         roasterIntakeNode: fetchRoasterIntakeNode.bind(this, farmer._doc.roasterIntakeNode),
 
                         // Roasting Node
-                        roastingNode: fetchRoastingNode.bind(this, farmer._doc.roastingNode)
+                        roastingNode: fetchRoastingNode.bind(this, farmer._doc.roastingNode),
+
+                        // Finished Product Node
+                        finishedProductNode: fetchFinishedProductNode.bind(this, farmer._doc.finishedProductNode)
 
                         // Other Nodes ...
 

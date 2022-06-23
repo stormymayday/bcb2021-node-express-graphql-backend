@@ -25,6 +25,9 @@ const roasterIntakeLotResolver = require('./roasterIntakeLot');
 const roastingNodeResolver = require('./roastingNode');
 const roastingLotResolver = require('./roastingLot');
 
+const finishedProductNodeResolver = require('./finishedProductNode');
+const finishedProductLotResolver = require('./finishedProductLot');
+
 // Rest of the Individual Resolvers should go here...
 
 // Mergin Individual Resolvers  into one resolver (rootResolver) for export
@@ -45,7 +48,9 @@ const rootResolver = {
     ...roasterIntakeNodeResolver,
     ...roasterIntakeLotResolver,
     ...roastingNodeResolver,
-    ...roastingLotResolver
+    ...roastingLotResolver,
+    ...finishedProductNodeResolver,
+    ...finishedProductLotResolver
     // Add more resolvers here...
 };
 
