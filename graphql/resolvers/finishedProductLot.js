@@ -22,7 +22,7 @@ module.exports = {
                     const finishedProductLot = new FinishedProductLot({
 
                         // Louis
-                        finishedProductNode: '62b4f6fef6e9e49e4b021ea0',
+                        finishedProductNode: '62f68588a9c6c30016f1907b',
 
                         finishedProductLotId: args.finishedProductLotInput.finishedProductLotId,
 
@@ -70,7 +70,7 @@ module.exports = {
                             createdFinishedProductLot = { ...result._doc };
 
                             // Finding Finished Product Node by ID
-                            return FinishedProductNode.findById('62b4f6fef6e9e49e4b021ea0')
+                            return FinishedProductNode.findById('62f68588a9c6c30016f1907b')
 
                         })
                         .then(finishedProductNode => {
