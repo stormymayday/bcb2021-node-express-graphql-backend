@@ -5,7 +5,7 @@ const createFinishedProductLot = (lotId) => {
     fetch(`${process.env.GET_LOT}${lotId}`, {
         method: 'GET',
         headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.OLDSOUL_API_KEY}`
+            'Ocp-Apim-Subscription-Key': `${process.env.QCCC_API_KEY}`
         }
     })
         .then((result) => {
@@ -18,7 +18,7 @@ const createFinishedProductLot = (lotId) => {
 
 
             // Storing data in the database
-            fetch('http://localhost:3000/graphql', {
+            fetch('https://graphql-bcb.herokuapp.com/graphql', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

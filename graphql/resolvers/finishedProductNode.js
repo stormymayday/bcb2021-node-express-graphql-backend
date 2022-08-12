@@ -20,8 +20,8 @@ module.exports = {
         // Creating New Finished Product Node
         const finishedProductNode = new FinishedProductNode({
 
-            // Luis
-            farmer: '613a9694e697483d168be5d4',
+            // Claudia & Juan
+            farmer: '60eb7fe31bc2c19311e8419f',
 
             totaAbsorbedWeight: args.finishedProductNodeInput.totaAbsorbedWeight,
             totalAbsorbedWeightUnit: args.finishedProductNodeInput.totalAbsorbedWeightUnit,

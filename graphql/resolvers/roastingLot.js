@@ -21,7 +21,7 @@ module.exports = {
                     // Creating New Roasting Lot
                     const roastingLot = new RoastingLot({
 
-                        roastingNode: '61689d9e5711e11c755d7555',
+                        roastingNode: '60eb7fe31bc2c19311e8419f',
 
                         roastingLotId: args.roastingLotInput.roastingLotId,
 
@@ -76,7 +76,7 @@ module.exports = {
                             createdRoastingLot = { ...result._doc };
 
                             // Finding Roasting Node by ID
-                            return RoastingNode.findById('61689d9e5711e11c755d7555')
+                            return RoastingNode.findById('60eb7fe31bc2c19311e8419f')
 
                         })
                         .then(roastingNode => {

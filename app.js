@@ -250,7 +250,7 @@ const oldSoulRoastingNode = '43774e42-e708-4e08-899e-5996c4dda30b';
 
 // **************************** Creating Roasting Lots ******************************* //
 
-const qcccRoastingLots = ["d3d320f8-4a9e-4812-a863-28a5b426aeb7"];
+const qcccRoastingLots = ["9c25f3d0-59b6-4d0f-a5b1-a73ce7642dfb"];
 const oldSoulRoastingLots = ["5ba440b9-0f3a-4799-b440-8a77e1cebe1f"];
 
 const fetchAndStoreRoastingLots = async (roastingLotsIds) => {
@@ -262,16 +262,16 @@ const fetchAndStoreRoastingLots = async (roastingLotsIds) => {
     }
 }
 
-// fetchAndStoreRoastingLots(oldSoulRoastingLots);
+// fetchAndStoreRoastingLots(qcccRoastingLots);
 
 // *********************************************************************************** //
 
 // **************************** Creating a Finished Product Node ***************************** //
 
-const qcccFinishedProductNode = '';
+const qcccFinishedProductNode = 'd4abf00e-9b80-4c0e-a359-ec5898183857';
 const oldSoulFinishedProductNode = '9a1b101c-532e-4aaf-99bd-82c27691d7c6';
 
-// createfinishedProductNode(oldSoulFinishedProductNode);
+// createfinishedProductNode(qcccFinishedProductNode);
 
 // *********************************************************************************** //
 
