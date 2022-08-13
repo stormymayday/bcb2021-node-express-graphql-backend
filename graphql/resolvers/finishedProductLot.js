@@ -21,7 +21,7 @@ module.exports = {
                     // Creating New Finished Product Lot
                     const finishedProductLot = new FinishedProductLot({
 
-                        // Louis
+                        // Claudia
                         finishedProductNode: '62f68588a9c6c30016f1907b',
 
                         finishedProductLotId: args.finishedProductLotInput.finishedProductLotId,

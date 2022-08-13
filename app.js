@@ -277,7 +277,7 @@ const oldSoulFinishedProductNode = '9a1b101c-532e-4aaf-99bd-82c27691d7c6';
 
 // **************************** Creating Finished Product Lot ******************************* //
 
-const qcccFinishedProductLots = [""];
+const qcccFinishedProductLots = ["32392706-e040-44ec-96fe-a7fd3b187ef4"];
 const oldFinishedProductLots = ["fb59d600-0884-470e-9e31-4c94edc55cfd"];
 
 const fetchAndStoreFinishedProductLots = async (finishedProductLotIds) => {
@@ -289,7 +289,7 @@ const fetchAndStoreFinishedProductLots = async (finishedProductLotIds) => {
     }
 }
 
-// fetchAndStoreFinishedProductLots(oldFinishedProductLots);
+// fetchAndStoreFinishedProductLots(qcccFinishedProductLots);
 
 // *********************************************************************************** //
 
