@@ -78,7 +78,8 @@ module.exports = {
                     // Creating New Farmer
                     const farmer = new Farmer({
                         farmerName: args.farmerInput.farmerName,
-                        producerName: args.farmerInput.producerName
+                        producerName: args.farmerInput.producerName,
+                        harvestYear: args.farmerInput.harvestYear
                     });
 
                     // Saving Farmer to the Database

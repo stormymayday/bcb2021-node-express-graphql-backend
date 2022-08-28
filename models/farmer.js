@@ -11,6 +11,9 @@ const farmerSchema = new Schema({
     producerName: {
         type: String
     },
+    harvestYear: {
+        type: String
+    },
     harvestNode: {
         type: Schema.Types.ObjectId,
         // required: true,

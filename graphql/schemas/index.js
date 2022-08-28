@@ -1511,6 +1511,8 @@ module.exports = buildSchema(`
             farmerName: String!
             producerName: String
 
+            harvestYear: String
+
             harvestNode: HarvestNode            
             wetMillNode: WetMillNode
             exporterIntakeNode: ExporterIntakeNode
@@ -1528,6 +1530,8 @@ module.exports = buildSchema(`
 
             farmerName: String!
             producerName: String
+
+            harvestYear: String
 
             harvestNode: HarvestNodeInput
             wetMillNode: WetMillNodeInput
