@@ -69,6 +69,8 @@ const fetchAndStoreHarvestLots = async (harvestLotIds) => {
         // continue;
     }
 }
+
+// Luis 2022
 const harvestLots = ["803120db-ed3f-4a38-8566-4cd95fb8e095"];
 
 // fetchAndStoreHarvestLots(harvestLots);
