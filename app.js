@@ -69,9 +69,9 @@ const fetchAndStoreHarvestLots = async (harvestLotIds) => {
         // continue;
     }
 }
-const harvestLots = ["1929d5d0-9d9a-4f38-9911-be72d09e668c"];
+const harvestLots = ["803120db-ed3f-4a38-8566-4cd95fb8e095"];
 
-fetchAndStoreHarvestLots(harvestLots);
+// fetchAndStoreHarvestLots(harvestLots);
 
 // *********************************************************************************** //
 
