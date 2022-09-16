@@ -2,10 +2,10 @@ const fetch = require('node-fetch');
 
 const createWetMillLot = (wetMillLotId) => {
 
-    fetch(`${process.env.GET_LOT}${wetMillLotId}`, {
+    fetch(`${process.env.GET_LOT_RETAIL}${wetMillLotId}`, {
         method: 'GET',
         headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.BEXT_API_KEY}`
+            'Ocp-Apim-Subscription-Key': `${process.env.CATRACHA_COFFEE_API_KEY}`
         }
     })
         .then((result) => {
@@ -18,7 +18,7 @@ const createWetMillLot = (wetMillLotId) => {
 
 
             // Storing data in the database
-            fetch('http://localhost:3000/graphql', {
+            fetch('https://graphql-bcb.herokuapp.com/graphql', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
