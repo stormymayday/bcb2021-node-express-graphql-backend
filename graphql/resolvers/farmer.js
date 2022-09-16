@@ -67,34 +67,38 @@ module.exports = {
     createFarmer: (args) => {
 
         // Checking if a Farmer with that name already exists in the database (to avoid duplicates)
-        return Farmer.findOne({ farmerName: args.farmerInput.farmerName })
-            .then(farmer => {
+        // return Farmer.findOne({ farmerName: args.farmerInput.farmerName })
+        //     .then(farmer => {
 
-                if (farmer) {
-                    throw new Error('Farmer with that name already exists');
-                }
-                else {
+        //         if (farmer) {
+        //             throw new Error('Farmer with that name already exists');
+        //         }
+        //         else {
 
-                    // Creating New Farmer
-                    const farmer = new Farmer({
-                        farmerName: args.farmerInput.farmerName,
-                        producerName: args.farmerInput.producerName,
-                        harvestYear: args.farmerInput.harvestYear
-                    });
+        // Creating New Farmer
+        const farmer = new Farmer({
+            farmerName: args.farmerInput.farmerName,
+            producerName: args.farmerInput.producerName,
+            harvestYear: args.farmerInput.harvestYear
+        });
 
-                    // Saving Farmer to the Database
-                    return farmer
-                        .save()
-                        .then(result => {
-                            console.log(result);
-                            return { ...result._doc };
-                        }).catch(err => {
-                            console.log(err);
-                            throw err;
-                        });
-                }
-
+        // Saving Farmer to the Database
+        return farmer
+            .save()
+            .then(result => {
+                console.log(result);
+                return { ...result._doc };
+            }).catch(err => {
+                console.log(err);
+                throw err;
             });
+
+
+
+
+        //     }
+
+        // });
 
     }
 }

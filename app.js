@@ -52,21 +52,10 @@ app.use((req, res, next) => {
 
 // ***************************** Creating a Harvest Node ***************************** //
 
-const mirianHarvestNodeId = '1dd07753-5a46-4151-a720-badaa9462153';
-const claudiaYJuanHarvestNodeId = '702079e1-62c8-4087-bc82-544acf15d141';
-const LuisHarvestNodeId = '5b10dd8f-2d9b-4595-98ab-4896ece46466';
-const JoseAntonioNolascoHarvestNodeId = '8c8a341d-112d-43a0-bc28-8d7b5eceb697';
-const mariaAdelaHarvestNodeId = '9efb04d1-76ab-4dae-94dd-29f0b0105fcc';
-const atanacioHarvestNodeId = '174a5f0c-0a98-46b9-b1af-c3fee2e78470';
-const fidelinaHarvestNodeId = '77073017-c640-4822-ad6d-7e6fd51da0f8';
-const francisHarvestNodeId = 'bc4fb3d0-97c9-4b84-946a-406bb7901de9';
-const adanHarvestNodeId = 'd7a3d524-d8fa-4f0d-b695-e5c7dfbc09a2';
-const gumercindoHarvestNodeId = '6e374ca1-ea5f-4cc4-863e-ece4143cad48';
-const davidHarvestNodeId = 'f5b260cf-afd8-4525-9533-4562a8741f0a';
-const rigobertoHarvestNodeId = 'c0cd6532-86dd-4693-843a-5825cabb4e8e';
-const gloriaHarvestNodeId = 'a4c8bf16-7c5b-44d9-a25b-2635bc9d803e';
+const luisNodeId = 'c26b851e-4636-4525-91f0-e61888540f59';
 
-// createHarvestNode(gloriaHarvestNodeId);
+
+// createHarvestNode(luisNodeId);
 
 // *********************************************************************************** //
 
@@ -80,9 +69,9 @@ const fetchAndStoreHarvestLots = async (harvestLotIds) => {
         // continue;
     }
 }
-const harvestLots = ["d906dba4-b72e-46e9-ad84-c27a1db41555", "925b22da-fa64-412e-b21c-8527df86e83a", "3961291c-3d9f-473a-afb2-b331cbab1898", "daf2db42-6d60-4c82-9a6b-99dd15ba61cf"];
+const harvestLots = ["1929d5d0-9d9a-4f38-9911-be72d09e668c"];
 
-// fetchAndStoreHarvestLots(harvestLots);
+fetchAndStoreHarvestLots(harvestLots);
 
 // *********************************************************************************** //
 

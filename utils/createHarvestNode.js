@@ -2,10 +2,10 @@ const fetch = require('node-fetch');
 
 const createHarvestNode = (nodeId) => {
 
-    fetch(`${process.env.GET_NODE}${nodeId}`, {
+    fetch(`${process.env.GET_NODE_RETAIL}${nodeId}`, {
         method: 'GET',
         headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.BEXT_API_KEY}`
+            'Ocp-Apim-Subscription-Key': `${process.env.CATRACHA_COFFEE_API_KEY}`
         }
     })
         .then((result) => {
