@@ -2,10 +2,10 @@ const fetch = require('node-fetch');
 
 const createExporterIntakeLot = (exporterIntakeLotId) => {
 
-    fetch(`${process.env.GET_LOT}${exporterIntakeLotId}`, {
+    fetch(`${process.env.GET_LOT_RETAIL}${exporterIntakeLotId}`, {
         method: 'GET',
         headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.BEXT_API_KEY}`
+            'Ocp-Apim-Subscription-Key': `${process.env.CATRACHA_COFFEE_API_KEY}`
         }
     })
         .then((result) => {
