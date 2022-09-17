@@ -2,10 +2,10 @@ const fetch = require('node-fetch');
 
 const createRoastingLot = (roastingLotId) => {
 
-    fetch(`${process.env.GET_LOT}${roastingLotId}`, {
+    fetch(`${process.env.GET_LOT_RETAIL}${roastingLotId}`, {
         method: 'GET',
         headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.QCCC_API_KEY}`
+            'Ocp-Apim-Subscription-Key': `${process.env.CATRACHA_COFFEE_API_KEY}`
         }
     })
         .then((result) => {
