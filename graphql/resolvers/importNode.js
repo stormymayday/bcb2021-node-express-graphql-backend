@@ -20,8 +20,8 @@ module.exports = {
         // Creating New Import Node
         const importNode = new ImportNode({
 
-            // Claudia & Juan ObectID
-            farmer: '60eb7fe31bc2c19311e8419f',
+            // Luis 2022
+            farmer: '631fd8717614b14aa7eedc94',
 
             totaAbsorbedWeight: args.importNodeInput.totaAbsorbedWeight,
             totalAbsorbedWeightUnit: args.importNodeInput.totalAbsorbedWeightUnit,
