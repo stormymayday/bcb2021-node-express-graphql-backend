@@ -148,14 +148,12 @@ const dryMillLots = [];
 
 // **************************** Creating an Export Node ****************************** //
 
-const ExportNodeId = 'b8a4b60f-552b-406e-84f9-3bafd0b3f904';
+const ExportNodeId = '';
 // createExportNode(ExportNodeId);
 
 // *********************************************************************************** //
 
 // **************************** Creating an Export Lots ****************************** //
-
-const exportLots = ["b14559ce-dfb9-48b8-802b-ee6e3ee6fb64"];
 
 const fetchAndStoreExportLots = async (exportLotIds) => {
     for (let i = 0; i < exportLotIds.length; i++) {
@@ -164,6 +162,8 @@ const fetchAndStoreExportLots = async (exportLotIds) => {
 
     }
 }
+
+const exportLots = [];
 
 // fetchAndStoreExportLots(exportLots);
 
