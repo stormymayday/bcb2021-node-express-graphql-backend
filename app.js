@@ -78,7 +78,7 @@ const harvestLots = [];
 
 // **************************** Creating a Wet Mill Node ***************************** //
 
-const luisWetMillnodeId = '16710ddc-6cc3-4b82-8759-8edc91444011';
+const luisWetMillnodeId = '';
 
 // createWetMillNode(luisWetMillnodeId);
 
@@ -103,7 +103,7 @@ const wetMillLots = [];
 
 // *********************** Creating an Exporter Intake Node ************************** //
 
-const marcalaIntakeNode = '3e09030a-da87-4839-96be-438dba4c1471';
+const marcalaIntakeNode = '';
 // createExporterIntakeNode(marcalaIntakeNode);
 
 // *********************************************************************************** //
@@ -117,7 +117,7 @@ const fetchAndStoreExporterIntakeLots = async (exporterIntakeLotIds) => {
 
     }
 }
-const exporterIntakeLots = ["44584ebf-39aa-4042-86f7-8e9667275533"];
+const exporterIntakeLots = [];
 
 // fetchAndStoreExporterIntakeLots(exporterIntakeLots);
 
@@ -125,7 +125,7 @@ const exporterIntakeLots = ["44584ebf-39aa-4042-86f7-8e9667275533"];
 
 // **************************** Creating a Dry Mill Node ***************************** //
 
-const VillaFloridaDryMillNodeId = '326d2dae-9cd0-4b4c-b64d-8874e1d80abd';
+const VillaFloridaDryMillNodeId = '9edbcca8-f764-4fff-bc1a-94b92f021eb6';
 // createDryMillNode(VillaFloridaDryMillNodeId);
 
 // *********************************************************************************** //
