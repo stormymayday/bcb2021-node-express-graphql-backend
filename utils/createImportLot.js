@@ -2,10 +2,10 @@ const fetch = require('node-fetch');
 
 const createImportLot = (lotId) => {
 
-    fetch(`${process.env.GET_LOT}${lotId}`, {
+    fetch(`${process.env.GET_LOT_RETAIL}${lotId}`, {
         method: 'GET',
         headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.BEXT_API_KEY}`
+            'Ocp-Apim-Subscription-Key': `${process.env.CATRACHA_COFFEE_API_KEY}`
         }
     })
         .then((result) => {
@@ -18,7 +18,7 @@ const createImportLot = (lotId) => {
 
 
             // Storing data in the database
-            fetch('http://localhost:3000/graphql', {
+            fetch('https://graphql-bcb.herokuapp.com/graphql', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
