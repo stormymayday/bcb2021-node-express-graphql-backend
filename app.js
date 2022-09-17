@@ -125,7 +125,7 @@ const exporterIntakeLots = [];
 
 // **************************** Creating a Dry Mill Node ***************************** //
 
-const VillaFloridaDryMillNodeId = '9edbcca8-f764-4fff-bc1a-94b92f021eb6';
+const VillaFloridaDryMillNodeId = '';
 // createDryMillNode(VillaFloridaDryMillNodeId);
 
 // *********************************************************************************** //
