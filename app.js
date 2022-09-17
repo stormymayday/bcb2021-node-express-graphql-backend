@@ -132,9 +132,6 @@ const VillaFloridaDryMillNodeId = '';
 
 // **************************** Creating a Dry Mill Lot ****************************** //
 
-const dryMillLots = ["ed5c61dc-35f3-4ba4-bfba-a76103fb7415", "c68afd07-d7eb-4eb2-9020-e5bda7775b1d"];
-
-
 const fetchAndStoreDryMillLots = async (dryMillLotIds) => {
     for (let i = 0; i < dryMillLotIds.length; i++) {
 
@@ -142,6 +139,8 @@ const fetchAndStoreDryMillLots = async (dryMillLotIds) => {
 
     }
 }
+
+const dryMillLots = [];
 
 // fetchAndStoreDryMillLots(dryMillLots);
 
