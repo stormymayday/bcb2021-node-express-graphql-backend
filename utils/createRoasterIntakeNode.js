@@ -2,10 +2,10 @@ const fetch = require('node-fetch');
 
 const createRoasterIntakeNode = (nodeId) => {
 
-    fetch(`${process.env.GET_NODE}${nodeId}`, {
+    fetch(`${process.env.GET_NODE_RETAIL}${nodeId}`, {
         method: 'GET',
         headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.OLDSOUL_API_KEY}`
+            'Ocp-Apim-Subscription-Key': `${process.env.CATRACHA_COFFEE_API_KEY}`
         }
     })
         .then((result) => {
@@ -17,7 +17,7 @@ const createRoasterIntakeNode = (nodeId) => {
             console.log(data);
 
             // Storing data in the database
-            fetch('http://localhost:3000/graphql', {
+            fetch('https://graphql-bcb.herokuapp.com/graphql', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
