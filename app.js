@@ -140,7 +140,7 @@ const fetchAndStoreDryMillLots = async (dryMillLotIds) => {
     }
 }
 
-const dryMillLots = [];
+const dryMillLots = ["e4385c4c-d402-460d-a0a5-cb402f9c21fa"];
 
 // fetchAndStoreDryMillLots(dryMillLots);
 
