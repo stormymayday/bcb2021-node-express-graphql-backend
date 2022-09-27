@@ -52,7 +52,7 @@ app.use((req, res, next) => {
 
 // ***************************** Creating a Harvest Node ***************************** //
 
-const claudiaNodeId = '7ebf3266-b2b3-473f-99de-f2429933e7e7';
+const claudiaNodeId = '';
 
 // createHarvestNode(claudiaNodeId);
 
@@ -70,7 +70,7 @@ const fetchAndStoreHarvestLots = async (harvestLotIds) => {
 }
 
 // Luis 2022
-const harvestLots = [];
+const harvestLots = ["64c46a18-0326-474d-bc31-645b18dd0442"];
 
 // fetchAndStoreHarvestLots(harvestLots);
 
@@ -78,9 +78,9 @@ const harvestLots = [];
 
 // **************************** Creating a Wet Mill Node ***************************** //
 
-const luisWetMillnodeId = '';
+const wetMillnodeId = "56372349-626a-4ece-8e62-ff25e4ac337a";
 
-// createWetMillNode(luisWetMillnodeId);
+// createWetMillNode(wetMillnodeId);
 
 // *********************************************************************************** //
 
