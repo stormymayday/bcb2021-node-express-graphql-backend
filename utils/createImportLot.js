@@ -18,7 +18,7 @@ const createImportLot = (lotId) => {
 
 
             // Storing data in the database
-            fetch('https://graphql-bcb.herokuapp.com/graphql', {
+            fetch(`${process.env.GRAPH_ENDPOINT}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

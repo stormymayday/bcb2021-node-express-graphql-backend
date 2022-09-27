@@ -171,7 +171,7 @@ const exportLots = [];
 
 // **************************** Creating an Import Node ****************************** //
 
-const ImportNodeId = "2ed5f27d-bf87-44f1-8f8f-92069248dcba";
+const ImportNodeId = "";
 // createImportNode(ImportNodeId);
 
 // *********************************************************************************** //
