@@ -103,7 +103,7 @@ const wetMillLots = [];
 
 // *********************** Creating an Exporter Intake Node ************************** //
 
-const marcalaIntakeNode = "3e09030a-da87-4839-96be-438dba4c1471";
+const marcalaIntakeNode = "";
 // createExporterIntakeNode(marcalaIntakeNode);
 
 // *********************************************************************************** //
@@ -125,7 +125,7 @@ const exporterIntakeLots = [];
 
 // **************************** Creating a Dry Mill Node ***************************** //
 
-const VillaFloridaDryMillNodeId = '';
+const VillaFloridaDryMillNodeId = '9edbcca8-f764-4fff-bc1a-94b92f021eb6';
 // createDryMillNode(VillaFloridaDryMillNodeId);
 
 // *********************************************************************************** //
