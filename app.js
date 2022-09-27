@@ -70,7 +70,7 @@ const fetchAndStoreHarvestLots = async (harvestLotIds) => {
 }
 
 // Luis 2022
-const harvestLots = ["64c46a18-0326-474d-bc31-645b18dd0442"];
+const harvestLots = [];
 
 // fetchAndStoreHarvestLots(harvestLots);
 
@@ -78,7 +78,7 @@ const harvestLots = ["64c46a18-0326-474d-bc31-645b18dd0442"];
 
 // **************************** Creating a Wet Mill Node ***************************** //
 
-const wetMillnodeId = "56372349-626a-4ece-8e62-ff25e4ac337a";
+const wetMillnodeId = "";
 
 // createWetMillNode(wetMillnodeId);
 
@@ -103,7 +103,7 @@ const wetMillLots = [];
 
 // *********************** Creating an Exporter Intake Node ************************** //
 
-const marcalaIntakeNode = '';
+const marcalaIntakeNode = "3e09030a-da87-4839-96be-438dba4c1471";
 // createExporterIntakeNode(marcalaIntakeNode);
 
 // *********************************************************************************** //
