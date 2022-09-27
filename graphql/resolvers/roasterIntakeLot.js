@@ -21,7 +21,8 @@ module.exports = {
                     // Creating New Roaster Intake Lot
                     const roasterIntakeLot = new RoasterIntakeLot({
 
-                        roasterIntakeNode: '61662e136d8c80b3f693b206',
+                        // Luis 2022
+                        roasterIntakeNode: '633214e8b3a95800168f5a98',
 
                         roasterIntakeLotId: args.roasterIntakeLotInput.roasterIntakeLotId,
 
@@ -89,7 +90,7 @@ module.exports = {
                             createdRoasterIntakeLot = { ...result._doc };
 
                             // Finding Roaster Intake Node by ID
-                            return RoasterIntakeNode.findById('61662e136d8c80b3f693b206')
+                            return RoasterIntakeNode.findById('633214e8b3a95800168f5a98')
 
                         })
                         .then(roasterIntakeNode => {

@@ -2,10 +2,10 @@ const fetch = require('node-fetch');
 
 const createRoasterIntakeLot = (roasterIntakeLotId) => {
 
-    fetch(`${process.env.GET_LOT}${roasterIntakeLotId}`, {
+    fetch(`${process.env.GET_LOT_RETAIL}${roasterIntakeLotId}`, {
         method: 'GET',
         headers: {
-            'Ocp-Apim-Subscription-Key': `${process.env.OLDSOUL_API_KEY}`
+            'Ocp-Apim-Subscription-Key': `${process.env.CATRACHA_COFFEE_API_KEY}`
         }
     })
         .then((result) => {
@@ -18,7 +18,7 @@ const createRoasterIntakeLot = (roasterIntakeLotId) => {
 
 
             // Storing data in the database
-            fetch('http://localhost:3000/graphql', {
+            fetch(`${process.env.GRAPH_ENDPOINT}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
