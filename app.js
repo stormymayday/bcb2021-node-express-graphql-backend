@@ -125,7 +125,7 @@ const exporterIntakeLots = [];
 
 // **************************** Creating a Dry Mill Node ***************************** //
 
-const VillaFloridaDryMillNodeId = '9edbcca8-f764-4fff-bc1a-94b92f021eb6';
+const VillaFloridaDryMillNodeId = '';
 // createDryMillNode(VillaFloridaDryMillNodeId);
 
 // *********************************************************************************** //
@@ -140,7 +140,7 @@ const fetchAndStoreDryMillLots = async (dryMillLotIds) => {
     }
 }
 
-const dryMillLots = ["e4385c4c-d402-460d-a0a5-cb402f9c21fa"];
+const dryMillLots = [];
 
 // fetchAndStoreDryMillLots(dryMillLots);
 
@@ -148,7 +148,7 @@ const dryMillLots = ["e4385c4c-d402-460d-a0a5-cb402f9c21fa"];
 
 // **************************** Creating an Export Node ****************************** //
 
-const ExportNodeId = '';
+const ExportNodeId = '5551a4dd-c80e-41e9-9367-856c6a6ddc01';
 // createExportNode(ExportNodeId);
 
 // *********************************************************************************** //
