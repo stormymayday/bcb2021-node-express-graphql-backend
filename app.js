@@ -148,7 +148,7 @@ const dryMillLots = [];
 
 // **************************** Creating an Export Node ****************************** //
 
-const ExportNodeId = '5551a4dd-c80e-41e9-9367-856c6a6ddc01';
+const ExportNodeId = '';
 // createExportNode(ExportNodeId);
 
 // *********************************************************************************** //
