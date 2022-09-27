@@ -52,9 +52,9 @@ app.use((req, res, next) => {
 
 // ***************************** Creating a Harvest Node ***************************** //
 
-const luisNodeId = 'c26b851e-4636-4525-91f0-e61888540f59';
+const claudiaNodeId = '7ebf3266-b2b3-473f-99de-f2429933e7e7';
 
-// createHarvestNode(luisNodeId);
+// createHarvestNode(claudiaNodeId);
 
 // *********************************************************************************** //
 
@@ -231,7 +231,7 @@ const fetchAndStoreRoastingLots = async (roastingLotsIds) => {
 
     }
 }
-const oldSoulRoastingLots = ["2d3bc125-ddb7-4d6e-a8a0-81841de33b79"];
+const oldSoulRoastingLots = ["19245669-eed1-4d65-b814-c64ce83e3e33"];
 
 // fetchAndStoreRoastingLots(oldSoulRoastingLots);
 

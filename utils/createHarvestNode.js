@@ -17,7 +17,7 @@ const createHarvestNode = (nodeId) => {
             console.log(data);
 
             // Storing data in the database
-            fetch('http://localhost:3000/graphql', {
+            fetch(`${process.env.GRAPH_ENDPOINT}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
