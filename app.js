@@ -193,7 +193,7 @@ const importLots = [];
 
 // *********************** Creating an Roaster Intake Node *************************** //
 
-const oldSoulRoasterIntakeNode = '786a6ed6-4f41-478e-b424-437ac60c1075';
+const oldSoulRoasterIntakeNode = '';
 // createRoasterIntakeNode(oldSoulRoasterIntakeNode);
 
 // *********************************************************************************** //
@@ -208,7 +208,7 @@ const fetchAndStoreRoasterIntakeLots = async (roasterIntakeLotsIds) => {
     }
 }
 
-const oldSoulRoasterIntakeLots = ["2b708db7-5eeb-41ed-95f9-8c753e99cd76"];
+const oldSoulRoasterIntakeLots = [];
 
 // fetchAndStoreRoasterIntakeLots(oldSoulRoasterIntakeLots);
 
@@ -239,8 +239,8 @@ const oldSoulRoastingLots = ["19245669-eed1-4d65-b814-c64ce83e3e33"];
 
 // **************************** Creating a Finished Product Node ***************************** //
 
-const qcccFinishedProductNode = 'd4abf00e-9b80-4c0e-a359-ec5898183857';
-const oldSoulFinishedProductNode = '9a1b101c-532e-4aaf-99bd-82c27691d7c6';
+const qcccFinishedProductNode = '';
+const oldSoulFinishedProductNode = '';
 
 // createfinishedProductNode(qcccFinishedProductNode);
 
@@ -248,8 +248,8 @@ const oldSoulFinishedProductNode = '9a1b101c-532e-4aaf-99bd-82c27691d7c6';
 
 // **************************** Creating Finished Product Lot ******************************* //
 
-const qcccFinishedProductLots = ["b851576a-5eb7-40c6-8e10-a53c68667db1"];
-const oldFinishedProductLots = ["fb59d600-0884-470e-9e31-4c94edc55cfd"];
+const qcccFinishedProductLots = [""];
+const oldFinishedProductLots = [""];
 
 const fetchAndStoreFinishedProductLots = async (finishedProductLotIds) => {
 
