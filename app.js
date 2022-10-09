@@ -185,14 +185,13 @@ const fetchAndStoreImportLots = async (importLotIds) => {
     }
 }
 const importLots = [];
-
 // fetchAndStoreImportLots(importLots);
 
 // *********************************************************************************** //
 
 // *********************** Creating an Roaster Intake Node *************************** //
 
-const oldSoulRoasterIntakeNode = '';
+const roasterIntakeNode = '';
 // createRoasterIntakeNode(oldSoulRoasterIntakeNode);
 
 // *********************************************************************************** //

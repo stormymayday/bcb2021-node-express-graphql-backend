@@ -26,8 +26,8 @@ module.exports = {
 
                         roasterIntakeNodeId: args.roasterIntakeNodeInput.roasterIntakeNodeId,
 
-                        // Luis 2022
-                        farmer: '631fd8717614b14aa7eedc94',
+                        // Mario 2022
+                        farmer: '634341ebd23e4deb333dd2af',
 
                         totaAbsorbedWeight: args.roasterIntakeNodeInput.totaAbsorbedWeight,
                         totalAbsorbedWeightUnit: args.roasterIntakeNodeInput.totalAbsorbedWeightUnit,
