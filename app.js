@@ -102,7 +102,7 @@ const wetMillLots = [];
 
 // *********************** Creating an Exporter Intake Node ************************** //
 
-const marcalaIntakeNode = "";
+const marcalaIntakeNode = "3e09030a-da87-4839-96be-438dba4c1471";
 // createExporterIntakeNode(marcalaIntakeNode);
 
 // *********************************************************************************** //
