@@ -147,8 +147,8 @@ const dryMillLots = [];
 
 // **************************** Creating an Export Node ****************************** //
 
-const ExportNodeId = '';
-// createExportNode(ExportNodeId);
+const exportNodeId = '';
+// createExportNode(exportNodeId);
 
 // *********************************************************************************** //
 
