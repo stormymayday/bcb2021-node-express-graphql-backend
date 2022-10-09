@@ -69,7 +69,6 @@ const fetchAndStoreHarvestLots = async (harvestLotIds) => {
     }
 }
 
-// Luis 2022
 const harvestLots = [];
 
 // fetchAndStoreHarvestLots(harvestLots);

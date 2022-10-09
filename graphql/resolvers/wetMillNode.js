@@ -22,8 +22,8 @@ module.exports = {
 
                         wetMillNodeId: args.wetMillNodeInput.wetMillNodeId,
 
-                        // Claudia 2022
-                        farmer: '630bde6585f9f008692a0bc5',
+                        // Mario Dionel 2022
+                        farmer: '634341ebd23e4deb333dd2af',
 
                         totaAbsorbedWeight: args.wetMillNodeInput.totaAbsorbedWeight,
                         totalAbsorbedWeightUnit: args.wetMillNodeInput.totalAbsorbedWeightUnit,
