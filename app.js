@@ -170,8 +170,8 @@ const exportLots = [];
 
 // **************************** Creating an Import Node ****************************** //
 
-const ImportNodeId = "";
-// createImportNode(ImportNodeId);
+const importNodeId = "";
+// createImportNode(importNodeId);
 
 // *********************************************************************************** //
 

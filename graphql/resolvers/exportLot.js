@@ -22,7 +22,7 @@ module.exports = {
                     const exportLot = new ExportLot({
 
                         // Mario 2022
-                        exportNode: '634341ebd23e4deb333dd2af',
+                        exportNode: '634350efce149400166aa56d',
 
                         exportLotId: args.exportLotInput.exportLotId,
 
@@ -82,7 +82,7 @@ module.exports = {
                             createdExportLot = { ...result._doc };
 
                             // Finding Export Node by ID
-                            return ExportNode.findById('634341ebd23e4deb333dd2af')
+                            return ExportNode.findById('634350efce149400166aa56d')
 
                         })
                         .then(exportNode => {
