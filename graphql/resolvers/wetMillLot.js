@@ -21,8 +21,8 @@ module.exports = {
                     // Creating New Wet Mill Lot 
                     const wetMillLot = new WetMillLot({
 
-                        // Claudia 2022
-                        wetMillNode: '633253214a30e900164abaaf',
+                        // Mario 2022
+                        wetMillNode: '63434969f1b0c000161a9435',
 
                         wetMillLotId: args.wetMillLotInput.wetMillLotId,
 
@@ -71,7 +71,7 @@ module.exports = {
                             createdWetMillLot = { ...result._doc };
 
                             // Finding Wet Mill Node by ID
-                            return WetMillNode.findById('633253214a30e900164abaaf');
+                            return WetMillNode.findById('63434969f1b0c000161a9435');
 
                         })
                         .then(wetMillNode => {
