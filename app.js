@@ -191,7 +191,8 @@ const importLots = [];
 
 // *********************** Creating an Roaster Intake Node *************************** //
 
-const roasterIntakeNode = "";
+// Claudia
+const roasterIntakeNode = "ee83a039-8d87-474c-977c-a28950992d87";
 // createRoasterIntakeNode(roasterIntakeNode);
 
 // *********************************************************************************** //
@@ -206,9 +207,9 @@ const fetchAndStoreRoasterIntakeLots = async (roasterIntakeLotsIds) => {
     }
 }
 
-const oldSoulRoasterIntakeLots = [];
+const roasterIntakeLots = [];
 
-// fetchAndStoreRoasterIntakeLots(oldSoulRoasterIntakeLots);
+// fetchAndStoreRoasterIntakeLots(roasterIntakeLots);
 
 // *********************************************************************************** //
 
@@ -229,7 +230,7 @@ const fetchAndStoreRoastingLots = async (roastingLotsIds) => {
 
     }
 }
-const oldSoulRoastingLots = ["19245669-eed1-4d65-b814-c64ce83e3e33"];
+const oldSoulRoastingLots = ["1484d871-95d8-430a-a465-ca45318f131f"];
 
 // fetchAndStoreRoastingLots(oldSoulRoastingLots);
 
