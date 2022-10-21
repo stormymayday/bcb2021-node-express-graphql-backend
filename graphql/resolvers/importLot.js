@@ -21,8 +21,8 @@ module.exports = {
                     // Creating New Import Lot 
                     const importLot = new ImportLot({
 
-                        // Mario 2022
-                        importNode: '634354c0d8dfc20016082b49',
+                        // Mario Martinez 2022
+                        importNode: '63532bf41987830016a43032',
 
                         importLotId: args.importLotInput.importLotId,
 
@@ -84,7 +84,7 @@ module.exports = {
                             createdImportLot = { ...result._doc };
 
                             // Finding Import Node by ID
-                            return ImportNode.findById('634354c0d8dfc20016082b49')
+                            return ImportNode.findById('63532bf41987830016a43032')
 
                         })
                         .then(importNode => {
