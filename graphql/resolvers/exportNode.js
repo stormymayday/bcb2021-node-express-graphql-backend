@@ -20,8 +20,8 @@ module.exports = {
         // Creating New Export Node
         const exportNode = new ExportNode({
 
-            // Mario 2022
-            farmer: '634341ebd23e4deb333dd2af',
+            // Mario Martinez 2022
+            farmer: '6352c9000025a418833ad893',
 
             totaAbsorbedWeight: args.exportNodeInput.totaAbsorbedWeight,
             totalAbsorbedWeightUnit: args.exportNodeInput.totalAbsorbedWeightUnit,
