@@ -207,7 +207,8 @@ const fetchAndStoreRoasterIntakeLots = async (roasterIntakeLotsIds) => {
     }
 }
 
-const roasterIntakeLots = [];
+// Claudia
+const roasterIntakeLots = ["0108638f-77af-40fc-a8ae-b95635fa9680"];
 
 // fetchAndStoreRoasterIntakeLots(roasterIntakeLots);
 
