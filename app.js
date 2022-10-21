@@ -52,7 +52,7 @@ app.use((req, res, next) => {
 
 // ***************************** Creating a Harvest Node ***************************** //
 
-const harvestNodeId = '';
+const harvestNodeId = "";
 
 // createHarvestNode(harvestNodeId);
 
