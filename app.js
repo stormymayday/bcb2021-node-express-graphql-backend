@@ -124,8 +124,8 @@ const exporterIntakeLots = [];
 
 // **************************** Creating a Dry Mill Node ***************************** //
 
-const VillaFloridaDryMillNodeId = "";
-// createDryMillNode(VillaFloridaDryMillNodeId);
+const dryMillNodeId = "";
+// createDryMillNode(dryMillNodeId);
 
 // *********************************************************************************** //
 
