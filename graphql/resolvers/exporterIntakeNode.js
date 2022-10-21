@@ -24,8 +24,8 @@ module.exports = {
 
             exporterIntakeNodeId: args.exporterIntakeNodeInput.exporterIntakeNodeId,
 
-            // Mario Dionel 2022
-            farmer: '634341ebd23e4deb333dd2af',
+            // Mario Martinez 2022
+            farmer: '6352c9000025a418833ad893',
 
             totaAbsorbedWeight: args.exporterIntakeNodeInput.totaAbsorbedWeight,
             totalAbsorbedWeightUnit: args.exporterIntakeNodeInput.totalAbsorbedWeightUnit,
