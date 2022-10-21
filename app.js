@@ -163,7 +163,6 @@ const fetchAndStoreExportLots = async (exportLotIds) => {
 }
 
 const exportLots = [];
-
 // fetchAndStoreExportLots(exportLots);
 
 // *********************************************************************************** //
