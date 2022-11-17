@@ -22,8 +22,8 @@ module.exports = {
                     const roastingNode = new RoastingNode({
 
                         roastingNodeId: args.roastingNodeInput.roastingNodeId,
-                        // Luis 2022
-                        farmer: '631fd8717614b14aa7eedc94',
+                        // Claudia 2022
+                        farmer: '630bde6585f9f008692a0bc5',
 
                         totaAbsorbedWeight: args.roastingNodeInput.totaAbsorbedWeight,
                         totalAbsorbedWeightUnit: args.roastingNodeInput.totalAbsorbedWeightUnit,
