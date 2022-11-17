@@ -215,7 +215,8 @@ const roasterIntakeLots = ["0108638f-77af-40fc-a8ae-b95635fa9680"];
 
 // **************************** Creating a Roasting Node ***************************** //
 
-const roastingNode = '';
+// Claudia 2022
+const roastingNode = 'a06e9191-d770-47df-ae87-d7a98137b9a1';
 // createRoastingNode(roastingNode);
 
 // *********************************************************************************** //
