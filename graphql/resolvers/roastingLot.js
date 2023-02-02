@@ -21,8 +21,8 @@ module.exports = {
                     // Creating New Roasting Lot
                     const roastingLot = new RoastingLot({
 
-                        // Mario Dionel Vasquez 2022
-                        roastingNode: '63cdd04451ea29fca6ce7c3f',
+                        // Luis Nolasco 2022
+                        roastingNode: '63255116add9b30016ee5004',
 
                         roastingLotId: args.roastingLotInput.roastingLotId,
 
@@ -77,7 +77,7 @@ module.exports = {
                             createdRoastingLot = { ...result._doc };
 
                             // Finding Roasting Node by ID
-                            return RoastingNode.findById('63cdd04451ea29fca6ce7c3f')
+                            return RoastingNode.findById('63255116add9b30016ee5004')
 
                         })
                         .then(roastingNode => {

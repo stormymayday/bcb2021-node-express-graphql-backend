@@ -232,7 +232,7 @@ const fetchAndStoreRoastingLots = async (roastingLotsIds) => {
     }
 }
 
-// Luis 2022
+// Luis Nolasco 2022
 const roastingLots = [""];
 
 // fetchAndStoreRoastingLots(roastingLots);
